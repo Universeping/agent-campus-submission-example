@@ -1,0 +1,25 @@
+{
+  "P_CAN_001": {
+    "id": "P_CAN_001",
+    "product_id": "canva",
+    "surfaces": [
+      "web"
+    ],
+    "feature_scope": "editable_captions",
+    "approved_text": "Canva 可为受支持视频设计中含语音的媒体生成可编辑字幕。",
+    "source_id": "S_CAN_01",
+    "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+    "source_section": "Before adding captions / Generate captions for videos",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "字幕",
+      "可编辑字幕",
+      "生成字幕"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+    "source_title": "Generate and animate captions in Canva",
+    "source_publisher": "Canva",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

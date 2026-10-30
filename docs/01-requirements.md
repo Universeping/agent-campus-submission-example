@@ -1,6 +1,6 @@
 # 需求与成功标准
 
-业务理解基线 v0.1.0；当前已实现 CLI 单 Agent 最小闭环。87 项测试通过；旧提示词保存两条真实模型成功路径，新提示词真实验证连接受阻。完整效果范围及不足见 [评估](03-evaluation.md)。
+业务理解基线 v0.1.0；当前已实现 CLI 单 Agent 最小闭环。105 项测试通过；8 个产品/客户端配置已接入，39 条事实启用、1 条暂缓，规则为项目自定演示政策。旧提示词保存两条真实路径，当前 profile 真实验证连接受阻。完整效果范围及不足见 [评估](03-evaluation.md)。
 
 ## 用户、目标与范围
 
@@ -38,7 +38,7 @@
 | 稿次、时长、报告对应 | schemas 完成约束；agent 可信执行 | test_schemas、test_agent；两条真实路径均保存 v1/v2，最终只用 v2 两项报告。 |
 | 两条真实动态决策路径 | model 原生函数调用、LangGraph 条件循环 | 正常路径空检索后改查询；故障路径收到工具错误后重新检索，两者均有检查反馈后修订。 |
 | 执行预算与明确未完成 | 主动计数及图后备上限 | [上限结果](../examples/agent-validation/mock-execution-limit-001/result.json)，incomplete；test_agent 覆盖工具上限。 |
-| 可复现、离线入口、可执行测试 | README、锁定依赖、CLI | [当前运行索引](../examples/prompt-validation/README.md)、[87 项测试](../examples/prompt-validation/unittest-v2-001.txt)。 |
+| 可复现、离线入口、可执行测试 | README、锁定依赖、CLI | [当前运行索引](../examples/data-validation/README.md)、[105 项测试](../examples/data-validation/unittest-001.txt)。 |
 
 上述真实证据为旧提示词结果；当前提示词与 main 元数据已变化。当前测试日志与批量验收见 [新提示词验证](../examples/prompt-validation/README.md)，新增空资料、无关资料、5 秒上限输入，真实执行受连接错误阻断。首稿直接短于上限不能覆盖超时修订；无关资料直接请求补充不能覆盖实际空检索反馈。业务成功标准未放宽。
 
@@ -47,3 +47,5 @@
 ## 后续资料准备
 
 官方发布规范、产品事实、自定品牌/创作配置、合成案例须分开记录。抖音/快手规范可作为规则参考，剪映/必剪说明可作为产品事实候选。来源登记在 [sources.md](../data/sources.md)，登记不等于已经转成可执行检查。扩展范围时再补充有来源的数据与相应用例，不将经验性数值写成平台强制要求。
+
+资料扩充已通过用户包接入 CapCut、Canva、Adobe Express、必剪 iOS，详见 [资料评估](09-data-pack.md)。产品客户端不等同于发布 platform；P01 保留作合成基线。8 条 Mock CLI 验证资料、范围、规则与来源可运行，但不证明真实模型选择最相关功能。业务成功标准未放宽，官方发布平台规则仍未实现。

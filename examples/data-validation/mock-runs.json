@@ -1,0 +1,221 @@
+{
+  "scope": "Actual CLI + real graph/tools; scripted Mock decisions only",
+  "runs": [
+    {
+      "profile": "capcut_web_captions",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-capcut_web_captions-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "capcut_web_captions",
+        "--output-dir",
+        "examples/data-validation/mock-capcut_web_captions-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 3,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 5.4,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_CAP_001"
+      ]
+    },
+    {
+      "profile": "capcut_desktop_captions",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-capcut_desktop_captions-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "capcut_desktop_captions",
+        "--output-dir",
+        "examples/data-validation/mock-capcut_desktop_captions-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 3,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 6.15,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_CAP_004"
+      ]
+    },
+    {
+      "profile": "capcut_web_voiceover",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-capcut_web_voiceover-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "capcut_web_voiceover",
+        "--output-dir",
+        "examples/data-validation/mock-capcut_web_voiceover-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 4,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 5.65,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_CAP_007"
+      ]
+    },
+    {
+      "profile": "canva_web_editable",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-canva_web_editable-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "canva_web_editable",
+        "--output-dir",
+        "examples/data-validation/mock-canva_web_editable-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 7,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 7.4,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_CAN_001"
+      ]
+    },
+    {
+      "profile": "canva_web_view_only",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-canva_web_view_only-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "canva_web_view_only",
+        "--output-dir",
+        "examples/data-validation/mock-canva_web_view_only-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 2,
+      "loaded_rules": 15,
+      "script_version": 1,
+      "duration_seconds": 4.65,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_CAN_008"
+      ]
+    },
+    {
+      "profile": "adobe_web_captions",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-adobe_web_captions-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "adobe_web_captions",
+        "--output-dir",
+        "examples/data-validation/mock-adobe_web_captions-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 5,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 7.9,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_ADB_001"
+      ]
+    },
+    {
+      "profile": "adobe_web_editing",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-adobe_web_editing-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "adobe_web_editing",
+        "--output-dir",
+        "examples/data-validation/mock-adobe_web_editing-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 5,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 10.65,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_ADB_006"
+      ]
+    },
+    {
+      "profile": "bcut_ios",
+      "mode": "mock",
+      "directory": "examples/data-validation/mock-bcut_ios-001",
+      "command": [
+        "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/.venv/bin/python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--profile",
+        "bcut_ios",
+        "--output-dir",
+        "examples/data-validation/mock-bcut_ios-001"
+      ],
+      "exit_code": 0,
+      "status": "completed",
+      "active_facts": 10,
+      "loaded_rules": 14,
+      "script_version": 1,
+      "duration_seconds": 3.65,
+      "steps": 5,
+      "tool_calls": 3,
+      "source_ids": [
+        "P_BCT_001"
+      ]
+    }
+  ]
+}

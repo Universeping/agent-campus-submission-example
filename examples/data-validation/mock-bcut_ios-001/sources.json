@@ -1,0 +1,24 @@
+{
+  "P_BCT_001": {
+    "id": "P_BCT_001",
+    "product_id": "bcut",
+    "surfaces": [
+      "ios"
+    ],
+    "feature_scope": "语音转字幕",
+    "approved_text": "必剪 iOS 版支持语音转字幕。",
+    "source_id": "S_BCT_01",
+    "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+    "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "字幕",
+      "语音转字幕"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。",
+    "source_title": "必剪-B站官方出品 — App Store 中国区产品页",
+    "source_publisher": "bilibili（App Store 开发者产品描述）",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

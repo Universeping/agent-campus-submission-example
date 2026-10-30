@@ -1,6 +1,10 @@
 # 业务资料、规则与测试配置
 
-资料准备基线为 v0.1.0。[materials.json](materials.json) 与 [brand_rules.json](brand_rules.json) 已建立，先服务于最小正常案例。用户希望后续参考抖音、快手及剪映、必剪等官方资料，[sources.md](sources.md) 已登记首轮来源；基于官方来源的数据集尚未生成。
+资料准备基线为 v0.1.0。[materials.json](materials.json) 与 [brand_rules.json](brand_rules.json) 保留为 P01/B01 最小正常案例。已导入用户提供的 [原始资料包](data_pack/short_video_data_pack/README.md)，经 [pack_review.json](pack_review.json) 审阅，由 --profile 加载 8 组独立产品/客户端配置。40 条事实启用 39 条、1 条暂缓；规则 12 通用+8 范围，为项目自定政策，不是官方平台规则。来源与限制见 [sources.md](sources.md)、[接入说明](../docs/09-data-pack.md)。
+
+原包含事实、规则、来源和独立样例，原始内容保持不改。Material 仍仅 id/fact，来源等 sidecar 由 profiles.py 核对后传入运行器。不得把素材总表与所有范围规则简单合并；选择 profile 后必需规则全部加载。原包验证和人工样例不当作真实模型证据，当前测试与运行在 [data-validation](../examples/data-validation/README.md)。
+
+根目录 [.gitattributes](../.gitattributes) 对原包关闭文本换行转换，并让空白检查识别 CRLF；保证跨系统检出时原始内容摘要仍有效。提交前已核对暂存区中 62 个文件的 SHA-256 与原包清单一致。
 
 ## 当前最小数据
 

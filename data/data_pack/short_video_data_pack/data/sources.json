@@ -1,0 +1,94 @@
+{
+  "verified_on": "2026-10-31",
+  "sources": [
+    {
+      "id": "S_CAP_01",
+      "publisher": "CapCut",
+      "title": "How to Add Subtitles in CapCut Instantly: Web, Mobile, Desktop Guide",
+      "url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "verified_on": "2026-10-31",
+      "page_updated_on": null,
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_CAP_02",
+      "publisher": "CapCut",
+      "title": "Text to Speech in CapCut: Create Natural AI Voice",
+      "url": "https://www.capcut.com/tools/text-to-speech",
+      "verified_on": "2026-10-31",
+      "page_updated_on": null,
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_CAN_01",
+      "publisher": "Canva",
+      "title": "Generate and animate captions in Canva",
+      "url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "verified_on": "2026-10-31",
+      "page_updated_on": null,
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_CAN_02",
+      "publisher": "Canva",
+      "title": "Enable accessibility or view-only captions on videos and audio",
+      "url": "https://www.canva.com/help/enable-captions/",
+      "verified_on": "2026-10-31",
+      "page_updated_on": null,
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_ADB_01",
+      "publisher": "Adobe",
+      "title": "Caption videos",
+      "url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "verified_on": "2026-10-31",
+      "page_updated_on": "2026-08-07",
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_ADB_02",
+      "publisher": "Adobe",
+      "title": "Trim videos",
+      "url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+      "verified_on": "2026-10-31",
+      "page_updated_on": "2026-04-24",
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_ADB_03",
+      "publisher": "Adobe",
+      "title": "Resize videos",
+      "url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "verified_on": "2026-10-31",
+      "page_updated_on": "2026-04-24",
+      "authority": "official_product_documentation",
+      "verification_method": "web_page_read",
+      "archived_full_page": false
+    },
+    {
+      "id": "S_BCT_01",
+      "publisher": "bilibili（App Store 开发者产品描述）",
+      "title": "必剪-B站官方出品 — App Store 中国区产品页",
+      "url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "verified_on": "2026-10-31",
+      "page_updated_on": null,
+      "authority": "developer_provided_app_store_description",
+      "verification_method": "web_page_read",
+      "archived_full_page": false,
+      "note": "仅采纳开发者产品描述；不使用用户评论、榜单、评分或免费标签推断权益。"
+    }
+  ]
+}

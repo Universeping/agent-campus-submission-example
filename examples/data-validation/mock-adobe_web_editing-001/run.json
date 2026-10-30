@@ -1,0 +1,191 @@
+{
+  "run_id": "becdddd0a5ce4964bb468375111af0e8",
+  "mode": "mock",
+  "command": [
+    "python",
+    "-m",
+    "src.main",
+    "--mode",
+    "mock",
+    "--profile",
+    "adobe_web_editing",
+    "--output-dir",
+    "examples/data-validation/mock-adobe_web_editing-001"
+  ],
+  "system_prompt_sha256": "c1e4d7261450968139165cbef94a4e99a2f89b9d62e3feea0ded5c900777bb3c",
+  "mock_scenario": "normal",
+  "simulate_search_failure": false,
+  "sha256": {
+    "data/data_pack/short_video_data_pack/profiles/index.json": "855d3faa6a1de781252bcbc870bcd7179ff4d8e7e40538823c0d7334d05f5573",
+    "data/data_pack/short_video_data_pack/data/materials.json": "6a9c90fef17c4183e48f5c364e243bb86d05a7f11f83827f2817419d402e112f",
+    "data/data_pack/short_video_data_pack/data/material_metadata.json": "cb64bc0b2b3dd8aa0619ea4fdabcbbca122c47405a7cc0da17648f8131817b14",
+    "data/data_pack/short_video_data_pack/data/products.json": "a2dafca483f7376d030e576fb156121f2bc92e7a96fe5ca2066313693cb98c41",
+    "data/data_pack/short_video_data_pack/data/sources.json": "deb7efcdb0a336873c0c5a91e7d88f8ada07080b675b82f8721883e18ca9ed47",
+    "data/data_pack/short_video_data_pack/data/brand_rules.json": "8b5889e935d5f5442236cd80ab0434e7c92f5637c262fb0eb2bc073658bce117",
+    "data/data_pack/short_video_data_pack/data/scope_rules.json": "12caeee9968e5a48f0b769123c5ba6f43f7ad0a602f180e3fa9fb8f66ce1e047",
+    "data/data_pack/short_video_data_pack/data/rule_metadata.json": "c2dc9310c081e235901429ae077cee2c7f50f5ddea7018713cbb17c3d690e312",
+    "data/data_pack/short_video_data_pack/profiles/adobe_web_editing/manifest.json": "3a9c5a700ca1fc7c57d35c28ff5df5aa15abf16d3c5218f688346610096a7b51",
+    "data/data_pack/short_video_data_pack/profiles/adobe_web_editing/input.json": "43c57d1280675923a38556b944a69d34a9dfd742076a168b571c98d51694dc42",
+    "data/data_pack/short_video_data_pack/profiles/adobe_web_editing/materials.json": "124335e24f27da9b543805c397808740c95cfc33ad2278a4be45ac59d1bce83f",
+    "data/data_pack/short_video_data_pack/profiles/adobe_web_editing/brand_rules.json": "8b10af985e6d218199b3b6ef003659c89c87a4a50b10f2a7ee048422d0681864",
+    "data/pack_review.json": "8ea0e9040ae30620a4e1ffb823b716078122d74c9b31efa6a77da7fa8b5ee931",
+    "src/tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+    "src/agent.py": "6f02d246cb6f20358dccf744d7ed72c161e99a5c58cf1a236c62eef7a5d5098b",
+    "src/main.py": "9838cecb6221f4ccc1160f5901a3639ef93eec4e43f241eefe98fa6a91b3e46c",
+    "src/schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+    "src/__init__.py": "7ae54096aa3796f8b993ae2664a4889270257431e274ed4b6fd20cfa08700af5",
+    "src/trace.py": "1caa9a5ae3c657ba3b4450261a7dd64c4cac4cece8f076ff38384c9def80fa9d",
+    "src/model.py": "ba1475a86c26e56ab0b040384c8ec000e710336b73e7c2a34cce41d052cbb409",
+    "src/profiles.py": "96e255c10c76d4005d67304ad94fc2489e2c76ddf4c7fd127a2ce6c3760f6115"
+  },
+  "model": "offline-mock",
+  "data_profile": {
+    "profile": "adobe_web_editing",
+    "product_id": "adobe_express",
+    "product_name": "Adobe Express",
+    "surface": "web",
+    "feature_scopes": [
+      "resize_video",
+      "trim_video"
+    ],
+    "rule_origin": "project_authored_demo_policy",
+    "conditions": "只收录本包所核验的网页版说明；不推断移动端功能。",
+    "material_ids": [
+      "P_ADB_006",
+      "P_ADB_007",
+      "P_ADB_008",
+      "P_ADB_009",
+      "P_ADB_010"
+    ],
+    "excluded_material_ids": []
+  },
+  "material_provenance": {
+    "P_ADB_006": {
+      "id": "P_ADB_006",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "trim_video",
+      "approved_text": "Adobe Express 网页端的 Trim video 支持设置开始和结束时间来裁短视频。",
+      "source_id": "S_ADB_02",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+      "source_section": "Trim videos / Start Time and End Time",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "裁短",
+        "裁剪时长",
+        "开始时间",
+        "结束时间",
+        "Trim"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "Trim videos",
+      "source_publisher": "Adobe",
+      "rule_origin": "project_authored_demo_policy"
+    },
+    "P_ADB_007": {
+      "id": "P_ADB_007",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "trim_video",
+      "approved_text": "Adobe Express 网页端的 Trim video 支持下载裁短后的视频。",
+      "source_id": "S_ADB_02",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+      "source_section": "Trim videos / Download",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "裁短",
+        "下载",
+        "Trim"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "Trim videos",
+      "source_publisher": "Adobe",
+      "rule_origin": "project_authored_demo_policy"
+    },
+    "P_ADB_008": {
+      "id": "P_ADB_008",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "resize_video",
+      "approved_text": "Adobe Express 网页端的 Resize video 支持选择社交平台尺寸预设或自定义尺寸。",
+      "source_id": "S_ADB_03",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "source_section": "Resize videos / Resize for",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "尺寸",
+        "预设",
+        "自定义",
+        "Resize"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "Resize videos",
+      "source_publisher": "Adobe",
+      "rule_origin": "project_authored_demo_policy"
+    },
+    "P_ADB_009": {
+      "id": "P_ADB_009",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "resize_video",
+      "approved_text": "Adobe Express 网页端的 Resize video 支持选择宽高比并调整视频缩放。",
+      "source_id": "S_ADB_03",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "source_section": "Resize videos / aspect ratio and Video scale",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "尺寸",
+        "宽高比",
+        "缩放",
+        "Resize"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "Resize videos",
+      "source_publisher": "Adobe",
+      "rule_origin": "project_authored_demo_policy"
+    },
+    "P_ADB_010": {
+      "id": "P_ADB_010",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "resize_video",
+      "approved_text": "Adobe Express 的 Resize video 用于调整视频尺寸，Trim video 用于缩短时长。",
+      "source_id": "S_ADB_03",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "source_section": "Resize videos / Note",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "尺寸",
+        "时长",
+        "Resize",
+        "Trim",
+        "区别"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "Resize videos",
+      "source_publisher": "Adobe",
+      "rule_origin": "project_authored_demo_policy"
+    }
+  },
+  "input_sha256": "6b6a0d8226b8a86b02b23678ead4d0c9651684e017a6005baab6268a334fec80",
+  "limits": {
+    "max_steps": 12,
+    "max_tool_calls": 8,
+    "max_transport_retries": 1
+  }
+}

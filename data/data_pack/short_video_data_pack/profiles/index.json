@@ -1,0 +1,58 @@
+[
+  {
+    "name": "capcut_web_captions",
+    "product_id": "capcut",
+    "surface": "web",
+    "facts": 3,
+    "rules": 14
+  },
+  {
+    "name": "capcut_desktop_captions",
+    "product_id": "capcut",
+    "surface": "desktop",
+    "facts": 3,
+    "rules": 14
+  },
+  {
+    "name": "capcut_web_voiceover",
+    "product_id": "capcut",
+    "surface": "web",
+    "facts": 4,
+    "rules": 14
+  },
+  {
+    "name": "canva_web_editable",
+    "product_id": "canva",
+    "surface": "web",
+    "facts": 7,
+    "rules": 14
+  },
+  {
+    "name": "canva_web_view_only",
+    "product_id": "canva",
+    "surface": "web",
+    "facts": 3,
+    "rules": 15
+  },
+  {
+    "name": "adobe_web_captions",
+    "product_id": "adobe_express",
+    "surface": "web",
+    "facts": 5,
+    "rules": 14
+  },
+  {
+    "name": "adobe_web_editing",
+    "product_id": "adobe_express",
+    "surface": "web",
+    "facts": 5,
+    "rules": 14
+  },
+  {
+    "name": "bcut_ios",
+    "product_id": "bcut",
+    "surface": "ios",
+    "facts": 10,
+    "rules": 14
+  }
+]

@@ -10,7 +10,10 @@
 | agent.py | prepare/call_model/dispatch/finalize 图节点、可信状态、历史版本和预算。 |
 | tools.py | 实际关键词检索、明确假设的估时、受控事实及品牌规则检查。 |
 | trace.py | 实际事件 JSONL 和凭据/内部推理过滤。 |
+| profiles.py | 原包 profile、来源、产品/客户端与必需规则校验，应用审阅排除项。 |
 
 入口：`.venv/bin/python -m src.main --mode mock --input examples/normal/input.json`。真实调用使用 --mode real 和本地密钥。默认只对 DeepSeek 直连，不改变系统代理。
+
+产品配置：`.venv/bin/python -m src.main --profile bcut_ios --mode mock`；用 --list-profiles 查看 8 个配置。省略 --input 使用对应样例，素材与全部规则由配置提供。profile 输出新增 sources.json，run.json 保存来源元数据和配置摘要，详见 [接入说明](../docs/09-data-pack.md)。
 
 模型自主选择业务动作，程序执行和裁决；不执行模型任意代码，不接受自报报告。当前不含前端、HTTP API、视频生成、持久化会话或开放域事实核验。

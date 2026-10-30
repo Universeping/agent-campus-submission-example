@@ -1,0 +1,2 @@
+# Preserve the supplied data pack bytes so its SHA-256 manifest stays valid.
+/data/data_pack/short_video_data_pack/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

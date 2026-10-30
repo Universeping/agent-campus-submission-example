@@ -2,6 +2,8 @@
 
 核对日期：2026-10-30。此文件记录资料调研，不是已实现规则、最终数据集或模型验证报告。仅保存简短转述和定位，未复制整页内容。后续选用资料时应保留来源 ID，并复核版本、终端和适用范围。
 
+2026-10-31 补充：用户资料包的 8 个官方/开发者来源已登记于 [sources.json](data_pack/short_video_data_pack/data/sources.json)，本轮读取与索引复核方法见 [pack-review.json](../examples/data-validation/pack-review.json)。8 个 profile 当前启用 39 条受控中文转述，P_CAN_010 暂缓；来源日期为包内核验记录，不意味着运行时联网核验或实测产品。接入和边界见 [说明](../docs/09-data-pack.md)。规则仍为项目自定演示政策，不冒充厂商官方政策。
+
 ## 模型与编排
 
 | ID | 官方来源 | 本轮核对结果 |

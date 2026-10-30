@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "Adobe Express 网页端支持选择媒体口语语言后生成字幕。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "Adobe Express 网页端支持选择媒体口语语言后生成字幕。",
+      "source_ids": [
+        "P_ADB_001"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "Adobe Express 网页端支持在 Transcript 面板中修改生成的字幕文字。",
+      "source_ids": [
+        "P_ADB_002"
+      ]
+    }
+  ]
+}

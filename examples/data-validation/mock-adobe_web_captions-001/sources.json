@@ -1,0 +1,25 @@
+{
+  "P_ADB_001": {
+    "id": "P_ADB_001",
+    "product_id": "adobe_express",
+    "surfaces": [
+      "web"
+    ],
+    "feature_scope": "captions",
+    "approved_text": "Adobe Express 网页端支持选择媒体口语语言后生成字幕。",
+    "source_id": "S_ADB_01",
+    "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+    "source_section": "Generate captions directly in the editor",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "字幕",
+      "生成字幕",
+      "语言"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+    "source_title": "Caption videos",
+    "source_publisher": "Adobe",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

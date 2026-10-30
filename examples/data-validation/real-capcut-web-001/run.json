@@ -1,0 +1,138 @@
+{
+  "run_id": "ea749c3822724f64bcb088428d45eddf",
+  "mode": "real",
+  "command": [
+    "python",
+    "-m",
+    "src.main",
+    "--mode",
+    "real",
+    "--profile",
+    "capcut_web_captions",
+    "--output-dir",
+    "examples/data-validation/real-capcut-web-001"
+  ],
+  "system_prompt_sha256": "c1e4d7261450968139165cbef94a4e99a2f89b9d62e3feea0ded5c900777bb3c",
+  "mock_scenario": null,
+  "simulate_search_failure": false,
+  "sha256": {
+    "data/data_pack/short_video_data_pack/profiles/index.json": "855d3faa6a1de781252bcbc870bcd7179ff4d8e7e40538823c0d7334d05f5573",
+    "data/data_pack/short_video_data_pack/data/materials.json": "6a9c90fef17c4183e48f5c364e243bb86d05a7f11f83827f2817419d402e112f",
+    "data/data_pack/short_video_data_pack/data/material_metadata.json": "cb64bc0b2b3dd8aa0619ea4fdabcbbca122c47405a7cc0da17648f8131817b14",
+    "data/data_pack/short_video_data_pack/data/products.json": "a2dafca483f7376d030e576fb156121f2bc92e7a96fe5ca2066313693cb98c41",
+    "data/data_pack/short_video_data_pack/data/sources.json": "deb7efcdb0a336873c0c5a91e7d88f8ada07080b675b82f8721883e18ca9ed47",
+    "data/data_pack/short_video_data_pack/data/brand_rules.json": "8b5889e935d5f5442236cd80ab0434e7c92f5637c262fb0eb2bc073658bce117",
+    "data/data_pack/short_video_data_pack/data/scope_rules.json": "12caeee9968e5a48f0b769123c5ba6f43f7ad0a602f180e3fa9fb8f66ce1e047",
+    "data/data_pack/short_video_data_pack/data/rule_metadata.json": "c2dc9310c081e235901429ae077cee2c7f50f5ddea7018713cbb17c3d690e312",
+    "data/data_pack/short_video_data_pack/profiles/capcut_web_captions/manifest.json": "aa5a5b88f880ec815d3826115ffb98ee3cb1f0bc4a5f070147310d033f987820",
+    "data/data_pack/short_video_data_pack/profiles/capcut_web_captions/input.json": "2e3d561e5df1cc0fb1e2bb4e24e9e2fd326827353981738554b00202d0c6f57f",
+    "data/data_pack/short_video_data_pack/profiles/capcut_web_captions/materials.json": "9180cceac53eea51fdf31068357e9b9bc8dc91c82bd5a1b70e14bf02c53a2491",
+    "data/data_pack/short_video_data_pack/profiles/capcut_web_captions/brand_rules.json": "c427ca9dff4f2bac5f6f8ebceb370da8eb202ee64cff8c7bb707534742a76a3a",
+    "data/pack_review.json": "8ea0e9040ae30620a4e1ffb823b716078122d74c9b31efa6a77da7fa8b5ee931",
+    "src/tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+    "src/agent.py": "6f02d246cb6f20358dccf744d7ed72c161e99a5c58cf1a236c62eef7a5d5098b",
+    "src/main.py": "9838cecb6221f4ccc1160f5901a3639ef93eec4e43f241eefe98fa6a91b3e46c",
+    "src/schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+    "src/__init__.py": "7ae54096aa3796f8b993ae2664a4889270257431e274ed4b6fd20cfa08700af5",
+    "src/trace.py": "1caa9a5ae3c657ba3b4450261a7dd64c4cac4cece8f076ff38384c9def80fa9d",
+    "src/model.py": "ba1475a86c26e56ab0b040384c8ec000e710336b73e7c2a34cce41d052cbb409",
+    "src/profiles.py": "96e255c10c76d4005d67304ad94fc2489e2c76ddf4c7fd127a2ce6c3760f6115"
+  },
+  "model": "deepseek-v4-pro",
+  "timeout_seconds": 60.0,
+  "use_proxy": false,
+  "data_profile": {
+    "profile": "capcut_web_captions",
+    "product_id": "capcut",
+    "product_name": "CapCut",
+    "surface": "web",
+    "feature_scopes": [
+      "captions"
+    ],
+    "rule_origin": "project_authored_demo_policy",
+    "conditions": "不等同于剪映；不推断中国大陆可用性、套餐或价格。",
+    "material_ids": [
+      "P_CAP_001",
+      "P_CAP_002",
+      "P_CAP_003"
+    ],
+    "excluded_material_ids": []
+  },
+  "material_provenance": {
+    "P_CAP_001": {
+      "id": "P_CAP_001",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 网页端可根据视频音频生成字幕。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "How to add auto captions on CapCut Web / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "自动字幕",
+        "音频转文字"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "How to Add Subtitles in CapCut Instantly: Web, Mobile, Desktop Guide",
+      "source_publisher": "CapCut",
+      "rule_origin": "project_authored_demo_policy"
+    },
+    "P_CAP_002": {
+      "id": "P_CAP_002",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 网页端支持修改生成的字幕文字。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "How to add auto captions on CapCut Web / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "修改文字",
+        "校对"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "How to Add Subtitles in CapCut Instantly: Web, Mobile, Desktop Guide",
+      "source_publisher": "CapCut",
+      "rule_origin": "project_authored_demo_policy"
+    },
+    "P_CAP_003": {
+      "id": "P_CAP_003",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 网页端支持删除或添加字幕行。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "How to add auto captions on CapCut Web / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "删除",
+        "添加字幕行"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+      "source_title": "How to Add Subtitles in CapCut Instantly: Web, Mobile, Desktop Guide",
+      "source_publisher": "CapCut",
+      "rule_origin": "project_authored_demo_policy"
+    }
+  },
+  "input_sha256": "82fdcebaa99823a1bc17f1a26a05b68edc05f835c5fe1ca69bc646cde8b71df0",
+  "limits": {
+    "max_steps": 12,
+    "max_tool_calls": 8,
+    "max_transport_retries": 1
+  }
+}

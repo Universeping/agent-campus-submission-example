@@ -1,0 +1,27 @@
+{
+  "P_ADB_006": {
+    "id": "P_ADB_006",
+    "product_id": "adobe_express",
+    "surfaces": [
+      "web"
+    ],
+    "feature_scope": "trim_video",
+    "approved_text": "Adobe Express 网页端的 Trim video 支持设置开始和结束时间来裁短视频。",
+    "source_id": "S_ADB_02",
+    "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+    "source_section": "Trim videos / Start Time and End Time",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "裁短",
+      "裁剪时长",
+      "开始时间",
+      "结束时间",
+      "Trim"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+    "source_title": "Trim videos",
+    "source_publisher": "Adobe",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

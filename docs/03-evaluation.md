@@ -1,8 +1,16 @@
 # 效果验证
 
-当前 87 项测试全部通过，无跳过。新提示词五条 Mock 案例通过，真实验证连接失败；旧提示词曾由用户在本机完成两条 DeepSeek V4 Pro 路径：正常任务 v2 / 7.1 秒、检索故障注入任务 v2 / 9.4 秒。旧记录不证明新提示词效果。
+当前 105 项测试全部通过，无跳过；8 个产品 profile 的实际 Mock CLI 均 completed。当前资料配置真实尝试 connection_error，未收到模型动作。更早提示词的 Mock 和两条真实成功记录保留为历史，不证明当前配置的真实效果。
 
-## 新提示词与新增场景
+## 产品资料扩充
+
+原包 40 条事实、20 条项目规则、8 个配置，经审阅启用 39 条、隔离易混淆的 P_CAN_010。原包 62 个内容摘要全部匹配。[原始包复跑 140 项检查](../examples/data-validation/raw-pack-report.json) 全部通过，其中包含确认混合库缺少产品隔离的已知限制；它们不是 140 个业务或模型成功案例。
+
+[8 次 Mock CLI 清单](../examples/data-validation/mock-runs.json) 全部 completed，实际时长 5.4、6.15、5.65、7.4、4.65、7.9、10.65、3.65 秒；每例保存同稿检查、Trace 和来源。新增 18 项配置测试，全部项目测试为 105 项。Mock 预设选择首条事实，不证明主题完整覆盖或创作质量。[真实 CapCut 尝试](../examples/data-validation/real-capcut-web-001/result.json) connection_error，未收到模型动作。
+
+范围规则为项目字面禁用项，可能误拒合理否定/比较；完整来源核对、复跑与限制见 [资料说明](09-data-pack.md)、[当前证据](../examples/data-validation/README.md)。旧 [87 项日志](../examples/prompt-validation/unittest-v2-001.txt) 是历史源码证据。
+
+## 上一阶段提示词与新增场景
 
 本轮按用户方案更新提示词，补充授权与主题相关事实、allowed_expressions 实际字段、同镜引用、至少表达一条事实、错误分类、终止选择与预算；工具和完成校验保持原有逻辑。新运行 run.json 保存提示词 SHA-256。
 
@@ -22,7 +30,7 @@
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-[当前实际测试日志](../examples/prompt-validation/unittest-v2-001.txt) 包含环境、源码/测试/批量入口指纹和基线 Git SHA。以文件指纹识别尚未提交的被测内容，不用基线提交冒充最终代码版本。上一阶段 [79 项日志](../examples/agent-validation/unittest-001.txt) 保留为历史。
+[当前实际测试日志](../examples/data-validation/unittest-001.txt) 包含环境、源码/测试/审阅配置指纹和基线 Git SHA。以文件指纹识别尚未提交的被测内容，不用基线提交冒充最终代码版本。上一阶段 [79 项日志](../examples/agent-validation/unittest-001.txt) 保留为历史。
 
 | 测试模块 | 数量 | 主要验证 |
 | --- | --- | --- |
@@ -32,6 +40,7 @@
 | test_agent.py | 24 | 真实 LangGraph 集成及节点契约、检查失效、完成拒绝、预算与恢复。 |
 | test_cli_trace.py | 4 | 文件/终端输入、结果保存、拒绝覆盖和 Trace 脱敏。 |
 | test_validation_cases.py | 8 | 区分实际分支覆盖、未触发、网络受阻、过期报告和检查顺序。 |
+| test_profiles.py | 18 | 39 条事实、人工样例、来源/范围、必需规则、隔离条目、实际图与 CLI。 |
 
 HTTP 单测使用模拟响应；Mock 集成使用实际 LangGraph 和本地工具。节点契约测试不单独当作图集成证据。旧 [15 项契约日志](../examples/schema-validation/unittest-001.txt) 和 [37 项工具阶段日志](../examples/tool-validation/unittest-001.txt) 是历史结果，不代表当前源码。
 
@@ -76,6 +85,6 @@ HTTP 单测使用模拟响应；Mock 集成使用实际 LangGraph 和本地工�
 
 用户反馈本机启用代理时无法访问 DeepSeek，直连后成功。现增加仅作用于 DeepSeek 客户端的 DEEPSEEK_USE_PROXY 开关，默认 false；不推断所有代理都不可用。新故障成功记录明确 use_proxy=false。
 
-尚未验证真实模型超时长修订、多个产品事实、大规模重复运行或不同平台效果。原文及封闭表达检查会误拒合理改写，创作空间有限；时长仅为 timing-v1 估算。未实现完整平台规则、开放域事实核验、会话恢复、HTTP API 或前端。当前三个场景共享很小的合成事实，不能外推到真实业务规模。
+尚未验证真实模型超时长修订、多产品 profile、大规模重复运行或不同平台效果。原文及封闭表达检查会误拒合理改写，创作空间有限；时长仅为 timing-v1 估算。未实现完整平台规则、开放域事实核验、会话恢复、HTTP API 或前端。旧真实场景共享很小的合成事实；新增 profile 虽扩展了资料和 Mock 验证，仍不能外推真实模型业务效果。
 
-历史 run.json 摘要保持不改；本轮 agent 的提示词和 main 的元数据已变化，因此旧故障真实运行也不对应当前完整源码。旧版本结果按原始摘要解释。本轮未改变工具与业务资料，新增的是隔离的合成测试输入；当前源码测试见上方 87 项日志。
+历史 run.json 摘要保持不改；当前 agent 提示词、main 元数据、profile 接入和 Mock 适配已变化，因此旧故障真实运行也不对应当前完整源码。旧版本结果按原始摘要解释。三个本地工具的计算与事实判定未放宽；当前资料由审阅后的 profile 注入，源码测试见上方 105 项日志。

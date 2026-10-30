@@ -1,0 +1,117 @@
+{
+  "verified_at": "2026-10-30T17:18:14.118765+00:00",
+  "tests": 105,
+  "test_file_hashes_matched": 18,
+  "raw_pack_content_hashes_matched": 62,
+  "public_candidate_text_files_checked": 315,
+  "configured_key_leaks": 0,
+  "sensitive_artifact_fields": 0,
+  "broken_local_links": [],
+  "runs": [
+    {
+      "profile": "capcut_web_captions",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "5decc7a87b87d18ec7a6566bdb22ba9ea38769ce785fd74ffa3fcc271351091c",
+        "history.json": "af13a8116eba6007c03d0b0aac638bf9ff51b0d015fac41be9bd58c12a6dce54",
+        "result.json": "e8994968c663175b79a521c4019904abe670b68816fe5bf0ecf9b4ca33b5161d",
+        "run.json": "34560df1169a72f480f43ba5eb1187daf5529af91bfbcfcb1ee05334f6fa60ac",
+        "script.md": "1cefc76a59de202b56976314a05f64296d6497349b407105ea33ecf268c4fa36",
+        "sources.json": "9f3433a85895de3593bc62f790e165015e3718cd3d6f7d26ab7042fec71d1331",
+        "trace.jsonl": "4acea6818204bcfb2e3a93e16b6e670e7ff28d005b7778bb8200120dfbdfceb6"
+      }
+    },
+    {
+      "profile": "capcut_desktop_captions",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "a95dc37b3429f45b77c96bc8c955526b62587bd93f9bd658f345f5a8e0c41a91",
+        "history.json": "222c9bd2da70ed52025a82f57dbb3c71536b5cc46618df81bf8042d82e18dfa7",
+        "result.json": "bbf6b861708db27e85020bf079d4684490de739bb3dd6c38eebd3d8cd586c081",
+        "run.json": "c94704859d080079ad775083c95c6b4a0f587dbe81c8c9fe778768ff3d454d92",
+        "script.md": "df31c65b29e1df2a0b9d785f09621083e99d3488da8b22c4deec21b36c7b657a",
+        "sources.json": "10c82d28fce1ea7be02fc302a27589db10f8b1802b5b4644c0c2f139c45d739c",
+        "trace.jsonl": "192e6fdc0809b33b0da985445fdfd01813d74a5f926c49cf00a02448a02b330a"
+      }
+    },
+    {
+      "profile": "capcut_web_voiceover",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "7936fe17344624615f9888fed8dd78e8d0f3e2703971733bd05669d2c4102773",
+        "history.json": "67f1d6c5b5c394cef7ae91ee5faa453e5e3b9b05454d0d14a519897b185dc949",
+        "result.json": "9ccb67187f9969222e2c80f016ea38030b7e129b8b1487ec6274f1ccfe58f5a4",
+        "run.json": "0ea7587bfe45ef79db6be4976691df857f1f04c56ab2b1cda2ac98b876c34e50",
+        "script.md": "c211afd605e33483602fb9b256e34de0cc5bbfd0c1bf0c9dff27a7b926fd6f70",
+        "sources.json": "be8bf6a0f321b2870608fd00f34ab4233310c899862eeb84a2088baaede5d7fb",
+        "trace.jsonl": "d957d622166677eef3e991419601e0376f15feae16d28006d807e7508788fc65"
+      }
+    },
+    {
+      "profile": "canva_web_editable",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "cb0b8c20787cd454e78ee96ff0b01929575d5d727c1f2b3f4d0379b72925b3ad",
+        "history.json": "e99fcda23209f01f1fbf8b545c5878ae2c1e2fa30a9b975f863fe44ad7dbb186",
+        "result.json": "814c197e6a8c62134e23a9df03fa2abf7005681910fa74af1e06a4fed3708171",
+        "run.json": "b2ddf350f3276d06402055ac540b8b16a1dd7cb1f83105795cfd96f9f5105e4f",
+        "script.md": "3844737c22568f8b8936b9d263275d2df34dd72c600a91bcfd897b592b13b3b4",
+        "sources.json": "7101231003a3459bc077999990e563766c7df2862b6914abd08ec46d03b17022",
+        "trace.jsonl": "eaa610ae9088c7e342da53c6d5477bf6d1b40ca0596f9ffe214712179a3a2860"
+      }
+    },
+    {
+      "profile": "canva_web_view_only",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "f53643cf07a3dacf4cc184877473d557fb832bb7b6f5920d7500aa16d22fda07",
+        "history.json": "3e581c75ec0c1e3035f13bfc61194740c033248847756081165ce1a652d57fab",
+        "result.json": "2a08b2f0dbafe784c831fbcd2dd23d8da6390e81b278551073eb06bb69c3b1e5",
+        "run.json": "433b94eebfca49964afc146376731bbf0bf0c3e3130a31170e2195fa265d3f89",
+        "script.md": "a26e27f4065d528cb0855359f1001dc395082676165188911ca97d5f7b7edb78",
+        "sources.json": "bbc1a85eaeeefba3c1881e1a2d17acc2a97e7515be1bf6e8bb46728c7349e250",
+        "trace.jsonl": "38adf664ee000f268b7c2a0d397a4ba70efb432c6e07221daf7310a1f020c734"
+      }
+    },
+    {
+      "profile": "adobe_web_captions",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "4212032fe81c3401baac5f97d1fa7ae7104d01d5995005da5ed9e42e321dab89",
+        "history.json": "88236ef13a2e131306bf6446a11ee2a5dc7accbc85949b18f321faf553e25dd9",
+        "result.json": "e8cdfd7d6f74ba5104f8f803739e715d10e0eeb91ec48f1d0ad30b4147acf252",
+        "run.json": "29b526ea89ab22a299c3a8d03722c09d03ee23b4618468a806d32ec187e0033a",
+        "script.md": "6def0ad49487ca8b4608a756f9bc76d745b59818cc72a07a127bae130be56a38",
+        "sources.json": "2816b07b3919663b3cfc36d895dda6dd838df6dc8dce6ae47609c536442fc2e2",
+        "trace.jsonl": "5945e816a10d2b983ac870c770c7448f15808f0787751fe82438c51743aa420c"
+      }
+    },
+    {
+      "profile": "adobe_web_editing",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "de7c6112d638ee61e0b657924d24b507e082612d4c20c4eefb2a7ede6bdc5ffa",
+        "history.json": "beb0e9d70adbb6162eb3db33e08848908964f54e473ec0e7602c8173793dcdcd",
+        "result.json": "e18e5beddc748a8f2a81b6151b2d75342cc8e0712b6bce524caad8d5c97db415",
+        "run.json": "e6265b2aeaee851bf15d6220ac4c4d1c98f05869cc27cc68d3b534734bdf0313",
+        "script.md": "78a2adf1cd72cb07df43466f71e5b95fcfce96050fb16e15211f3e6db06841e8",
+        "sources.json": "83ec5e1851f80f72d16e1708bd0257a617c1c835d0f63256efc90b5dd02331f7",
+        "trace.jsonl": "0666190fc539ece2f74c9a096b1b82e86468f6e4b5c462169895679c3a74b0b2"
+      }
+    },
+    {
+      "profile": "bcut_ios",
+      "status": "verified",
+      "artifacts_sha256": {
+        "checks.json": "2564a168ef042e76ca3675205f3ee237fc49ebc58e052f5eb6ceb610299e225b",
+        "history.json": "b0ec93d8114219f7d7c626fc0ab1bea21b87f8dff0f1d10839c3fda48e5fb622",
+        "result.json": "fc00ef41755e1d7e3024cdc994b901c995e65d6a65fe1b0948cc9842e57d77a7",
+        "run.json": "49ceeb611d99d8bdd0c81a79b36a7fcc4b827d2168f32f4d820ab07221f7d491",
+        "script.md": "df711fd4e695034d1221dc909bbfa0caa69199183a58ddd594749e3600c105d3",
+        "sources.json": "10803aa21dd46ed360075f95defccbb26175bfb5797acb611c846abbd0fe625a",
+        "trace.jsonl": "42cf7b4b90fc0d1c7eb177593102134b320493d15b3d10b50a5979064f7a9ac0"
+      }
+    }
+  ],
+  "scope": "Actual artifact/source/link audit and local tool recomputation, no model calls; Mock does not establish real model behavior."
+}

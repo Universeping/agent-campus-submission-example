@@ -14,9 +14,10 @@ from .model import DeepSeekModel, MockModel, ModelConfig, ROOT, strict_json
 from .schemas import RunMode, TaskResult, ToolError
 from .tools import load_brand_rules, load_materials
 from .trace import TraceRecorder
+from .profiles import load_profile, list_profiles
 
 
-def render_script(result: TaskResult) -> str:
+def render_script(result: TaskResult, source_metadata=None) -> str:
     lines = ["# 短视频脚本", "", f"状态：{result.status.value}；模式：{result.mode.value}", ""]
     if result.script:
         script = result.script
@@ -39,6 +40,12 @@ def render_script(result: TaskResult) -> str:
         lines += ["", "待补充：", "", *("- " + question for question in result.questions)]
     if result.risks:
         lines += ["", "风险与限制：", "", *("- " + risk for risk in result.risks)]
+    if result.script and source_metadata:
+        lines += ["", "素材来源：", ""]
+        for key in result.script.source_ids:
+            if key in source_metadata:
+                info = source_metadata[key]
+                lines.append(f"- {key}：{info['source_title']}（核验：{info['verified_on']}；适用端：{', '.join(info['surfaces'])}） {info['source_url']}")
     return "\n".join(lines) + "\n"
 
 
@@ -51,7 +58,10 @@ def write_outputs(directory: Path, result: TaskResult, trace: TraceRecorder, sta
         "duration_result": result.duration_result.to_dict() if result.duration_result else None,
         "rule_check_result": result.rule_check_result.to_dict() if result.rule_check_result else None,
     })
-    (directory / "script.md").write_text(trace.sanitize(render_script(result)), encoding="utf-8")
+    provenance = (metadata or {}).get("material_provenance", {})
+    (directory / "script.md").write_text(trace.sanitize(render_script(result, provenance)), encoding="utf-8")
+    if "data_profile" in (metadata or {}):
+        save("sources.json", {key: provenance[key] for key in (result.script.source_ids if result.script else ()) if key in provenance})
     state = state or {}
     save("history.json", {
         "scripts": {str(key): value.to_dict() for key, value in state.get("scripts", {}).items()},
@@ -65,13 +75,15 @@ def write_outputs(directory: Path, result: TaskResult, trace: TraceRecorder, sta
 
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    inputs = parser.add_mutually_exclusive_group(required=True)
+    inputs = parser.add_mutually_exclusive_group()
     inputs.add_argument("--input", type=Path, help="需求 JSON 文件；- 表示标准输入")
     inputs.add_argument("--interactive", action="store_true", help="粘贴多行 JSON，以单独一行 END 提交")
     parser.add_argument("--mode", choices=["real", "mock"], default="mock")
     parser.add_argument("--env-file", type=Path, default=ROOT / ".env")
-    parser.add_argument("--materials", type=Path, default=ROOT / "data/materials.json")
-    parser.add_argument("--brand-rules", type=Path, default=ROOT / "data/brand_rules.json")
+    parser.add_argument("--materials", type=Path)
+    parser.add_argument("--brand-rules", type=Path)
+    parser.add_argument("--profile", help="审阅后的产品/客户端配置；省略 --input 时使用其输入样例")
+    parser.add_argument("--list-profiles", action="store_true", help="列出可用配置，不调用模型")
     parser.add_argument("--output-dir", type=Path, help="新建输出目录；拒绝覆盖已有目录")
     parser.add_argument("--max-steps", type=int, default=12)
     parser.add_argument("--max-tool-calls", type=int, default=8)
@@ -79,6 +91,17 @@ def main(argv=None) -> int:
     parser.add_argument("--mock-scenario", choices=["normal", "over-duration", "unsupported-claim", "early-finish"], default="normal")
     parser.add_argument("--simulate-search-failure", action="store_true", help="测试用：显式注入一次检索失败")
     args = parser.parse_args(argv)
+    if args.list_profiles:
+        try:
+            print(json.dumps(list_profiles(), ensure_ascii=False, indent=2))
+            return 0
+        except (OSError, ValueError, TypeError, KeyError):
+            print("资料配置无效，请检查数据包与审阅文件。", file=sys.stderr)
+            return 2
+    if not args.input and not args.interactive and not args.profile:
+        parser.error("需要 --input、--interactive 或 --profile")
+    if args.profile and (args.materials is not None or args.brand_rules is not None):
+        parser.error("--profile 不能与 --materials/--brand-rules 混用，以免绕过配置范围和必需规则")
     run_id = uuid4().hex
     directory = args.output_dir or ROOT / "outputs" / run_id
     try:
@@ -103,6 +126,18 @@ def main(argv=None) -> int:
         else:
             model = MockModel(args.mock_scenario)
             metadata["model"] = "offline-mock"
+        profile = load_profile(args.profile) if args.profile else None
+        if profile:
+            materials, rules = profile.materials, profile.brand_rules
+            evidence_files = profile.evidence_files
+            metadata["data_profile"] = {**profile.scope, "material_ids": [m.id for m in materials],
+                                        "excluded_material_ids": list(profile.excluded_material_ids)}
+            metadata["material_provenance"] = profile.material_metadata
+        else:
+            material_path = args.materials or ROOT / "data/materials.json"
+            rule_path = args.brand_rules or ROOT / "data/brand_rules.json"
+            materials, rules = load_materials(material_path), load_brand_rules(rule_path)
+            evidence_files = (material_path, rule_path)
         if args.interactive:
             print("粘贴任务 JSON，以单独一行 END 提交：", file=sys.stderr)
             lines = []
@@ -111,15 +146,18 @@ def main(argv=None) -> int:
                     break
                 lines.append(line)
             text = "".join(lines)
+        elif args.input is None:
+            text = json.dumps(profile.default_input, ensure_ascii=False)
         elif str(args.input) == "-":
             text = sys.stdin.read()
         else:
             text = args.input.read_text(encoding="utf-8")
         raw_input = strict_json(text)
         limits = AgentLimits(args.max_steps, args.max_tool_calls, args.max_transport_retries)
-        runner = AgentRunner(model, load_materials(args.materials), load_brand_rules(args.brand_rules),
-                             limits=limits, simulate_search_failure=args.simulate_search_failure)
-        for path in [args.materials, args.brand_rules, *(ROOT / "src").glob("*.py")]:
+        runner = AgentRunner(model, materials, rules, limits=limits, simulate_search_failure=args.simulate_search_failure,
+                             data_scope=profile.scope if profile else None,
+                             material_metadata=profile.material_metadata if profile else None)
+        for path in [*evidence_files, *(ROOT / "src").glob("*.py")]:
             metadata["sha256"][str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
         metadata["input_sha256"] = hashlib.sha256(text.encode()).hexdigest()
         metadata["limits"] = {"max_steps": limits.max_steps, "max_tool_calls": limits.max_tool_calls,
@@ -137,7 +175,7 @@ def main(argv=None) -> int:
         result = TaskResult(run_id, RunMode(args.mode), "failed", reason=message, errors=[error])
         trace.emit(0, "terminal", status="failed", error=error.to_dict())
     write_outputs(directory, result, trace, state, metadata)
-    print(trace.sanitize(render_script(result)))
+    print(trace.sanitize(render_script(result, metadata.get("material_provenance"))))
     print(f"结果目录：{directory}")
     return 0 if result.status.value == "completed" else 1 if result.status.value in ("needs_input", "incomplete") else 2
 

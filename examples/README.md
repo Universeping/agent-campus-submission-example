@@ -1,6 +1,6 @@
 # 输入、实际输出和验证材料
 
-当前核心循环可运行。当前 [新提示词验证](prompt-validation/README.md) 包含 87 项通过测试、五条 Mock 案例及一次真实连接失败。旧提示词的成功路径、Trace 和指纹见 [历史 Agent 运行索引](agent-validation/README.md)，不能代替新提示词真实验证。
+当前资料配置验证见 [data-validation](data-validation/README.md)：105 项测试、8 个 profile 的 Mock CLI 通过，真实尝试连接失败。之前 [提示词验证](prompt-validation/README.md) 和 [Agent 运行](agent-validation/README.md) 是历史源码记录，不作为当前配置的真实效果证明。
 
 ## 输入与资料
 
@@ -21,3 +21,7 @@ Mock 路径另覆盖正常、超时长、事实违规、故障恢复、无素材
 [历史工具记录](tool-validation/README.md) 的输入是人工脚本，不是模型生成；历史 15/37 项测试日志的源码指纹也不等于当前版本。不得将这些材料混同为完整真实模型验收。
 
 .env、note/ 和日常 outputs/ 不提交。公开证据不包含 API 密钥、认证头或模型内部思维过程；保留简短行动依据、版本对应的实际观察和必要失败记录。
+
+## 产品资料配置
+
+按 --profile 加载用户原始包与审阅决策，8 个配置启用 39 条事实、1 条暂缓。示例命令、八次 Mock 的完整文件、来源和失败记录见 [资料验证](data-validation/README.md)。原包 examples 中的脚本是人工工具输入，不是模型输出；输入 platform 为发布平台，不等同于产品客户端。

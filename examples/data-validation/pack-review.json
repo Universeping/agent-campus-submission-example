@@ -1,0 +1,207 @@
+{
+  "reviewed_at": "2026-10-30T17:13:21.382096+00:00",
+  "raw_facts": 40,
+  "active_facts": 39,
+  "quarantined_material_ids": [
+    "P_CAN_010"
+  ],
+  "profiles": [
+    {
+      "name": "capcut_web_captions",
+      "profile": "capcut_web_captions",
+      "product_id": "capcut",
+      "product_name": "CapCut",
+      "surface": "web",
+      "feature_scopes": [
+        "captions"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "不等同于剪映；不推断中国大陆可用性、套餐或价格。",
+      "facts": 3,
+      "rules": 14,
+      "excluded_material_ids": []
+    },
+    {
+      "name": "capcut_desktop_captions",
+      "profile": "capcut_desktop_captions",
+      "product_id": "capcut",
+      "product_name": "CapCut",
+      "surface": "desktop",
+      "feature_scopes": [
+        "caption_export",
+        "captions"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "不等同于剪映；不推断中国大陆可用性、套餐或价格。",
+      "facts": 3,
+      "rules": 14,
+      "excluded_material_ids": []
+    },
+    {
+      "name": "capcut_web_voiceover",
+      "profile": "capcut_web_voiceover",
+      "product_id": "capcut",
+      "product_name": "CapCut",
+      "surface": "web",
+      "feature_scopes": [
+        "text_to_speech"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "不等同于剪映；不推断中国大陆可用性、套餐或价格。",
+      "facts": 4,
+      "rules": 14,
+      "excluded_material_ids": []
+    },
+    {
+      "name": "canva_web_editable",
+      "profile": "canva_web_editable",
+      "product_id": "canva",
+      "product_name": "Canva",
+      "surface": "web",
+      "feature_scopes": [
+        "editable_captions"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "可编辑字幕与仅查看字幕分别建模；不混用功能范围。",
+      "facts": 7,
+      "rules": 14,
+      "excluded_material_ids": []
+    },
+    {
+      "name": "canva_web_view_only",
+      "profile": "canva_web_view_only",
+      "product_id": "canva",
+      "product_name": "Canva",
+      "surface": "web",
+      "feature_scopes": [
+        "view_only_captions"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "可编辑字幕与仅查看字幕分别建模；不混用功能范围。",
+      "facts": 2,
+      "rules": 15,
+      "excluded_material_ids": [
+        "P_CAN_010"
+      ]
+    },
+    {
+      "name": "adobe_web_captions",
+      "profile": "adobe_web_captions",
+      "product_id": "adobe_express",
+      "product_name": "Adobe Express",
+      "surface": "web",
+      "feature_scopes": [
+        "caption_quick_action",
+        "captions"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "只收录本包所核验的网页版说明；不推断移动端功能。",
+      "facts": 5,
+      "rules": 14,
+      "excluded_material_ids": []
+    },
+    {
+      "name": "adobe_web_editing",
+      "profile": "adobe_web_editing",
+      "product_id": "adobe_express",
+      "product_name": "Adobe Express",
+      "surface": "web",
+      "feature_scopes": [
+        "resize_video",
+        "trim_video"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "只收录本包所核验的网页版说明；不推断移动端功能。",
+      "facts": 5,
+      "rules": 14,
+      "excluded_material_ids": []
+    },
+    {
+      "name": "bcut_ios",
+      "profile": "bcut_ios",
+      "product_id": "bcut",
+      "product_name": "必剪",
+      "surface": "ios",
+      "feature_scopes": [
+        "发布到B站",
+        "封面智能抠图",
+        "封面模板",
+        "录音提词",
+        "批量粗剪",
+        "文本朗读",
+        "画中画",
+        "蒙版",
+        "视频模板",
+        "语音转字幕"
+      ],
+      "rule_origin": "project_authored_demo_policy",
+      "conditions": "本包依据中国区 App Store 开发者说明，仅用于 iOS 应用，不外推至 Android、桌面或网页。",
+      "facts": 10,
+      "rules": 14,
+      "excluded_material_ids": []
+    }
+  ],
+  "distinct_rules": 20,
+  "common_rules": 12,
+  "scope_rules": 8,
+  "rule_origin": "project_authored_demo_policy",
+  "sources": [
+    {
+      "id": "S_CAP_01",
+      "url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "review_method": "official_search_body",
+      "findings": "直接读取一度失败，官方搜索返回的同一页面正文覆盖网页端字幕增删改、桌面语言选择/布局/时间与导出步骤。"
+    },
+    {
+      "id": "S_CAP_02",
+      "url": "https://www.capcut.com/tools/text-to-speech",
+      "review_method": "direct_body_query_variant",
+      "findings": "原始路径一度读取失败，添加 enter_from=page_footer 后读取官方正文；线上文字转语音步骤与 FAQ 支持四条范围内表述。"
+    },
+    {
+      "id": "S_CAN_01",
+      "url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "review_method": "direct_body",
+      "findings": "页面明确区分 Editable Captions 与 view-only；支持条件、时间轴文字/时间、样式、MP4、语言检测及中文说明。"
+    },
+    {
+      "id": "S_CAN_02",
+      "url": "https://www.canva.com/help/enable-captions/",
+      "review_method": "direct_body",
+      "findings": "仅查看字幕不能编辑/下载与可编辑字幕并不冲突。P_CAN_010 对 Canva websites 的中文表述易混淆，单独隔离。"
+    },
+    {
+      "id": "S_ADB_01",
+      "url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "review_method": "direct_body",
+      "findings": "编辑器生成、Transcript 修改、样式/位置/大小，以及 Quick action 下载均有说明。"
+    },
+    {
+      "id": "S_ADB_02",
+      "url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+      "review_method": "direct_body",
+      "findings": "Start/End Time 与 Download 步骤支持裁短及下载表述。"
+    },
+    {
+      "id": "S_ADB_03",
+      "url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "review_method": "direct_body",
+      "findings": "社交尺寸/自定义、宽高比/缩放，并明确 Resize 与 Trim 区别。"
+    },
+    {
+      "id": "S_BCT_01",
+      "url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "review_method": "direct_developer_description",
+      "findings": "只核对开发者产品描述中的十项功能；仅作为 iOS 范围文档依据，不使用评论、评分或免费标签。"
+    }
+  ],
+  "limitations": [
+    "Documentary review is not a product/account/region entitlement test.",
+    "Source metadata dates are the data pack author verification dates, not evidence of runtime live browsing.",
+    "Forbidden-term rules are literal and may reject valid negations/comparisons; they are not general semantic policies.",
+    "Raw pack fixtures and 140 compatibility checks are deterministic, hand-authored tool evidence, not Agent decisions.",
+    "All-profile tests use scripted Mock decisions; real connection attempt failed."
+  ],
+  "original_pack_hashes_matched": 62,
+  "review_configuration_sha256": "8ea0e9040ae30620a4e1ffb823b716078122d74c9b31efa6a77da7fa8b5ee931"
+}

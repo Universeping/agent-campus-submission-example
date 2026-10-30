@@ -1,0 +1,86 @@
+[
+  {
+    "id": "B_SCOPE_CAPCUT",
+    "rule": "禁止把其他产品名称混入当前单产品脚本",
+    "forbidden_terms": [
+      "Canva",
+      "Adobe Express",
+      "必剪",
+      "剪映"
+    ]
+  },
+  {
+    "id": "B_SCOPE_CANVA",
+    "rule": "禁止把其他产品名称混入当前单产品脚本",
+    "forbidden_terms": [
+      "CapCut",
+      "Adobe Express",
+      "必剪"
+    ]
+  },
+  {
+    "id": "B_SCOPE_ADOBE_EXPRESS",
+    "rule": "禁止把其他产品名称混入当前单产品脚本",
+    "forbidden_terms": [
+      "CapCut",
+      "Canva",
+      "必剪"
+    ]
+  },
+  {
+    "id": "B_SCOPE_BCUT",
+    "rule": "禁止把其他产品名称混入当前单产品脚本",
+    "forbidden_terms": [
+      "CapCut",
+      "Canva",
+      "Adobe Express"
+    ]
+  },
+  {
+    "id": "B_SURFACE_WEB",
+    "rule": "禁用当前任务范围外的客户端名称（保守单端脚本策略）",
+    "forbidden_terms": [
+      "桌面端",
+      "桌面版",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ]
+  },
+  {
+    "id": "B_SURFACE_DESKTOP",
+    "rule": "禁用当前任务范围外的客户端名称（保守单端脚本策略）",
+    "forbidden_terms": [
+      "网页端",
+      "iOS",
+      "Android",
+      "手机版"
+    ]
+  },
+  {
+    "id": "B_SURFACE_IOS",
+    "rule": "禁用当前任务范围外的客户端名称（保守单端脚本策略）",
+    "forbidden_terms": [
+      "Android",
+      "安卓",
+      "Windows",
+      "macOS",
+      "桌面端",
+      "桌面版",
+      "网页端"
+    ]
+  },
+  {
+    "id": "B_CAN_VIEW_ONLY",
+    "rule": "仅查看字幕专用文案不得混入可编辑字幕或肯定下载编辑承诺",
+    "forbidden_terms": [
+      "可编辑字幕",
+      "支持编辑",
+      "可以编辑",
+      "支持下载",
+      "可以下载",
+      "可导出"
+    ]
+  }
+]

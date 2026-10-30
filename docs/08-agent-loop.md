@@ -40,6 +40,10 @@ Trace 记录 run_id、顺序、时间、步骤、动作、参数、调用 ID、�
 
 ## 独立验证
 
-87 项测试覆盖真实 LangGraph 条件路由、Mock+真实工具、版本失效、受控事实、预算、消息配对、协议错误、传输错误、配置、代理范围、CLI、Trace 及分支分类。HTTP 单测为模拟传输，分类器使用人工事件。新提示词真实连接受阻，结果见 [当前验证](../examples/prompt-validation/README.md)；旧真实效果见 [历史运行索引](../examples/agent-validation/README.md)。
+105 项测试覆盖真实 LangGraph 条件路由、Mock+真实工具、版本失效、受控事实、预算、消息配对、协议错误、传输错误、配置、代理范围、CLI、Trace 及分支分类。HTTP 单测为模拟传输，分类器使用人工事件。新提示词真实连接受阻，结果见 [当前验证](../examples/data-validation/README.md)；旧真实效果见 [历史运行索引](../examples/agent-validation/README.md)。
 
 LangGraph 1.2.18 负责状态图及执行，python-dotenv 1.2.4 负责 .env 读取；DeepSeek HTTP、动作验证、业务状态和检查逻辑由项目实现。未使用框架预制 Agent、持久化 checkpointer 或多 Agent。
+
+## 资料范围与来源
+
+可信 profile 选择单产品、客户端和功能范围，固定加载全部适用规则，data_scope 不由模型修改。完整事实及来源仍须通过实际 search 才进入 retrieved_materials/retrieved_material_metadata。run.json 保存配置、来源、审阅与源码摘要，sources.json 仅导出实际稿件引用的条目。P01 基线与 profile 独立；手工加载混合总表仍不自动具备产品范围校验。详见 [资料接入](09-data-pack.md)。

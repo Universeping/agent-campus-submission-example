@@ -1,0 +1,25 @@
+{
+  "P_CAP_007": {
+    "id": "P_CAP_007",
+    "product_id": "capcut",
+    "surfaces": [
+      "web"
+    ],
+    "feature_scope": "text_to_speech",
+    "approved_text": "CapCut 网页端支持将输入文字转换为语音。",
+    "source_id": "S_CAP_02",
+    "source_url": "https://www.capcut.com/tools/text-to-speech",
+    "source_section": "How to convert text to speech in the CapCut online video editor",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "文字转语音",
+      "配音",
+      "朗读"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+    "source_title": "Text to Speech in CapCut: Create Natural AI Voice",
+    "source_publisher": "CapCut",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

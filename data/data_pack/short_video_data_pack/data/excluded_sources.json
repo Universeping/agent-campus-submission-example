@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.jianying.com/",
+    "status": "candidate_not_in_runtime_materials",
+    "reason": "本轮直接读取超时，仅获得官方搜索索引正文；未作为当前可执行事实包依据。"
+  },
+  {
+    "url": "https://www.jianying.com/web/professional",
+    "status": "candidate_not_in_runtime_materials",
+    "reason": "官方搜索索引含产品说明，但直接页面只返回 iframe；本轮暂不纳入已完整读取的事实。"
+  },
+  {
+    "url": "https://bcut.bilibili.cn/",
+    "status": "replaced_by_developer_app_store_description",
+    "reason": "直接页面依赖 JavaScript；必剪事实改用已读到正文的开发者 App Store 产品描述。"
+  }
+]

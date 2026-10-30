@@ -1,0 +1,33 @@
+{
+  "profile": "adobe_web_editing",
+  "product_id": "adobe_express",
+  "surface": "web",
+  "material_ids": [
+    "P_ADB_006",
+    "P_ADB_007",
+    "P_ADB_008",
+    "P_ADB_009",
+    "P_ADB_010"
+  ],
+  "source_ids": [
+    "S_ADB_02",
+    "S_ADB_03"
+  ],
+  "brand_rule_ids": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B_SCOPE_ADOBE_EXPRESS",
+    "B_SURFACE_WEB"
+  ],
+  "important": "通过单独材料文件限制范围；现有代码不读取 product_id/surface 元数据，不自动阻止跨产品混用。"
+}

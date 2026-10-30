@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P_ADB_001",
+    "fact": "Adobe Express 网页端支持选择媒体口语语言后生成字幕。"
+  },
+  {
+    "id": "P_ADB_002",
+    "fact": "Adobe Express 网页端支持在 Transcript 面板中修改生成的字幕文字。"
+  },
+  {
+    "id": "P_ADB_003",
+    "fact": "Adobe Express 网页端支持调整字幕样式、字体、颜色和形状。"
+  },
+  {
+    "id": "P_ADB_004",
+    "fact": "Adobe Express 网页端支持拖动字幕位置并调整大小。"
+  },
+  {
+    "id": "P_ADB_005",
+    "fact": "Adobe Express 网页端的 Caption video 快捷操作支持修改字幕文字并下载结果。"
+  }
+]

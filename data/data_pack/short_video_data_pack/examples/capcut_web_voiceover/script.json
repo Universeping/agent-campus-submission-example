@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "CapCut 网页端支持将输入文字转换为语音。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "CapCut 网页端支持将输入文字转换为语音。",
+      "source_ids": [
+        "P_CAP_007"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "CapCut 网页端文字转语音支持选择声音风格、语气和语言。",
+      "source_ids": [
+        "P_CAP_008"
+      ]
+    }
+  ]
+}

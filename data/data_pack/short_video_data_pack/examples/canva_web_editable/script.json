@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "Canva 可为受支持视频设计中含语音的媒体生成可编辑字幕。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "Canva 可为受支持视频设计中含语音的媒体生成可编辑字幕。",
+      "source_ids": [
+        "P_CAN_001"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "Canva 的可编辑字幕支持在视频时间轴中修改文字。",
+      "source_ids": [
+        "P_CAN_002"
+      ]
+    }
+  ]
+}

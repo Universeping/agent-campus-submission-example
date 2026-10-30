@@ -1,0 +1,25 @@
+{
+  "P_CAP_001": {
+    "id": "P_CAP_001",
+    "product_id": "capcut",
+    "surfaces": [
+      "web"
+    ],
+    "feature_scope": "captions",
+    "approved_text": "CapCut 网页端可根据视频音频生成字幕。",
+    "source_id": "S_CAP_01",
+    "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+    "source_section": "How to add auto captions on CapCut Web / Step 2",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "字幕",
+      "自动字幕",
+      "音频转文字"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+    "source_title": "How to Add Subtitles in CapCut Instantly: Web, Mobile, Desktop Guide",
+    "source_publisher": "CapCut",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

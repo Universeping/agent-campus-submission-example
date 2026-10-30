@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "Adobe Express 网页端的 Trim video 支持设置开始和结束时间来裁短视频。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "Adobe Express 网页端的 Trim video 支持设置开始和结束时间来裁短视频。",
+      "source_ids": [
+        "P_ADB_006"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "Adobe Express 网页端的 Trim video 支持下载裁短后的视频。",
+      "source_ids": [
+        "P_ADB_007"
+      ]
+    }
+  ]
+}

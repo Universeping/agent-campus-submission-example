@@ -1,0 +1,162 @@
+[
+  {
+    "id": "P_CAP_001",
+    "fact": "CapCut 网页端可根据视频音频生成字幕。"
+  },
+  {
+    "id": "P_CAP_002",
+    "fact": "CapCut 网页端支持修改生成的字幕文字。"
+  },
+  {
+    "id": "P_CAP_003",
+    "fact": "CapCut 网页端支持删除或添加字幕行。"
+  },
+  {
+    "id": "P_CAP_004",
+    "fact": "CapCut 桌面端可选择音频语言后生成自动字幕。"
+  },
+  {
+    "id": "P_CAP_005",
+    "fact": "CapCut 桌面端支持修改字幕文字、布局和时间。"
+  },
+  {
+    "id": "P_CAP_006",
+    "fact": "CapCut 桌面端支持导出嵌有字幕的视频。"
+  },
+  {
+    "id": "P_CAP_007",
+    "fact": "CapCut 网页端支持将输入文字转换为语音。"
+  },
+  {
+    "id": "P_CAP_008",
+    "fact": "CapCut 网页端文字转语音支持选择声音风格、语气和语言。"
+  },
+  {
+    "id": "P_CAP_009",
+    "fact": "CapCut 网页端生成的配音可以下载或用于项目。"
+  },
+  {
+    "id": "P_CAP_010",
+    "fact": "CapCut 网页端文字转语音流程支持调整语速和音量。"
+  },
+  {
+    "id": "P_CAN_001",
+    "fact": "Canva 可为受支持视频设计中含语音的媒体生成可编辑字幕。"
+  },
+  {
+    "id": "P_CAN_002",
+    "fact": "Canva 的可编辑字幕支持在视频时间轴中修改文字。"
+  },
+  {
+    "id": "P_CAN_003",
+    "fact": "Canva 的可编辑字幕支持在视频时间轴中调整时间。"
+  },
+  {
+    "id": "P_CAN_004",
+    "fact": "Canva 的可编辑字幕支持调整字体、颜色和大小。"
+  },
+  {
+    "id": "P_CAN_005",
+    "fact": "Canva 的可编辑字幕可随设计导出为 MP4 视频。"
+  },
+  {
+    "id": "P_CAN_006",
+    "fact": "Canva 生成可编辑字幕时默认自动检测口语语言。"
+  },
+  {
+    "id": "P_CAN_007",
+    "fact": "Canva 的字幕功能支持中文。"
+  },
+  {
+    "id": "P_CAN_008",
+    "fact": "Canva 的仅查看字幕目前不能编辑。"
+  },
+  {
+    "id": "P_CAN_009",
+    "fact": "Canva 的仅查看字幕目前不能下载。"
+  },
+  {
+    "id": "P_CAN_010",
+    "fact": "Canva 官方仅查看字幕说明指出，Canva 网站目前不支持视频字幕。"
+  },
+  {
+    "id": "P_ADB_001",
+    "fact": "Adobe Express 网页端支持选择媒体口语语言后生成字幕。"
+  },
+  {
+    "id": "P_ADB_002",
+    "fact": "Adobe Express 网页端支持在 Transcript 面板中修改生成的字幕文字。"
+  },
+  {
+    "id": "P_ADB_003",
+    "fact": "Adobe Express 网页端支持调整字幕样式、字体、颜色和形状。"
+  },
+  {
+    "id": "P_ADB_004",
+    "fact": "Adobe Express 网页端支持拖动字幕位置并调整大小。"
+  },
+  {
+    "id": "P_ADB_005",
+    "fact": "Adobe Express 网页端的 Caption video 快捷操作支持修改字幕文字并下载结果。"
+  },
+  {
+    "id": "P_ADB_006",
+    "fact": "Adobe Express 网页端的 Trim video 支持设置开始和结束时间来裁短视频。"
+  },
+  {
+    "id": "P_ADB_007",
+    "fact": "Adobe Express 网页端的 Trim video 支持下载裁短后的视频。"
+  },
+  {
+    "id": "P_ADB_008",
+    "fact": "Adobe Express 网页端的 Resize video 支持选择社交平台尺寸预设或自定义尺寸。"
+  },
+  {
+    "id": "P_ADB_009",
+    "fact": "Adobe Express 网页端的 Resize video 支持选择宽高比并调整视频缩放。"
+  },
+  {
+    "id": "P_ADB_010",
+    "fact": "Adobe Express 的 Resize video 用于调整视频尺寸，Trim video 用于缩短时长。"
+  },
+  {
+    "id": "P_BCT_001",
+    "fact": "必剪 iOS 版支持语音转字幕。"
+  },
+  {
+    "id": "P_BCT_002",
+    "fact": "必剪 iOS 版支持文本朗读。"
+  },
+  {
+    "id": "P_BCT_003",
+    "fact": "必剪 iOS 版支持画中画。"
+  },
+  {
+    "id": "P_BCT_004",
+    "fact": "必剪 iOS 版支持蒙版。"
+  },
+  {
+    "id": "P_BCT_005",
+    "fact": "必剪 iOS 版支持录音提词。"
+  },
+  {
+    "id": "P_BCT_006",
+    "fact": "必剪 iOS 版支持批量粗剪。"
+  },
+  {
+    "id": "P_BCT_007",
+    "fact": "必剪 iOS 版提供视频模板。"
+  },
+  {
+    "id": "P_BCT_008",
+    "fact": "必剪 iOS 版提供封面模板。"
+  },
+  {
+    "id": "P_BCT_009",
+    "fact": "必剪 iOS 版支持封面智能抠图。"
+  },
+  {
+    "id": "P_BCT_010",
+    "fact": "必剪 iOS 版支持一键发布到 B 站。"
+  }
+]

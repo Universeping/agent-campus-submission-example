@@ -1,5 +1,7 @@
 # 新提示词与业务分支验证
 
+本目录现为上一阶段历史记录，源码与提示词后续增加了产品 profile 支持。当前 105 项测试和资料配置运行见 [data-validation](../data-validation/README.md)，不把本目录旧摘要当作当前代码证据。
+
 本轮更新 system prompt，不改变工具判定或完成条件。新运行的 run.json 保存 system_prompt_sha256；旧记录不追写。旧提示词的真实结果见 [历史运行索引](../agent-validation/README.md)。
 
 ## 一条命令运行

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "capcut",
+    "name": "CapCut",
+    "surfaces": [
+      "web",
+      "desktop"
+    ],
+    "note": "不等同于剪映；不推断中国大陆可用性、套餐或价格。"
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "surfaces": [
+      "web"
+    ],
+    "note": "可编辑字幕与仅查看字幕分别建模；不混用功能范围。"
+  },
+  {
+    "id": "adobe_express",
+    "name": "Adobe Express",
+    "surfaces": [
+      "web"
+    ],
+    "note": "只收录本包所核验的网页版说明；不推断移动端功能。"
+  },
+  {
+    "id": "bcut",
+    "name": "必剪",
+    "surfaces": [
+      "ios"
+    ],
+    "note": "本包依据中国区 App Store 开发者说明，仅用于 iOS 应用，不外推至 Android、桌面或网页。"
+  }
+]

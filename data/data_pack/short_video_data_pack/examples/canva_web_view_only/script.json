@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "Canva 的仅查看字幕目前不能编辑。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "Canva 的仅查看字幕目前不能编辑。",
+      "source_ids": [
+        "P_CAN_008"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "Canva 的仅查看字幕目前不能下载。",
+      "source_ids": [
+        "P_CAN_009"
+      ]
+    }
+  ]
+}

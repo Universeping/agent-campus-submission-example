@@ -1,0 +1,816 @@
+{
+  "schema_version": "1.0",
+  "verified_on": "2026-10-31",
+  "note": "本文件不传给现有 load_materials。approved_text 是本资料库受控中文表述，并非官方网页逐字引文。",
+  "materials": [
+    {
+      "id": "P_CAP_001",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 网页端可根据视频音频生成字幕。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "How to add auto captions on CapCut Web / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "自动字幕",
+        "音频转文字"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_002",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 网页端支持修改生成的字幕文字。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "How to add auto captions on CapCut Web / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "修改文字",
+        "校对"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_003",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 网页端支持删除或添加字幕行。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "How to add auto captions on CapCut Web / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "删除",
+        "添加字幕行"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_004",
+      "product_id": "capcut",
+      "surfaces": [
+        "desktop"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 桌面端可选择音频语言后生成自动字幕。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "Steps to add captions in CapCut Desktop / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "自动字幕",
+        "选择语言"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_005",
+      "product_id": "capcut",
+      "surfaces": [
+        "desktop"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "CapCut 桌面端支持修改字幕文字、布局和时间。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "Steps to add captions in CapCut Desktop / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "布局",
+        "时间",
+        "校对"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_006",
+      "product_id": "capcut",
+      "surfaces": [
+        "desktop"
+      ],
+      "feature_scope": "caption_export",
+      "approved_text": "CapCut 桌面端支持导出嵌有字幕的视频。",
+      "source_id": "S_CAP_01",
+      "source_url": "https://www.capcut.com/resource/how-to-add-subtitle-in-capcut",
+      "source_section": "Steps to add captions in CapCut Desktop / Step 3",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "导出",
+        "嵌入"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_007",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "text_to_speech",
+      "approved_text": "CapCut 网页端支持将输入文字转换为语音。",
+      "source_id": "S_CAP_02",
+      "source_url": "https://www.capcut.com/tools/text-to-speech",
+      "source_section": "How to convert text to speech in the CapCut online video editor",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "文字转语音",
+        "配音",
+        "朗读"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_008",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "text_to_speech",
+      "approved_text": "CapCut 网页端文字转语音支持选择声音风格、语气和语言。",
+      "source_id": "S_CAP_02",
+      "source_url": "https://www.capcut.com/tools/text-to-speech",
+      "source_section": "Online video editor / Step 2",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "文字转语音",
+        "声音风格",
+        "语气",
+        "语言"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_009",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "text_to_speech",
+      "approved_text": "CapCut 网页端生成的配音可以下载或用于项目。",
+      "source_id": "S_CAP_02",
+      "source_url": "https://www.capcut.com/tools/text-to-speech",
+      "source_section": "Online video editor / Step 3",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "配音",
+        "下载",
+        "项目"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAP_010",
+      "product_id": "capcut",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "text_to_speech",
+      "approved_text": "CapCut 网页端文字转语音流程支持调整语速和音量。",
+      "source_id": "S_CAP_02",
+      "source_url": "https://www.capcut.com/tools/text-to-speech",
+      "source_section": "FAQ / Can I adjust speech rate and volume",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "文字转语音",
+        "语速",
+        "音量"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_001",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 可为受支持视频设计中含语音的媒体生成可编辑字幕。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "Before adding captions / Generate captions for videos",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "可编辑字幕",
+        "生成字幕"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_002",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 的可编辑字幕支持在视频时间轴中修改文字。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "Can I edit the timing of the captions",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "可编辑字幕",
+        "时间轴",
+        "修改文字"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_003",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 的可编辑字幕支持在视频时间轴中调整时间。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "Can I edit the timing of the captions",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "可编辑字幕",
+        "时间轴",
+        "调整时间"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_004",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 的可编辑字幕支持调整字体、颜色和大小。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "Customize individual captions in video",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "可编辑字幕",
+        "字体",
+        "颜色",
+        "大小"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_005",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 的可编辑字幕可随设计导出为 MP4 视频。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "Can I download my designs with captions",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "可编辑字幕",
+        "导出",
+        "MP4"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_006",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 生成可编辑字幕时默认自动检测口语语言。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "Improve captions accuracy",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "可编辑字幕",
+        "语言",
+        "自动检测"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_007",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "editable_captions",
+      "approved_text": "Canva 的字幕功能支持中文。",
+      "source_id": "S_CAN_01",
+      "source_url": "https://www.canva.com/help/generate-edit-captions-on-videos/",
+      "source_section": "What languages are captions available in",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "中文",
+        "语言"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_008",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "view_only_captions",
+      "approved_text": "Canva 的仅查看字幕目前不能编辑。",
+      "source_id": "S_CAN_02",
+      "source_url": "https://www.canva.com/help/enable-captions/",
+      "source_section": "Can I edit my captions",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "仅查看字幕",
+        "不能编辑"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_009",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "view_only_captions",
+      "approved_text": "Canva 的仅查看字幕目前不能下载。",
+      "source_id": "S_CAN_02",
+      "source_url": "https://www.canva.com/help/enable-captions/",
+      "source_section": "Can I download my designs with captions",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "仅查看字幕",
+        "不能下载"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_CAN_010",
+      "product_id": "canva",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "view_only_captions",
+      "approved_text": "Canva 官方仅查看字幕说明指出，Canva 网站目前不支持视频字幕。",
+      "source_id": "S_CAN_02",
+      "source_url": "https://www.canva.com/help/enable-captions/",
+      "source_section": "Introduction / Captions on video are not yet supported on Canva websites",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "仅查看字幕",
+        "Canva网站",
+        "限制"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_001",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "Adobe Express 网页端支持选择媒体口语语言后生成字幕。",
+      "source_id": "S_ADB_01",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "source_section": "Generate captions directly in the editor",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "生成字幕",
+        "语言"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_002",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "Adobe Express 网页端支持在 Transcript 面板中修改生成的字幕文字。",
+      "source_id": "S_ADB_01",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "source_section": "Generate captions directly in the editor",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "修改文字",
+        "Transcript",
+        "校对"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_003",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "Adobe Express 网页端支持调整字幕样式、字体、颜色和形状。",
+      "source_id": "S_ADB_01",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "source_section": "Generate captions directly in the editor / Format",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "样式",
+        "字体",
+        "颜色",
+        "形状"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_004",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "captions",
+      "approved_text": "Adobe Express 网页端支持拖动字幕位置并调整大小。",
+      "source_id": "S_ADB_01",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "source_section": "Generate captions directly in the editor / Drag the captions",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "位置",
+        "大小"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_005",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "caption_quick_action",
+      "approved_text": "Adobe Express 网页端的 Caption video 快捷操作支持修改字幕文字并下载结果。",
+      "source_id": "S_ADB_01",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/caption-video.html",
+      "source_section": "Generate captions using Caption video Quick action",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "快捷操作",
+        "下载",
+        "修改文字"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_006",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "trim_video",
+      "approved_text": "Adobe Express 网页端的 Trim video 支持设置开始和结束时间来裁短视频。",
+      "source_id": "S_ADB_02",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+      "source_section": "Trim videos / Start Time and End Time",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "裁短",
+        "裁剪时长",
+        "开始时间",
+        "结束时间",
+        "Trim"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_007",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "trim_video",
+      "approved_text": "Adobe Express 网页端的 Trim video 支持下载裁短后的视频。",
+      "source_id": "S_ADB_02",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/trim-videos.html",
+      "source_section": "Trim videos / Download",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "裁短",
+        "下载",
+        "Trim"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_008",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "resize_video",
+      "approved_text": "Adobe Express 网页端的 Resize video 支持选择社交平台尺寸预设或自定义尺寸。",
+      "source_id": "S_ADB_03",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "source_section": "Resize videos / Resize for",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "尺寸",
+        "预设",
+        "自定义",
+        "Resize"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_009",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "resize_video",
+      "approved_text": "Adobe Express 网页端的 Resize video 支持选择宽高比并调整视频缩放。",
+      "source_id": "S_ADB_03",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "source_section": "Resize videos / aspect ratio and Video scale",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "尺寸",
+        "宽高比",
+        "缩放",
+        "Resize"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_ADB_010",
+      "product_id": "adobe_express",
+      "surfaces": [
+        "web"
+      ],
+      "feature_scope": "resize_video",
+      "approved_text": "Adobe Express 的 Resize video 用于调整视频尺寸，Trim video 用于缩短时长。",
+      "source_id": "S_ADB_03",
+      "source_url": "https://helpx.adobe.com/express/web/video-creation-and-editing/edit-videos/resize-videos.html",
+      "source_section": "Resize videos / Note",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "尺寸",
+        "时长",
+        "Resize",
+        "Trim",
+        "区别"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。"
+    },
+    {
+      "id": "P_BCT_001",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "语音转字幕",
+      "approved_text": "必剪 iOS 版支持语音转字幕。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "字幕",
+        "语音转字幕"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_002",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "文本朗读",
+      "approved_text": "必剪 iOS 版支持文本朗读。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "配音",
+        "文本朗读"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_003",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "画中画",
+      "approved_text": "必剪 iOS 版支持画中画。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "画中画",
+        "叠加"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_004",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "蒙版",
+      "approved_text": "必剪 iOS 版支持蒙版。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "蒙版"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_005",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "录音提词",
+      "approved_text": "必剪 iOS 版支持录音提词。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "录音",
+        "提词"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_006",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "批量粗剪",
+      "approved_text": "必剪 iOS 版支持批量粗剪。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "粗剪",
+        "批量"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_007",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "视频模板",
+      "approved_text": "必剪 iOS 版提供视频模板。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "模板",
+        "视频模板"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_008",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "封面模板",
+      "approved_text": "必剪 iOS 版提供封面模板。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "模板",
+        "封面"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_009",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "封面智能抠图",
+      "approved_text": "必剪 iOS 版支持封面智能抠图。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "封面",
+        "抠图"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    },
+    {
+      "id": "P_BCT_010",
+      "product_id": "bcut",
+      "surfaces": [
+        "ios"
+      ],
+      "feature_scope": "发布到B站",
+      "approved_text": "必剪 iOS 版支持一键发布到 B 站。",
+      "source_id": "S_BCT_01",
+      "source_url": "https://apps.apple.com/cn/app/%E5%BF%85%E5%89%AA-b%E7%AB%99%E5%AE%98%E6%96%B9%E5%87%BA%E5%93%81/id1299589486",
+      "source_section": "开发者产品描述（iPhone、iPad），页面第 53 行附近；不使用用户评论",
+      "verified_on": "2026-10-31",
+      "tags": [
+        "投稿",
+        "发布",
+        "B站"
+      ],
+      "evidence_type": "official_documentation_paraphrase",
+      "conditions": "仅核验 iOS 应用的开发者功能描述；不推断套餐、账号权益或识别质量。"
+    }
+  ]
+}

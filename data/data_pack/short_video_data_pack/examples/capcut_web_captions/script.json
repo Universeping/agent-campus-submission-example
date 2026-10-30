@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "CapCut 网页端可根据视频音频生成字幕。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "CapCut 网页端可根据视频音频生成字幕。",
+      "source_ids": [
+        "P_CAP_001"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "CapCut 网页端支持修改生成的字幕文字。",
+      "source_ids": [
+        "P_CAP_002"
+      ]
+    }
+  ]
+}

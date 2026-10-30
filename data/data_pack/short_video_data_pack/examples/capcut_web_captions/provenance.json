@@ -1,0 +1,5 @@
+{
+  "kind": "hand_authored_tool_fixture",
+  "not_real_model_output": true,
+  "note": "仅验证数据兼容与本地工具，不能作为真实 Agent 决策证据。"
+}

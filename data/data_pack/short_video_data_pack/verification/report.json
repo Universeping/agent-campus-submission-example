@@ -1,0 +1,4971 @@
+{
+  "verified_on": "2026-10-31",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "data compatibility and deterministic tools only; no agent/model/network execution",
+  "repository_read_only": true,
+  "repository_source_sha256": {
+    "src\\schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+    "src\\tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+    "data\\materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+    "data\\brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91"
+  },
+  "total_checks": 140,
+  "passed": 140,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "all_materials_load",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "count": 40
+      }
+    },
+    {
+      "name": "common_rules_load",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "count": 12
+      }
+    },
+    {
+      "name": "all_facts_have_source_metadata",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "profile_load:capcut_web_captions",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_CAP_001",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1a5ceb511291b730d527197ae0a71ac60d7008ed6f09d1be0d2bddb7a276b02c",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_002",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "6a3c874f05b9ee61e59caac35f5f3d21a7697b6247e6587dbfe3f4a7bcffc2c8",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_003",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "710e8922db0f1b5704041aa517591d0b2951a723e9384f2196f39c70fd0bc811",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:capcut_web_captions",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "b47a6f0d95735ee05aa72499825bb28346d9bcd7f08996e61a481a5ad6e2b163",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_CAPCUT",
+            "B_SURFACE_WEB"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "b47a6f0d95735ee05aa72499825bb28346d9bcd7f08996e61a481a5ad6e2b163",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 5.4
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 5.7
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 11.100000000000001,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:capcut_desktop_captions",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_CAP_004",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "284e016a73f47bc33533e07fd4696ef30d9a6afc004be97f8867fd27637e2128",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_DESKTOP"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_005",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "d6578084141de4c2f59e098e80fcab4d03e4049060c45ee3ff7be60f5075ee83",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_DESKTOP"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_006",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "f74ec408808b7ca8add57d5024fb1edee7185ca249eea6ab60d513d3924895f5",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_DESKTOP"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:capcut_desktop_captions",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "1f27f841457f198d2893bfbdef75e479bbd1cf1a9ea3fd7cea021d6929f383d5",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_CAPCUT",
+            "B_SURFACE_DESKTOP"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "1f27f841457f198d2893bfbdef75e479bbd1cf1a9ea3fd7cea021d6929f383d5",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 6.15
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 6.4
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 12.55,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:capcut_web_voiceover",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_CAP_007",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "c4743c8b062faf0a0a24afb51d794bb4cbbf0563b9ae55e2b7e689e3c984166c",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_008",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "884063a37e32a8dcd2847a09ee02a455c9a58d620a9873651fc3e2858f556a51",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_009",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "7fa6064b855e27b2b60603258508f7fb31f72107e8a915c8aa44fdbc0b9b092a",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAP_010",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "fbca7fba3ad0e050e9ac0c49e9a2c08c383158cdde7a4e9f751f0d3e10b7986e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:capcut_web_voiceover",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "f649919d68411a40583beb815a17381fe9d48488891701beaa2a7479a672d1d4",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_CAPCUT",
+            "B_SURFACE_WEB"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "f649919d68411a40583beb815a17381fe9d48488891701beaa2a7479a672d1d4",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 5.65
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 7.65
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 13.3,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:canva_web_editable",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_CAN_001",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "c0126d70e2c7ea084811de36ca1dff252f00610be6e591fac93c8bea77ae9f2d",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_002",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "8804f7af167becd1b5e3df2441caac5628fec1cc21a26a29ea79b1b725590400",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_003",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "26a66a3faff6a53f0b3d901656abe33e3e624360619ae5683ac2ad7896fe82af",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_004",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "9e2303e6e0b98c2a04ef432b5d74e803c7d40dfb04bea46ca20c74fa59c5b14d",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_005",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "8f22f1c79455a871265459be6d87906bfcc6da698d69ac3c91431cb20259dfb9",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_006",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "6378c90ddedf5348febfa03f5731f72c19d71d53f63615c76af5a64f2b3f94f8",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_007",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "503d2b4ed5b41b443299ec07f82d448894f52e23ddb4773e59b0468ad4b4cfba",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:canva_web_editable",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "a22ae0dd282ee168d76a71f33e4c2f5d0610ff8d4f47be1ed9f58574d4bd5c70",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_CANVA",
+            "B_SURFACE_WEB"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "a22ae0dd282ee168d76a71f33e4c2f5d0610ff8d4f47be1ed9f58574d4bd5c70",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 7.4
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 6.7
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 14.100000000000001,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:canva_web_view_only",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_CAN_008",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "e894b0bf69c7a4ca0b6dcf6455fb44f4222000891c56870475419721df8d07ab",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB",
+          "B_CAN_VIEW_ONLY"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_009",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "5f4a53e4caaf1572928b7d7bdd47ef479f28c87304abef656e038ae77e99126c",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB",
+          "B_CAN_VIEW_ONLY"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_CAN_010",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "c74b6c905104abdf80515bc6bb2ded1fe120c887c3fad5ebd7b20a898f945d75",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB",
+          "B_CAN_VIEW_ONLY"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:canva_web_view_only",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "d3360a176db0d70fcff2ed5c0696c64db639ae32020c30f6d6341302d9fcdaaf",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_CANVA",
+            "B_SURFACE_WEB",
+            "B_CAN_VIEW_ONLY"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "d3360a176db0d70fcff2ed5c0696c64db639ae32020c30f6d6341302d9fcdaaf",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 4.65
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 4.95
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 9.600000000000001,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:adobe_web_captions",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_ADB_001",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "e7b6818df83dc9c7cfa7f44f31c618b94b0599761cdffc53d2409d102ccb6cd9",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_002",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "f6e6456536209a602c9145400e69b72801f97190162d1a108d770fb50b10d32f",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_003",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "6c11c85eb2d3033c526e27d84fb82f6ac1e0c6f56ded74e5ee49b712cdbb5b62",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_004",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "7512594f518ed908cad284414b1dbd513d93d9cdd38f75cb35702f20cad11f9e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_005",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "d314d65b69bc5b6d5d09b60224e6497673490d225c0d779c976ffe06730579b4",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:adobe_web_captions",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "81a8993221effce3e11630ad5ffa113196e66417f1bf709516e6a43feb8ee13e",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_ADOBE_EXPRESS",
+            "B_SURFACE_WEB"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "81a8993221effce3e11630ad5ffa113196e66417f1bf709516e6a43feb8ee13e",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 7.9
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 10.7
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 18.6,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:adobe_web_editing",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_ADB_006",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "68f868b914a5d6dcefbfa26bc53508b2ae2b7d33434db2cae6c4ef9173962a74",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_007",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1380817a48e4b7aa37ff695c9c3b8178fa4034be80e28dbf891d513d600fd30e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_008",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "0875576e71a4895977133f34dc2f2545c2059999fc3dca10b899c4f03f595198",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_009",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "29acf4257dd7b28a67352ee31775ccc9eb02eb14197995fa1dbe3e7646c123e3",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_ADB_010",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1a779c4cee3ede227b1b416168992c17f7524b7733ab3546910039a583b88162",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:adobe_web_editing",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "0178c4fc8919c09e060f2fed136fbf5a71fb7f7f3ae15ffb48276f122b72255f",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_ADOBE_EXPRESS",
+            "B_SURFACE_WEB"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "0178c4fc8919c09e060f2fed136fbf5a71fb7f7f3ae15ffb48276f122b72255f",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 10.65
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 9.45
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 20.1,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "profile_load:bcut_ios",
+      "passed": true,
+      "category": "verification",
+      "evidence": null
+    },
+    {
+      "name": "fact_accepted:P_BCT_001",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "276f056bea3c7e66d9fbf4ba39702c5994417e08082907510cf3a894427c34e9",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_002",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "2a5ec41ebb889945722626f15698a6331cd11b10a811eff622117aa114625ab1",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_003",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "5cafe73bf18cf6ca126eb543ec42e057536ddd2585c3834c1a2877963af02e7a",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_004",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "fceb9f03359f69e0280ee74e34772050e6d2aaf91abe02d032fb56b62aef9eb2",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_005",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "b2520a080288b49b429d0a261a7598c57bfe96edabec37e376437ca328379592",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_006",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "830616cedb3dddfedce84e610f36aa97b1c49a82720d16a8d1546391a0f370d1",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_007",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "7259dc0bd9331abf6dd575e6a4ab76900cbc36ccb2bb712b712e2d86d92cc251",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_008",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "9caabf779a0faf7213cef7acbab47fcf45da5c487fa19df7f4bbf76e03bb7755",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_009",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "000b43bcb1098416a7d84a81e2fc9b807e3e87dcd32f6f6ccc30124de913a1fd",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "fact_accepted:P_BCT_010",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "81b14c91828256fe00063313801d07abb1f970e3b24ed25971a618fddc3ea195",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [],
+        "passed": true
+      }
+    },
+    {
+      "name": "example_checks:bcut_ios",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "rules": {
+          "script_version": 1,
+          "script_fingerprint": "b755e086a692350a8c8e202f1f4b0223b5c03fed86e8efd3d5b2b49d5c5d8044",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12",
+            "B_SCOPE_BCUT",
+            "B_SURFACE_IOS"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "duration": {
+          "script_version": 1,
+          "script_fingerprint": "b755e086a692350a8c8e202f1f4b0223b5c03fed86e8efd3d5b2b49d5c5d8044",
+          "shot_durations": [
+            {
+              "shot_id": "S01",
+              "duration_seconds": 3.65
+            },
+            {
+              "shot_id": "S02",
+              "duration_seconds": 3.7
+            }
+          ],
+          "target_duration_seconds": 30,
+          "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+          "total_duration_seconds": 7.35,
+          "passed": true
+        },
+        "provenance": "hand_authored_tool_fixture_not_model_generation"
+      }
+    },
+    {
+      "name": "unknown_source_rejected",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "7761b37ec0a196cc10ec0499313a20dd06a6ce6091619a6524bc22f09ee7b6be",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "missing_source",
+            "message": "标题“CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": null
+          },
+          {
+            "rule_id": "FACT-REF",
+            "code": "unknown_source",
+            "message": "素材 P_DOES_NOT_EXIST 不存在",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "missing_source",
+            "message": "旁白“CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "wrong_existing_citation_rejected",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "d013238ad2c7db2b2d678dfb7b9b336d4a2805070ab39a17590f7fbc486553b9",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "missing_source",
+            "message": "标题“CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": null
+          },
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "missing_source",
+            "message": "旁白“CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "reasonable_paraphrase_is_out_of_scope",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "be4c19883fdf8bed20e88a62f04e982ec772952a17ff35a2b5542706d7f776d1",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“它CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "citations_without_expressed_fact_rejected",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "4246703db01aebcd168e49d38d4bb34f3e47cc8f46c2d5647105e4ce83e5cbdb",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "no_grounded_fact",
+            "message": "引用了素材但未实际表达任何有依据的事实，请使用所引素材原文。",
+            "shot_id": null
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "cross_product_rejected_by_profile",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "c2f3b2cbf05a87bce90b1687fb8edfa5b680aff6acd6ba5f4f2714ef7ee6b135",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "missing_source",
+            "message": "标题“CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": null
+          },
+          {
+            "rule_id": "FACT-REF",
+            "code": "unknown_source",
+            "message": "素材 P_CAN_001 不存在",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Canva 可为受支持视频设计中含语音的媒体生成可编辑字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CAPCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Canva”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "wrong_surface_rejected_by_profile",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "0af9f51fbeec00f3b76f5553fbe52dffa1f3bcdb23ee5634f8ee1f4305f530fc",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "missing_source",
+            "message": "标题“CapCut 网页端可根据视频音频生成字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": null
+          },
+          {
+            "rule_id": "FACT-REF",
+            "code": "unknown_source",
+            "message": "素材 P_CAP_004 不存在",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“CapCut 桌面端可选择音频语言后生成自动字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“桌面端”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "3745513f18d8e7b680774aa119e0aeb049dfddf5b81abb5cebd91422b5f9ff75",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“效率提升80%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“效率提升80%”",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“提升80%”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "baa8bed064fba1bc9c9f8b70546e15d5fce1fae09efdfd15901ece6bd6b4ca4f",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“准确率99%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“准确率99%”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "8922a476e9c2e6eaa652d77e126bcfe604908c37392eba4f1c2b4f200688ab63",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“识别率99%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“识别率99%”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "a2abd794c8783dd371c674f28ec9831b475b2f8aacb984f415aa586a99c8cddd",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“提升80%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“提升80%”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:4",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1b9cedab8589723aac617802921a1c359016e49b637565d884458b35df7c02b6",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“提高80%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“提高80%”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:5",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "8d82c0c5cffd9c5e6464ec90226acddc2c54f6a83a240c928dff6a8656193883",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“效率翻倍”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“效率翻倍”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B02:6",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "2163a5dbae9462d1886321f2f7d2e2549f031397314352ef54a499d3d60f9a7c",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“提升百分之八十”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“提升百分之八十”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B03:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "da8537a40540348d3588415b929e760bc7e22bfac8155d9e46351ebcbee79fb1",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“全网第一”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B03",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“全网第一”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B03:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "4938d960558bf13020d76000a7d2dd8199cd42ecb437d2613aaea98263cc5170",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“行业第一”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B03",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“行业第一”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B03:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "02482d81fa6cf88c6dd31d444b8544f611242d37fc15c861f99a2945f1a7e65c",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“百分之百准确”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B03",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“百分之百准确”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B03:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "2a1395cea629b7414999db853ec9b434c6f172e920a6bd0019961512bafc3b19",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“零错误”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B03",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“零错误”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B03:4",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "8cd5a36ec2da4a3af07685b3a366c3a2566c389fa9cb51c6c52c5c1b3459ebbb",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“永不出错”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B03",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“永不出错”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "2ecab6c8b2de31dae38f620fa1f2596f5cf7e5034fe6e2583a60adc75d8da3a6",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“永久免费”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“永久免费”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "c9d54fcba26ab898dfb0c34c64dab6c8b8bbbd37b47088a26b839f9dd1b8296f",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“完全免费”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“完全免费”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "d1b2ecbfd7aab59ecafcf2964ab3d2119c6740658fffe58501bc2a066009e174",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“全部免费”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“全部免费”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1b11496fec723f2812d3ca92a2d1365f320ce32edb556d8db93de19a46055a4f",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“不收费”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“不收费”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:4",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "132107ed5a8631859425f355fc9fb124d91671e583d71dad436b1c587204a93e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“不限次数”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“不限次数”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:5",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "04f3d81819abca99cec3af75cda40d0529982793facdc854a5406159be0893e8",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“无限使用”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“无限使用”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B04:6",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "9d8d1f6503936298ec5bea708170329489395eed6c9423ddac67bf7ac51a6f76",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“零成本”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B04",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“零成本”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B05:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "2aaf7ce75036c5813a8d86eb8a72626a0e12c6f88c64be6479efaf73a20aae55",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“免费商用”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B05",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“免费商用”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B05:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "a996287aad2827fcf56cf97506bba0fd238eae1eafd3657eafa83c7e4922d19f",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“无版权风险”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B05",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“无版权风险”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B05:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "bdbcd85669a86f5243a1d984bba1d3f7f92d53e4cf55abc54d9660315ce60396",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“无需授权”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B05",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“无需授权”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B05:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "c9a74fb82fb643a4241ae2be5ef190cff32d86bdcf55d3b496eb7c8dbfbc76bf",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“随便商用”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B05",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“随便商用”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B06:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "2dddda86c282296fd162241520f4667f8db9d7a85f4e70b60f4e136cd665eecf",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“保证过审”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B06",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“保证过审”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B06:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "8a0e9291a5a604927c9bd276580b1fea275d037f31f4062a59e0fa73d0522720",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“必过审核”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B06",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“必过审核”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B06:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "e6fc79fd7754ee7bd2b614c31054bd1509f1774d2b9f3a906206d63e6f4d4c4e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“平台官方推荐”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B06",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“平台官方推荐”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B06:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1678d7f18bad6182dadf403ca42f08c23abfbf3e53d1bf26cdf7083245b17c58",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“抖音官方认证”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B06",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“抖音官方认证”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B07:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "08d90c057f62377f5e6d1a61f8707a5890ebd2385947c94a910fdb6313934fcf",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“保证涨粉”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B07",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“保证涨粉”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B07:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "6ceb7cbdce122347fd11c3f6c3f69aa8cd7abe1971c33318a54b35b2468e8d6a",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“必成爆款”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B07",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“必成爆款”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B07:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "724cd422681303880841422cf79a6d0cce0c33207f78211f253876018acfb1c8",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“保证爆单”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B07",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“保证爆单”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B07:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "fd708a9d21b7facaae302bfef971aeee3df8ab6f0bc52e920dc71fbb97084423",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“稳赚”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B07",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“稳赚”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B08:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "57223d0a820d1a4e7f0693cba22f6a229c7bf1e181009826217ac1c13e4166ac",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“碾压竞品”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B08",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“碾压竞品”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B08:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "0ce7c108974d65b420efc9010ef39809f87e22081a52c2f8d26a64527149bde6",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“吊打竞品”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B08",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“吊打竞品”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B08:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "0759496fab367221db6c25dd0c0edf693365f80056ad0a845a1abafb487d40c9",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“全行业最强”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B08",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“全行业最强”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B08:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "a1825329eab2f018ffaf4d83a5a8d778f1c9f89ea733a4a1839d03c033129c9e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“比所有竞品都好”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B08",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“比所有竞品都好”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B09:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "413db13ed89ac0ccbc64f5d681857c855cbcab843001848b230c1e60710cdfda",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“全平台通用”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B09",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“全平台通用”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B09:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "649841d05331c323236682711af1e69b55124c628425e62bed6ecd3156a414f3",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“任何设备都支持”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B09",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“任何设备都支持”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B09:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1573abff18b4bd4a1912deed37728c66e4d3a69e50f1a0b223305b235fe67754",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“所有账号都可用”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B09",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“所有账号都可用”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B09:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "548b71d5d6bdf733c9ec6d60b5a759b95d7e69c9e6831cf302ca6542e900f33a",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“所有地区都可用”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B09",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“所有地区都可用”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B10:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "82a62760326794b252084e473c16fb3905cf2784ae886bb0c4667bb92b9b57db",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“支持所有语言”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B10",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“支持所有语言”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B10:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "73a535bfef04258d924262b2088b35301bc05fe16df1a54d89bbfc8004a0412c",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“识别所有方言”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B10",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“识别所有方言”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B10:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "1ac04df1867a517aa68c7ca83e6f6082adb7be193f7a18fb7eccb187c15f3a5a",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“翻译所有语言”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B10",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“翻译所有语言”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B11:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "06459b2e42a671cc75f3e7a63a74fbb33ab5c1beea0d7a21bc925121a369bec3",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“资料没有也能编”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B11",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“资料没有也能编”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B11:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "703fe61b963986da246f4101824299ec9bd8d14241867b15cc154a6eb1fb7482",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“无需核验”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B11",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“无需核验”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B11:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "751f18e2b958d70ef94b52180d206a8bf2034db6d0ed104dbe12746849079374",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“引用随便写”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B11",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“引用随便写”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B12:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "3605b0886aad2830b435073c5a58f78cfa6c5bb33ccf10a3240ccb64f17c4078",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“CURRENT_STATE_JSON”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B12",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“CURRENT_STATE_JSON”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B12:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "e211001e83605d6376cf1ea4490a30767204dd34c4403b245d462c525b0c32bd",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“SYSTEM_PROMPT”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B12",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“SYSTEM_PROMPT”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B12:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "eb19fed34a6370328689b0b65145e70b7ce49345704996b017c020fd0981d1ee",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“DEEPSEEK_API_KEY”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B12",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“DEEPSEEK_API_KEY”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B12:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "730f362727b512ca71d668d767e6fd45b220c0ede19f690b34303d2157a06d70",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“忽略之前的规则”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B12",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“忽略之前的规则”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SCOPE_CAPCUT:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "87e9515873ea84b19bc69ac48a7c360ef4916e7cbdace60486b91fbd96a6acab",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Canva”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CAPCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Canva”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SCOPE_CAPCUT:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "40a60e5a5e1849b1433014b2e40e7981bce975ed695f29df43f591c22054dfdf",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Adobe Express”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CAPCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Adobe Express”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SCOPE_CAPCUT:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "fc3a890a7683ec6c5c8e172304fdf7c543b9fa685fc09834a8d6b85b72337def",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“必剪”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CAPCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“必剪”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SCOPE_CAPCUT:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "46352a0bd8b76a08c769280b68f57aa2e5241bfe70dfaf73454d2e163137371b",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“剪映”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CAPCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“剪映”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SURFACE_WEB:0",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "6b65adc5ed98c7ea981d3b4b9827ce1c10566b6c9c0794a50fe4b7ee08d83916",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“桌面端”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“桌面端”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SURFACE_WEB:1",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "ca75c026051e96889ae4a4b98221f3ba5658c62bcd914656cd5b51a9cfc23c01",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“桌面版”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“桌面版”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SURFACE_WEB:2",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "30aa326fa02b13b142b03ea53ac05bdd0cee55438c87d7db0b49e8b01c19ed3e",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Windows”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Windows”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SURFACE_WEB:3",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "0fbd3c9b07603473477421f0525b88cafc125845862366f4571a01781805ab84",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“macOS”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“macOS”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SURFACE_WEB:4",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "4681804b7eaa5d5fb8d9324ea6a260641834dff6f5b6d44b179fee4c48f6daa1",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“iOS”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“iOS”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "literal:B_SURFACE_WEB:5",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "7f5d2bcdaa94309049f73ab532ca36d6da386324539ab9794892fdda4cfbf895",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Android”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Android”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:capcut_desktop_captions:B_SCOPE_CAPCUT",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "e0c3c4f4aff2a3506fb013272e90b0bcb65db6a22139d1bc0346a3f9f43be622",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_DESKTOP"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Canva”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CAPCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Canva”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:capcut_desktop_captions:B_SURFACE_DESKTOP",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "7b274e7f0089647e120c5e9ff30bb03f41713d1be013b874559892cc35b37420",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_DESKTOP"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“网页端”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_DESKTOP",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“网页端”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:bcut_ios:B_SCOPE_BCUT",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "d8d24cd11b2f3b7b8a71b4b83bb14134746cac84c6387c4b5bf77df0d7e56dbd",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“CapCut”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_BCUT",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“CapCut”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:bcut_ios:B_SURFACE_IOS",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "a54e0b90c3e35f928d44fac9adda0611bcb3dcfcb54e89645be00e25af87a807",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_BCUT",
+          "B_SURFACE_IOS"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“Android”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_IOS",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“Android”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:canva_web_view_only:B_SCOPE_CANVA",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "bab296af8454814789b54d32b229099ec6b25202feed56689d8499da3953f3c8",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB",
+          "B_CAN_VIEW_ONLY"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“CapCut”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_CANVA",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“CapCut”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:canva_web_view_only:B_SURFACE_WEB",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "4fd80bc996cf879a0a8cb646750a53551514b81e297755d2a1df71964606b8d3",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB",
+          "B_CAN_VIEW_ONLY"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“桌面端”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“桌面端”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:canva_web_view_only:B_CAN_VIEW_ONLY",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "e74d4f65ad77ed5d6d75037f22078a300459e91cbdaa6aefad1c44cac8d1ede0",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CANVA",
+          "B_SURFACE_WEB",
+          "B_CAN_VIEW_ONLY"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“可编辑字幕”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_CAN_VIEW_ONLY",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“可编辑字幕”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:adobe_web_captions:B_SCOPE_ADOBE_EXPRESS",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "f6ca9d05d423e9f5a0a3d1d82b5e68e4c4e1805442d6a9ca74d4c66c2e8887db",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“CapCut”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SCOPE_ADOBE_EXPRESS",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“CapCut”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "scope_literal:adobe_web_captions:B_SURFACE_WEB",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "135217acdb793070bca462132401171ec3a988db314b3780345cb11014a50345",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_ADOBE_EXPRESS",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“桌面端”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B_SURFACE_WEB",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“桌面端”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "normalized_whitespace_forbidden_term",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "b5b0115b83d695c0b40cd314a7ee5c73d504f3f656655e2d8c4bd50ef51d55ca",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“全 网 第 一”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B03",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“全网第一”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "normalized_fullwidth_forbidden_term",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "script_version": 1,
+        "script_fingerprint": "59af3748e9561b1c6843eb6d5b6e8ed24fb2d575e8ef095b927825d760259a6d",
+        "checked_rule_ids": [
+          "FACT-REF",
+          "FACT-SUPPORT",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B_SCOPE_CAPCUT",
+          "B_SURFACE_WEB"
+        ],
+        "issues": [
+          {
+            "rule_id": "FACT-SUPPORT",
+            "code": "unsupported_expression",
+            "message": "旁白“准确率９９％”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+            "shot_id": "S01"
+          },
+          {
+            "rule_id": "B02",
+            "code": "forbidden_term",
+            "message": "旁白包含禁用表达“准确率99%”",
+            "shot_id": "S01"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "name": "unsupported_natural_language_rule_returns_error",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "tool": "check_rules",
+        "code": "unsupported_rule",
+        "message": "规则 B_FUTURE 未实现；请提供 forbidden_terms 或支持的事实约束",
+        "retryable": false
+      }
+    },
+    {
+      "name": "long_query_can_be_empty_then_keyword_retrieves",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "first": {
+          "query": "请介绍字幕生成功能的完整业务流程",
+          "materials": [],
+          "error": null
+        },
+        "second": {
+          "query": "字幕",
+          "materials": [
+            {
+              "id": "P_CAP_001",
+              "fact": "CapCut 网页端可根据视频音频生成字幕。"
+            },
+            {
+              "id": "P_CAP_002",
+              "fact": "CapCut 网页端支持修改生成的字幕文字。"
+            },
+            {
+              "id": "P_CAP_003",
+              "fact": "CapCut 网页端支持删除或添加字幕行。"
+            }
+          ],
+          "error": null
+        },
+        "note": "人工调用的检索工具验证，不是模型自主改写查询的证据。"
+      }
+    },
+    {
+      "name": "unrelated_query_is_empty",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "query": "发票报销",
+        "materials": [],
+        "error": null
+      }
+    },
+    {
+      "name": "known_boundary_unscoped_corpus_accepts_other_product",
+      "passed": true,
+      "category": "documented_limitation",
+      "evidence": {
+        "result": {
+          "script_version": 1,
+          "script_fingerprint": "c0126d70e2c7ea084811de36ca1dff252f00610be6e591fac93c8bea77ae9f2d",
+          "checked_rule_ids": [
+            "FACT-REF",
+            "FACT-SUPPORT",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+            "B10",
+            "B11",
+            "B12"
+          ],
+          "issues": [],
+          "passed": true
+        },
+        "warning": "现有脚本契约没有目标产品字段；必须选择单产品 profile。"
+      }
+    },
+    {
+      "name": "read_repository_files_unchanged",
+      "passed": true,
+      "category": "verification",
+      "evidence": {
+        "before": {
+          "src\\schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+          "src\\tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+          "data\\materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+          "data\\brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91"
+        },
+        "after": {
+          "src\\schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+          "src\\tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+          "data\\materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+          "data\\brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91"
+        }
+      }
+    }
+  ]
+}

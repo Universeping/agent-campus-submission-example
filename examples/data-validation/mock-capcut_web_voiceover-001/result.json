@@ -1,0 +1,77 @@
+{
+  "run_id": "e52a9b0d25a849b8b638d67e2f67d3ef",
+  "mode": "mock",
+  "status": "completed",
+  "task_input": {
+    "topic": "介绍 CapCut 网页端文字转语音功能",
+    "audience": "短视频新手",
+    "platform": "抖音",
+    "target_duration_seconds": 30,
+    "style": "轻松、客观，产品事实逐句使用检索原文"
+  },
+  "script": {
+    "version": 1,
+    "title": "CapCut 网页端支持将输入文字转换为语音。",
+    "shots": [
+      {
+        "id": "S01",
+        "visual": "展示视频画面",
+        "narration": "CapCut 网页端支持将输入文字转换为语音。",
+        "source_ids": [
+          "P_CAP_007"
+        ]
+      }
+    ],
+    "source_ids": [
+      "P_CAP_007"
+    ],
+    "fingerprint": "c4743c8b062faf0a0a24afb51d794bb4cbbf0563b9ae55e2b7e689e3c984166c"
+  },
+  "duration_result": {
+    "script_version": 1,
+    "script_fingerprint": "c4743c8b062faf0a0a24afb51d794bb4cbbf0563b9ae55e2b7e689e3c984166c",
+    "shot_durations": [
+      {
+        "shot_id": "S01",
+        "duration_seconds": 5.65
+      }
+    ],
+    "target_duration_seconds": 30,
+    "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+    "total_duration_seconds": 5.65,
+    "passed": true
+  },
+  "rule_check_result": {
+    "script_version": 1,
+    "script_fingerprint": "c4743c8b062faf0a0a24afb51d794bb4cbbf0563b9ae55e2b7e689e3c984166c",
+    "checked_rule_ids": [
+      "FACT-REF",
+      "FACT-SUPPORT",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B_SCOPE_CAPCUT",
+      "B_SURFACE_WEB"
+    ],
+    "issues": [],
+    "passed": true
+  },
+  "risks": [
+    "时长是 timing-v1 假设下的估算，不是实际配音测量。",
+    "事实检查仅覆盖素材原文与受控表达，可能误拒有效改写。",
+    "离线 Mock 仅验证流程，不证明真实模型决策效果。"
+  ],
+  "reason": "当前稿已通过估时和规则检查",
+  "missing_fields": [],
+  "errors": [],
+  "questions": []
+}

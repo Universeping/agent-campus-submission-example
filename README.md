@@ -2,7 +2,7 @@
 
 基于 Python、LangGraph 1.2.18 和 DeepSeek V4 Pro 的单 Agent。已实现六动作循环、三个本地工具、文件/终端输入、离线 Mock、版本检查和输出记录。旧提示词的真实正常任务与检索故障注入任务均已完成，最终分别为 v2 / 7.1 秒与 v2 / 9.4 秒；新提示词的真实验证受连接错误阻断，不能沿用旧结果证明效果。
 
-当前 87 项测试全部通过，新提示词五个 Mock 案例通过。事实检查采用素材原文与封闭表达，存在明显误拒，不能代表通用事实判断或平台实际审核。
+当前 105 项测试全部通过。已接入用户资料包的 8 个产品/客户端配置，40 条原始事实中启用 39 条、暂缓 1 条；规则为 12 条通用与 8 条范围规则，均为项目自定演示政策。8 条 profile Mock CLI 路径通过，真实连接受阻。事实检查仍采用素材原文与封闭表达，不能代表通用事实判断或平台审核。
 
 ## 安装
 
@@ -55,7 +55,7 @@ DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-87 项测试全部通过，无跳过项。HTTP 单元测试使用模拟响应，Mock 集成使用真实 LangGraph 和本地工具；真实模型效果另以实际 Trace 验证。
+105 项测试全部通过，无跳过项。HTTP 单元测试使用模拟响应，Mock 集成使用真实 LangGraph 和本地工具；真实模型效果另以实际 Trace 验证。当前日志与配置运行见 [资料验证](examples/data-validation/README.md)。
 
 新提示词的正常、故障、空资料、无关资料、超时长批量验证：
 
@@ -73,9 +73,20 @@ DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时
 - [数据约定](docs/06-data-contracts.md)
 - [工具能力边界](docs/07-tools.md)
 - [Agent 协议与状态](docs/08-agent-loop.md)
+- [产品资料包评估与接入](docs/09-data-pack.md)
 - [真实/Mock 执行记录](examples/agent-validation/README.md)
 
 ## 最小资料与独立工具
+
+可按审阅后的配置使用实际产品资料，无需手动拼接素材和规则：
+
+```bash
+.venv/bin/python -m src.main --list-profiles
+.venv/bin/python -m src.main --profile capcut_web_captions --mode mock
+.venv/bin/python -m src.main --profile bcut_ios --mode real
+```
+
+--profile 默认采用对应输入样例，可用 --input 覆盖需求；不能再混用 --materials/--brand-rules。一次只加载当前产品与客户端资料和全部适用规则，保留来源日期及限制。profile 输出另含 sources.json，script.md 附来源链接，run.json 保存配置、元数据和摘要。P_CAN_010 因 Canva websites 的中文表述易混淆暂缓使用，详见 [评估](docs/09-data-pack.md)。
 
 [materials.json](data/materials.json) 仅含 P01“支持为视频添加字幕”；[brand_rules.json](data/brand_rules.json) 仅含不得虚构功能或效果数据。它们是用户指定的合成测试资料，不归属于真实品牌；“通用短视频”不是平台官方规则。
 
@@ -87,8 +98,8 @@ DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时
 
 ## 目录与提交状态
 
-`src/` 包含 CLI、数据结构、模型、Agent、工具和 Trace；`tests/` 为可执行测试；`data/` 为素材、规则和[官方来源登记](data/sources.md)；`examples/` 为输入及实际证据；`docs/` 为说明。协作规则见 [AGENTS.md](AGENTS.md)。
+`src/` 包含 CLI、数据结构、模型、Agent、工具、profile 加载和 Trace；`tests/` 为可执行测试；`data/` 为素材、规则、原始资料包、审阅配置和[来源登记](data/sources.md)；`examples/` 为输入及实际证据；`docs/` 为说明。协作规则见 [AGENTS.md](AGENTS.md)。
 
-`.env`、`.venv/`、`note/`、`outputs/` 不纳入 Git，运行与评审不依赖本地笔记。官方规则与更丰富产品资料尚未转为数据集，未实现前端、HTTP API、会话恢复或视频生成。
+`.env`、`.venv/`、`note/`、`outputs/` 不纳入 Git，运行与评审不依赖本地笔记。产品资料已按 profile 接入；官方发布平台审核规则仍未实现，未实现前端、HTTP API、会话恢复或视频生成。
 
 题目：短视频脚本 Agent，题号待用户补充。仓库为 [Universeping/agent-campus-submission-example](https://github.com/Universeping/agent-campus-submission-example)。实际用时待候选人填写；最终提交 SHA 用 `git rev-parse HEAD` 获取，不追写自身所在提交的 SHA。

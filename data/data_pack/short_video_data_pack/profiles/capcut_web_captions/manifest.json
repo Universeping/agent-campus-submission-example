@@ -1,0 +1,30 @@
+{
+  "profile": "capcut_web_captions",
+  "product_id": "capcut",
+  "surface": "web",
+  "material_ids": [
+    "P_CAP_001",
+    "P_CAP_002",
+    "P_CAP_003"
+  ],
+  "source_ids": [
+    "S_CAP_01"
+  ],
+  "brand_rule_ids": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B_SCOPE_CAPCUT",
+    "B_SURFACE_WEB"
+  ],
+  "important": "通过单独材料文件限制范围；现有代码不读取 product_id/surface 元数据，不自动阻止跨产品混用。"
+}

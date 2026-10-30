@@ -1,0 +1,3 @@
+Checks: 140; passed: 140; failed: 0
+Scope: data compatibility + existing deterministic tools; no model or Agent loop.
+Four read repository files have unchanged hashes. No repository file writes are performed.

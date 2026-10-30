@@ -1,0 +1,37 @@
+{
+  "profile": "bcut_ios",
+  "product_id": "bcut",
+  "surface": "ios",
+  "material_ids": [
+    "P_BCT_001",
+    "P_BCT_002",
+    "P_BCT_003",
+    "P_BCT_004",
+    "P_BCT_005",
+    "P_BCT_006",
+    "P_BCT_007",
+    "P_BCT_008",
+    "P_BCT_009",
+    "P_BCT_010"
+  ],
+  "source_ids": [
+    "S_BCT_01"
+  ],
+  "brand_rule_ids": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B_SCOPE_BCUT",
+    "B_SURFACE_IOS"
+  ],
+  "important": "通过单独材料文件限制范围；现有代码不读取 product_id/surface 元数据，不自动阻止跨产品混用。"
+}

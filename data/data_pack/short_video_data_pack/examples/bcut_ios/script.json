@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "title": "必剪 iOS 版支持语音转字幕。",
+  "shots": [
+    {
+      "id": "S01",
+      "visual": "展示视频画面",
+      "narration": "必剪 iOS 版支持语音转字幕。",
+      "source_ids": [
+        "P_BCT_001"
+      ]
+    },
+    {
+      "id": "S02",
+      "visual": "展示视频画面",
+      "narration": "必剪 iOS 版支持文本朗读。",
+      "source_ids": [
+        "P_BCT_002"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,8 @@ schemas 仅实现结构和一致性校验，不执行估时或规则判断。真
 
 Python 类型和面向模型的 JSON Schema 分开维护。`model.py` 中 `ModelAction` 保存调用 ID、动作名和参数；`ModelReply` 保存经过过滤的原生消息、有效动作或结构化错误。六个函数声明、本地参数校验和 tool_call_id 消息配对已实现，详见 [循环协议](08-agent-loop.md)。
 
+产品资料接入不修改 Material 的 id/fact 构造契约。profiles.py 的 DataProfile 保存可信素材/规则、默认输入、产品/客户端范围、来源元数据、审阅排除和摘要依赖。运行器仅在实际检索后附加来源元数据；TaskResult 保留 source_ids，profile 的 sources.json 保存所引事实详情，见 [说明](09-data-pack.md)。
+
 ## 字段清单
 
 | 类型 | 字段及含义 |

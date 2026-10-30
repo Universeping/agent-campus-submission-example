@@ -1,0 +1,25 @@
+{
+  "P_CAN_008": {
+    "id": "P_CAN_008",
+    "product_id": "canva",
+    "surfaces": [
+      "web"
+    ],
+    "feature_scope": "view_only_captions",
+    "approved_text": "Canva 的仅查看字幕目前不能编辑。",
+    "source_id": "S_CAN_02",
+    "source_url": "https://www.canva.com/help/enable-captions/",
+    "source_section": "Can I edit my captions",
+    "verified_on": "2026-10-31",
+    "tags": [
+      "字幕",
+      "仅查看字幕",
+      "不能编辑"
+    ],
+    "evidence_type": "official_documentation_paraphrase",
+    "conditions": "按 surfaces 和 feature_scope 限定使用；不得删除事实句中的适用限制，不推断价格、套餐或地区可用性。",
+    "source_title": "Enable accessibility or view-only captions on videos and audio",
+    "source_publisher": "Canva",
+    "rule_origin": "project_authored_demo_policy"
+  }
+}

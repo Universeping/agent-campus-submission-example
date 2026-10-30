@@ -271,7 +271,8 @@ class MockModel:
                     return reply("finish", status="incomplete", reason="检索持续失败，无法取得事实依据")
             elif observation.get("materials") == []:
                 return reply("request_input", missing_fields=["materials"], questions=["请补充可支持主题的产品事实。"], reason="没有检索到可用事实")
-            return reply("search_materials", query="字幕", reason="先查找有依据的字幕功能事实")
+            query = (view.get("data_scope") or {}).get("product_name", "字幕")
+            return reply("search_materials", query=query, reason="先查找当前授权范围内有依据的产品事实")
         script = view["current_script"]
         duration = view["duration_result"]
         rules = view["rule_check_result"]
@@ -281,13 +282,13 @@ class MockModel:
             if script and script["version"] >= 3:
                 return reply("finish", status="incomplete", reason="多次修订后仍无法通过检查")
             material = view["retrieved_materials"][0]
-            narration = material["fact"] + "。"
+            narration = material["fact"].rstrip("。") + "。"
             if script is None and self.scenario == "over-duration":
                 narration *= 12
             if script is None and self.scenario == "unsupported-claim":
                 narration = "效率提升80%。"
-            return reply("save_script", title="给视频加字幕", shots=[{
-                "id": "S01", "visual": "字幕示意画面", "narration": narration, "source_ids": [material["id"]]
+            return reply("save_script", title=material["fact"] if view.get("data_scope") else "给视频加字幕", shots=[{
+                "id": "S01", "visual": "展示视频画面" if view.get("data_scope") else "字幕示意画面", "narration": narration, "source_ids": [material["id"]]
             }], reason="根据可用事实生成草稿，或依据实际检查反馈修订")
         if duration is None:
             return reply("estimate_duration", script_version=script["version"], reason="检查当前稿是否满足用户时长上限")

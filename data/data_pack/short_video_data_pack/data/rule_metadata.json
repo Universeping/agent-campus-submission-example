@@ -1,0 +1,146 @@
+{
+  "origin": "project_authored_demo_policy",
+  "disclaimer": "全部规则均为本项目自定；不是厂商官方品牌手册、平台规则或法律意见。",
+  "rules": [
+    {
+      "id": "B01",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "builtin_fact_support",
+      "boundary": "内置 FACT-REF / FACT-SUPPORT；逐句匹配素材与受控表达。"
+    },
+    {
+      "id": "B02",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "只检测所列字面表达，不声称识别所有数字宣传。"
+    },
+    {
+      "id": "B03",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "项目自定宣传边界，不是法律条款实现。"
+    },
+    {
+      "id": "B04",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "本包未核验套餐或价格，不从下载免费推断功能免费。"
+    },
+    {
+      "id": "B05",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "不由功能介绍推断素材或生成内容的授权。"
+    },
+    {
+      "id": "B06",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "本地检查通过不代表发布平台审核通过。"
+    },
+    {
+      "id": "B07",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "没有流量和收益证据。"
+    },
+    {
+      "id": "B08",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "未开展竞品实验。"
+    },
+    {
+      "id": "B09",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "功能事实必须保留产品与客户端范围。"
+    },
+    {
+      "id": "B10",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "不由支持部分语言推出无限语言覆盖。"
+    },
+    {
+      "id": "B11",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "禁止这些文字进入交付脚本；不是通用提示注入防御。"
+    },
+    {
+      "id": "B12",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "只检查脚本正文中的列出词语，不读取或检查真实密钥。"
+    },
+    {
+      "id": "B_SCOPE_CAPCUT",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_SCOPE_CANVA",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_SCOPE_ADOBE_EXPRESS",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_SCOPE_BCUT",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_SURFACE_WEB",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_SURFACE_DESKTOP",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_SURFACE_IOS",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    },
+    {
+      "id": "B_CAN_VIEW_ONLY",
+      "origin": "project_authored_demo_policy",
+      "official_brand_policy": false,
+      "mechanism": "normalized_literal_forbidden_terms",
+      "boundary": "单产品/单端/单功能脚本的保守词表；不适用于跨产品比较，也不代替产品字段校验。"
+    }
+  ]
+}
