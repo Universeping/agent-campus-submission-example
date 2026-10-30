@@ -1,24 +1,38 @@
-# AI Agent 校招考核项目
+# 短视频脚本 Agent
 
-当前阶段：起始仓库。尚未选择题目，尚未实现 Agent，也没有真实模型执行记录或测试结果。
+当前阶段：已建立业务理解基线 v0.1.0 和 Python 文件骨架，模型选用 DeepSeek V4 Pro。尚未实现数据结构、业务逻辑、配置加载或 API 接入，没有真实模型执行记录或业务测试结果。
 
 ## 提交信息
 
 | 项目 | 内容 |
 | --- | --- |
-| 题号与业务任务 | 待选择 |
+| 题号与业务任务 | 短视频脚本 Agent；题号待补充 |
 | GitHub 所属账号及 URL | [Universeping/agent-campus-submission-example](https://github.com/Universeping/agent-campus-submission-example) |
 | 仓库可见性 | 用户已确认创建；要求公开，当前环境尚未联网核验 |
 | 最终 commit SHA | 提交前通过 `git rev-parse HEAD` 获取 |
 | 实际用时 | 待记录 |
-| 运行入口 | CLI 或 HTTP API，待选题后确定 |
-| 语言、模型、框架及版本 | 待确定 |
+| 运行入口 | CLI，支持文件/终端 JSON 输入的设计；入口尚未实现 |
+| 语言、模型、框架及版本 | Python；DeepSeek V4 Pro（`deepseek-v4-pro`）；拟用 LangGraph 小型状态图，框架及依赖版本待确认 |
 
 ## 环境、安装与运行
 
-本仓库目前只有目录和文档骨架，无运行时依赖，尚无 Agent 运行命令或测试命令。选题后补充依赖文件、所需版本、可复制的安装命令、真实模型运行方式、离线 Mock 入口及测试命令。
+`src/` 当前仅包含模块说明，没有可运行的 Agent。`requirements.txt` 尚无第三方依赖；开始实现时补充并锁定实际依赖版本，提供可复制的安装、真实模型运行、离线 Mock 及测试命令。
 
-当前无需配置环境变量，见 `.env.example`。离线 Mock 的验证范围必须与真实模型验证结果分别说明。
+计划采用 `python -m src.main` 作为入口，具体参数尚未定义；当前执行该模块不会生成脚本，不能作为功能验证。
+
+### 模型配置准备
+
+本地 `.env` 已加入 Git 忽略规则。本仓库提供 [.env.example](.env.example)，配置设计为：
+
+```dotenv
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-v4-pro
+```
+
+开发工作区已建立空密钥的 `.env`。其他克隆环境可将 `.env.example` 复制为 `.env`，仅在本地填写密钥。当前尚未实现文件加载或模型调用，填写后也不代表已接通 API；实现时计划优先使用进程环境变量，再读取本地文件。离线 Mock 计划无需真实密钥，其验证范围必须与真实模型验证分别说明。
+
+模型标识和地址已按 [DeepSeek 官方文档](https://api-docs.deepseek.com/) 核对；工具调用协议见 [官方指南](https://api-docs.deepseek.com/guides/tool_calls/)。尚未进行真实 API 调用。
 
 ## 评审入口
 
@@ -32,15 +46,32 @@
 ## 目录
 
 ```text
-AGENTS.md   项目协作规则、文档更新时机和验证要求
-src/        Agent、模型接入、业务工具和运行入口
-tests/      可执行测试
-examples/   输入、实际输出、Trace 与测试结果
-data/       合成业务资料和规则（按题目需要）
-docs/       需求、方案、评估、AI 使用与复盘
+AGENTS.md          项目协作规则、文档更新时机和验证要求
+src/
+  __init__.py      Python 包
+  main.py          CLI、输入校验、结果保存
+  schemas.py       输入、素材、脚本、模型动作、工具结果和任务状态
+  model.py         真实模型接入与离线 Mock
+  agent.py         决策循环、工具调度和执行上限
+  tools.py         素材检索、估时、事实与品牌规则检查
+  trace.py         执行记录
+data/              官方来源登记、产品事实及测试规则（数据集待准备）
+tests/             可执行测试（待实现）
+examples/          输入、实际输出、Trace 与测试结果（待生成）
+docs/              需求、方案、评估、AI 使用与复盘
+requirements.txt   依赖清单（尚未引入第三方依赖）
+.env.example       可提交的 DeepSeek 配置模板
 ```
 
 开发协作遵循 [AGENTS.md](AGENTS.md)。本地可使用 `note/` 存放指定固化的讨论结果和个人参考文件，该目录已被 Git 忽略，不属于提交材料，也不是运行依赖。
+
+## 首版范围
+
+面向创作者，根据文本形式的主题、受众、平台、目标时长和风格，结合本地产品事实及品牌/平台规则生成可编辑脚本。资料将参考抖音、快手的官方规则与剪映、必剪的官方产品说明，同时使用明确标记的合成案例和自定创作配置。[来源登记](data/sources.md) 已建立，机器可读数据集尚未生成，首批产品和平台组合待选定。
+
+首版采用单 Agent 和三个本地工具：素材检索、时长估算、事实与品牌/平台规则检查，提供真实模型入口及明确标记的离线 Mock。检查结果绑定脚本版本，修改后重新检查；缺信息时输出补充问题并结束，暂不恢复会话。
+
+计划在终端显示结果，同时保存 `result.json`、`script.md`、`checks.json` 和 `trace.jsonl` 至被 Git 忽略的 `outputs/<run_id>/`；选定的验收证据归档到 `examples/`。后续通过 HTTP API 复用同一 Agent 核心，再加前端字段表单。首版不实现视频生成、配音、HTTP API、网页编辑器或会话恢复。业务流程与待确认项见 [方案文档](docs/02-solution.md)。
 
 ## 提交前检查
 

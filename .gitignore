@@ -8,6 +8,9 @@
 # Local discussion notes and personal reference files
 /note/
 
+# Generated local runs; reviewed submission evidence belongs in examples/
+/outputs/
+
 # Python
 __pycache__/
 *.py[cod]
