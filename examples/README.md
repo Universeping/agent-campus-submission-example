@@ -1,27 +1,20 @@
-# 输入、实际输出与验证证据
+# 输入、实际输出和验证材料
 
-当前没有 Agent 执行记录，已有单元测试与人工脚本的本地工具运行记录。不得将下列规划或手工输入的工具结果视为已完成模型决策验证。
+当前核心循环可运行。查看 [Agent 运行索引](agent-validation/README.md) 获取真实与 Mock 的区分、实际结果、Trace、历史和代码指纹；查看 [当前测试日志](agent-validation/unittest-001.txt) 获取 79 项测试结果。
 
-当前工程验证：[工具验证索引](tool-validation/README.md)，完整 37 项测试和七次独立工具命令输出；输入脚本均为人工测试资料。历史结果：[schema-validation/unittest-001.txt](schema-validation/unittest-001.txt)，保存早期 15 项契约测试，不作为当前源码指纹依据。两者都不包含模型输出。
+## 输入与资料
 
-至少准备三组案例：
+- [normal/input.json](normal/input.json)：新手、轻松、通用短视频、30 秒以内。
+- [insufficient-information/input.json](insufficient-information/input.json)：缺少主题。
+- [no-materials/materials.json](no-materials/materials.json)：空资料集。
+- [产品事实](../data/materials.json) 和 [品牌规则](../data/brand_rules.json)：用户指定的最小合成资料。
 
-| 案例 | 场景 | 证据状态 |
-| --- | --- | --- |
-| [normal](normal/input.json) | 新手、轻松风格，30 秒以内的单事实字幕脚本 | 输入已准备，未运行 |
-| insufficient-information | 用户输入缺关键信息 | 待运行 |
-| no-materials | 检索无可用素材 | 待运行 |
-| tool-failure | 工具失败 | 待运行 |
-| over-duration | 超时长后的修正或明确失败 | 待运行 |
-| unsupported-claim | 无依据的产品表达被检出并处理 | 待运行 |
-| execution-limit | 达到执行上限后明确返回未完成 | 待运行 |
+## 证据范围
 
-每组保存输入、实际输出、Trace，并标明模型或 Mock 模式、运行命令和必要配置。另保存测试结果，并在 `docs/03-evaluation.md` 中引用具体文件。
+真实正常路径已记录改写检索、受限表达被拒后的修订、v2 重检和完成。真实检索故障注入路径记录一次明确模拟的工具错误，以及真实模型的查询调整和后续修订。缺信息案例在 real 模式下由基础校验直接返回问题，没有调用模型。
 
-Trace 应包含步骤、工具名称和参数、返回摘要、后续动作及简短决策依据，无需模型内部思维过程。至少两条实际路径应体现模型根据不同工具结果调整行为。
+Mock 路径另覆盖正常、超时长、事实违规、故障恢复、无素材、缺信息、执行上限和提前完成申请。Mock 只验证流程，不证明真实模型具备相应效果。真实模型的超时长修订与稳定性仍待验证。
 
-案例还须覆盖所选题目的全部验收点，同一案例可覆盖多个验收点。
+[历史工具记录](tool-validation/README.md) 的输入是人工脚本，不是模型生成；历史 15/37 项测试日志的源码指纹也不等于当前版本。不得将这些材料混同为完整真实模型验收。
 
-先以 `normal/input.json` 驱动最小链路开发，资料仅为 P01“支持为视频添加字幕”和 B01“不得虚构功能或效果数据”。输入中的“通用短视频”是测试场景，不代表任何平台官方规范。验收要求见 [最小正常案例](../docs/03-evaluation.md#最小正常案例-normal)；实际输出、检查报告及 Trace 尚未生成。
-
-v0.1.0 计划使用 DeepSeek V4 Pro 的真实模型路径，并明确区分 Mock。日常输出先进入被忽略的 `outputs/<run_id>/`，选定的实际输入、输出、检查报告和 Trace 经必要脱敏后归档至本目录；不提交 `.env` 或本地讨论文件。每组记录对应的资料/规则版本，首版缺信息案例以补充请求结束，不含会话恢复。
+.env、note/ 和日常 outputs/ 不提交。公开证据不包含 API 密钥、认证头或模型内部思维过程；保留简短行动依据、版本对应的实际观察和必要失败记录。

@@ -2,9 +2,9 @@
 
 实现位置：[src/schemas.py](../src/schemas.py)。使用 Python 标准库 `dataclasses`，无新增第三方依赖。数据对象不可变，传入的列表转为 tuple；`to_dict()` 输出 JSON 兼容字典，tuple 转为数组。需要 Python 3.10 或更高版本。
 
-schemas 仅实现结构和一致性校验，不执行估时或规则判断。真实本地工具及脚本 JSON 加载器已在 `src/tools.py` 实现，见 [工具说明](07-tools.md)；Agent 和模型调用仍未实现。TaskInput、Material、BrandRule 可直接用现有 JSON 字段构造，派生字段只用于输出，不作为构造参数。
+schemas 仅实现结构和一致性校验，不执行估时或规则判断。真实本地工具及脚本 JSON 加载器在 `src/tools.py`，模型适配在 `src/model.py`，LangGraph 循环在 `src/agent.py`。TaskInput、Material、BrandRule 可直接用现有 JSON 字段构造，派生字段只用于输出，不作为构造参数。
 
-这些 Python 类型不是已注册到模型的工具参数 JSON Schema。工具 description、模型动作结构、参数适配和调用结果消息协议尚未实现。
+Python 类型和面向模型的 JSON Schema 分开维护。`model.py` 中 `ModelAction` 保存调用 ID、动作名和参数；`ModelReply` 保存经过过滤的原生消息、有效动作或结构化错误。六个函数声明、本地参数校验和 tool_call_id 消息配对已实现，详见 [循环协议](08-agent-loop.md)。
 
 ## 字段清单
 
@@ -21,7 +21,7 @@ schemas 仅实现结构和一致性校验，不执行估时或规则判断。真
 | `RuleCheckResult` | `script_version`、`script_fingerprint`、`checked_rule_ids`、`issues`；检查规则列表不能为空，`passed` 由问题列表是否为空决定。 |
 | `ToolError` | `tool`、`code`、`message`、`retryable`；区分工具运行失败和检查未通过。 |
 | `SearchResult` | `query`、`materials`、可选 `error`；空结果且无错误代表未检索到，出现错误时不同时携带素材。 |
-| `TaskResult` | `run_id`、`mode`、`status`、可选 `task_input` / `script` / 两类检查结果，以及 `risks`、`reason`、`missing_fields`、`errors`。 |
+| `TaskResult` | `run_id`、`mode`、`status`、可选 `task_input` / `script` / 两类检查结果，以及 `risks`、`reason`、`missing_fields`、`questions`、`errors`；questions 保存具体补充问题。 |
 
 `mode` 为 `real` 或 `mock`，表示运行模式，不代表真实模型效果已验证。
 
@@ -38,15 +38,15 @@ schemas 仅实现结构和一致性校验，不执行估时或规则判断。真
 
 ## 版本与内容绑定
 
-1. `Script.version` 是稿次，后续运行器负责修订时递增。
+1. `Script.version` 是稿次，运行器每次接受 save_script 后递增。
 2. `Script.fingerprint` 由程序对标题、分镜顺序、镜头 ID、画面、旁白和来源的规范化 JSON 计算 SHA-256；不包含版本，因为两者分别比较。
 3. 两类检查都保存 `script_version` 和 `script_fingerprint`，`matches(script)` 同时核对两者。
 4. 版本从 1 改为 2，即使正文相同，第一稿的检查也不能用于第二稿；正文改了但误用版本 1，内容指纹仍会发现过期。
 5. `TaskResult` 拒绝用过期、缺失或未通过的检查标记完成。
 
-数据对象本身不能证明工具真正执行过，指纹也不是执行签名。后续运行器必须使用工具实际产生的结果，禁止把模型自报的“检查通过”直接当作工具报告，也不能仅重写旧报告的版本号来代替重检。
+数据对象本身不能证明工具真正执行过，指纹也不是执行签名。运行器使用工具实际产生的结果，并校验返回类型、版本、指纹和目标时长；禁止把模型自报的“检查通过”直接当作工具报告，也不能仅重写旧报告的版本号来代替重检。
 
-当前绑定覆盖脚本内容、稿次和用户时长上限；规则库、素材库或估时配置变化后的失效机制仍需后续运行器处理。来源与受控表达由工具核对，不由 schemas 代替；开放域语义核验尚未实现。
+当前绑定覆盖脚本内容、稿次和用户时长上限。一次运行中素材、规则和估时策略固定，检查依据由运行器注入；run.json 记录代码与资料指纹。当前不跨次恢复任务，也不复用跨配置报告；未来实现恢复时必须增加配置变更失效机制。来源与受控表达由工具核对，不由 schemas 代替；开放域语义核验尚未实现。
 
 ## 验证
 

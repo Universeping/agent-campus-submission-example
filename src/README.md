@@ -1,18 +1,16 @@
 # 项目代码
 
-`schemas.py` 已实现标准库数据契约，`tools.py` 已实现三个独立工具及其命令入口，其他模块仍为骨架，尚无 Agent。字段见 [数据约定](../docs/06-data-contracts.md)，工具假设、错误与受控表达见 [工具说明](../docs/07-tools.md)。
-
-三个工具已采用本地函数实现；模型工具声明和调用适配尚未实现。下一阶段模型根据结果选择动作，运行器负责校验、执行、限制调用次数并记录 Trace，资料与规则由程序注入。
+六个动作的单 Agent、DeepSeek 适配和 CLI 已实现，使用 LangGraph 1.2.18。字段见 [数据约定](../docs/06-data-contracts.md)，工具边界见 [工具说明](../docs/07-tools.md)，循环协议见 [Agent 文档](../docs/08-agent-loop.md)。
 
 | 模块 | 职责 |
 | --- | --- |
-| `main.py` | CLI、输入校验、启动 Agent 和保存结果。 |
-| `schemas.py` | 用户输入、素材、脚本、工具结果和任务状态；模型动作协议待定义。 |
-| `model.py` | 真实模型与离线 Mock 的一致接口，区分运行模式。 |
-| `agent.py` | 中心决策循环、工具调度、执行上限及结束条件。 |
-| `tools.py` | 素材检索、时长估算、事实与品牌规则检查。 |
-| `trace.py` | 执行步骤、工具参数、返回摘要、后续动作与简短依据。 |
+| main.py | 文件/终端输入，启动任务，保存六类输出文件及退出码。 |
+| schemas.py | 不可变领域数据、版本/指纹绑定和完成约束。 |
+| model.py | 配置、六动作 description/JSON Schema、标准 HTTP 客户端及离线 Mock。 |
+| agent.py | prepare/call_model/dispatch/finalize 图节点、可信状态、历史版本和预算。 |
+| tools.py | 实际关键词检索、明确假设的估时、受控事实及品牌规则检查。 |
+| trace.py | 实际事件 JSONL 和凭据/内部推理过滤。 |
 
-业务理解基线为 v0.1.0。真实模型选用 DeepSeek V4 Pro，LangGraph 小型状态图为拟用方案；三个工具设计名为 `search_materials`、`estimate_duration`、`check_rules`。首版支持文件/终端 JSON 输入，缺信息后结束，不实现会话恢复。CLI 与未来 HTTP API 复用同一业务核心。
+入口：`.venv/bin/python -m src.main --mode mock --input examples/normal/input.json`。真实调用使用 --mode real 和本地密钥。默认只对 DeepSeek 直连，不改变系统代理。
 
-两类工具检查绑定脚本版本及内容指纹；`TaskResult` 校验最终稿与报告一致。下一步接模型与 Agent，配置读取、框架选择和依赖版本仍待完成；完整方案见 [方案文档](../docs/02-solution.md)。
+模型自主选择业务动作，程序执行和裁决；不执行模型任意代码，不接受自报报告。当前不含前端、HTTP API、视频生成、持久化会话或开放域事实核验。

@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "1": {
+      "version": 1,
+      "title": "给视频加字幕",
+      "shots": [
+        {
+          "id": "S01",
+          "visual": "字幕示意画面",
+          "narration": "支持为视频添加字幕。",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc"
+    }
+  },
+  "duration_results": {},
+  "rule_results": {},
+  "error_history": [],
+  "step_count": 2,
+  "tool_call_count": 1
+}

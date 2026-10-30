@@ -159,6 +159,7 @@ def check_rules(
     by_id = {material.id: material for material in corpus}
     all_facts = {_clause(material.fact) for material in corpus}
     issues = []
+    grounded_facts = set()
 
     def check_text(text: str, sources: tuple[str, ...], allowed: tuple[str, ...], location: str, shot_id=None):
         supported = {_clause(by_id[source].fact) for source in sources if source in by_id}
@@ -167,7 +168,10 @@ def check_rules(
             value = _clause(part)
             if not value:
                 continue
-            if value in neutral or value in supported:
+            if value in supported:
+                grounded_facts.add(value)
+                continue
+            if value in neutral:
                 continue
             code = "missing_source" if value in all_facts else "unsupported_expression"
             issues.append(RuleIssue(
@@ -183,6 +187,8 @@ def check_rules(
                 issues.append(RuleIssue(REFERENCE_RULE_ID, "unknown_source", f"素材 {source} 不存在", shot.id))
         check_text(shot.visual, shot.source_ids, ALLOWED_VISUALS, "画面", shot.id)
         check_text(shot.narration, shot.source_ids, ALLOWED_NARRATION, "旁白", shot.id)
+    if script.source_ids and not grounded_facts:
+        issues.append(RuleIssue(SUPPORT_RULE_ID, "no_grounded_fact", "引用了素材但未实际表达任何有依据的事实，请使用所引素材原文。"))
     fields = [(None, "标题", script.title)] + [
         (shot.id, name, value)
         for shot in script.shots

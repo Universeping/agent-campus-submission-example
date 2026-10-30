@@ -19,7 +19,11 @@ def _text(value: str, name: str) -> None:
 
 
 def _positive(value: float, name: str) -> None:
-    if type(value) not in (int, float) or not math.isfinite(value) or value <= 0:
+    try:
+        valid = type(value) in (int, float) and math.isfinite(value) and value > 0
+    except OverflowError:
+        valid = False
+    if not valid:
         raise ValueError(f"{name} must be a finite positive number")
 
 
@@ -266,6 +270,7 @@ class TaskResult(JsonRecord):
     reason: str | None = None
     missing_fields: tuple[str, ...] = ()
     errors: tuple[ToolError, ...] = ()
+    questions: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         _text(self.run_id, "run_id")
@@ -283,6 +288,7 @@ class TaskResult(JsonRecord):
             _text(risk, "risk")
         object.__setattr__(self, "risks", risks)
         object.__setattr__(self, "missing_fields", _ids(self.missing_fields, "missing_fields"))
+        object.__setattr__(self, "questions", _ids(self.questions, "questions"))
         object.__setattr__(self, "errors", _items(self.errors, ToolError, "errors"))
         if self.reason is not None:
             _text(self.reason, "reason")
@@ -311,7 +317,7 @@ class TaskResult(JsonRecord):
                 raise ValueError("duration check must use the requested time limit")
             if not self.script.source_ids:
                 raise ValueError("completed task requires material references")
-            if self.errors or self.missing_fields:
+            if self.errors or self.missing_fields or self.questions:
                 raise ValueError("completed task cannot have unresolved errors or missing fields")
         elif self.reason is None:
             raise ValueError("non-completed task requires a reason")

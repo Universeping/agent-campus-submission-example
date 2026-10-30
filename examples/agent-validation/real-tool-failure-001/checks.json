@@ -1,0 +1,39 @@
+{
+  "duration_result": {
+    "script_version": 2,
+    "script_fingerprint": "effffddc87d5cea99623f1c500818d0755ecad142e542f24aae037a26a3b3f8f",
+    "shot_durations": [
+      {
+        "shot_id": "S1",
+        "duration_seconds": 2.0
+      },
+      {
+        "shot_id": "S2",
+        "duration_seconds": 2.55
+      },
+      {
+        "shot_id": "S3",
+        "duration_seconds": 2.55
+      },
+      {
+        "shot_id": "S4",
+        "duration_seconds": 2.3
+      }
+    ],
+    "target_duration_seconds": 30,
+    "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+    "total_duration_seconds": 9.399999999999999,
+    "passed": true
+  },
+  "rule_check_result": {
+    "script_version": 2,
+    "script_fingerprint": "effffddc87d5cea99623f1c500818d0755ecad142e542f24aae037a26a3b3f8f",
+    "checked_rule_ids": [
+      "FACT-REF",
+      "FACT-SUPPORT",
+      "B01"
+    ],
+    "issues": [],
+    "passed": true
+  }
+}

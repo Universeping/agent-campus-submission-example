@@ -103,6 +103,10 @@ class ToolTests(unittest.TestCase):
         self.assertIn("B01", result.checked_rule_ids)
         self.assertEqual(result.issues, ())
 
+    def test_citing_a_fact_without_using_it_does_not_make_a_product_script(self):
+        script = self.changed_narration("我们开始吧。")
+        self.assertIn("no_grounded_fact", self.issues(script))
+
     def test_citation_does_not_support_new_function_metrics_or_negation(self):
         for text in ["支持自动识别字幕", "支持翻译字幕", "效率提升80%", "不支持为视频添加字幕"]:
             with self.subTest(text=text):

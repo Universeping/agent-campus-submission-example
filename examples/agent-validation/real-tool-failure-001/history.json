@@ -1,0 +1,181 @@
+{
+  "scripts": {
+    "1": {
+      "version": 1,
+      "title": "给视频加字幕",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "标题卡片",
+          "narration": "今天聊聊视频字幕",
+          "source_ids": []
+        },
+        {
+          "id": "S2",
+          "visual": "展示视频画面",
+          "narration": "给视频加字幕",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "id": "S3",
+          "visual": "展示字幕示意画面",
+          "narration": "你会给视频加字幕吗",
+          "source_ids": []
+        },
+        {
+          "id": "S4",
+          "visual": "片尾提示画面",
+          "narration": "我们开始吧",
+          "source_ids": []
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "1a9ac4eb34ee1f632be2905b6315d748da000333872ad5b3527cf4c4b053bb6f"
+    },
+    "2": {
+      "version": 2,
+      "title": "给视频加字幕",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "标题卡片",
+          "narration": "今天聊聊视频字幕",
+          "source_ids": []
+        },
+        {
+          "id": "S2",
+          "visual": "展示视频画面",
+          "narration": "支持为视频添加字幕",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "id": "S3",
+          "visual": "展示字幕示意画面",
+          "narration": "你会给视频加字幕吗",
+          "source_ids": []
+        },
+        {
+          "id": "S4",
+          "visual": "片尾提示画面",
+          "narration": "我们开始吧",
+          "source_ids": []
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "effffddc87d5cea99623f1c500818d0755ecad142e542f24aae037a26a3b3f8f"
+    }
+  },
+  "duration_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "1a9ac4eb34ee1f632be2905b6315d748da000333872ad5b3527cf4c4b053bb6f",
+      "shot_durations": [
+        {
+          "shot_id": "S1",
+          "duration_seconds": 2.0
+        },
+        {
+          "shot_id": "S2",
+          "duration_seconds": 2.3
+        },
+        {
+          "shot_id": "S3",
+          "duration_seconds": 2.55
+        },
+        {
+          "shot_id": "S4",
+          "duration_seconds": 2.3
+        }
+      ],
+      "target_duration_seconds": 30,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 9.149999999999999,
+      "passed": true
+    },
+    "2": {
+      "script_version": 2,
+      "script_fingerprint": "effffddc87d5cea99623f1c500818d0755ecad142e542f24aae037a26a3b3f8f",
+      "shot_durations": [
+        {
+          "shot_id": "S1",
+          "duration_seconds": 2.0
+        },
+        {
+          "shot_id": "S2",
+          "duration_seconds": 2.55
+        },
+        {
+          "shot_id": "S3",
+          "duration_seconds": 2.55
+        },
+        {
+          "shot_id": "S4",
+          "duration_seconds": 2.3
+        }
+      ],
+      "target_duration_seconds": 30,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 9.399999999999999,
+      "passed": true
+    }
+  },
+  "rule_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "1a9ac4eb34ee1f632be2905b6315d748da000333872ad5b3527cf4c4b053bb6f",
+      "checked_rule_ids": [
+        "FACT-REF",
+        "FACT-SUPPORT",
+        "B01"
+      ],
+      "issues": [
+        {
+          "rule_id": "FACT-SUPPORT",
+          "code": "no_grounded_fact",
+          "message": "引用了素材但未实际表达任何有依据的事实，请使用所引素材原文。",
+          "shot_id": null
+        }
+      ],
+      "passed": false
+    },
+    "2": {
+      "script_version": 2,
+      "script_fingerprint": "effffddc87d5cea99623f1c500818d0755ecad142e542f24aae037a26a3b3f8f",
+      "checked_rule_ids": [
+        "FACT-REF",
+        "FACT-SUPPORT",
+        "B01"
+      ],
+      "issues": [],
+      "passed": true
+    }
+  },
+  "error_history": [
+    {
+      "error": {
+        "tool": "search_materials",
+        "code": "simulated_failure",
+        "message": "测试配置注入的一次检索失败",
+        "retryable": true
+      }
+    },
+    {
+      "error": {
+        "tool": "model",
+        "code": "multiple_actions",
+        "message": "每轮只允许一个动作，本轮未执行任何动作",
+        "retryable": false
+      }
+    }
+  ],
+  "step_count": 10,
+  "tool_call_count": 6
+}

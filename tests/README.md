@@ -1,17 +1,21 @@
 # 可执行测试
 
-已实现 [test_schemas.py](test_schemas.py) 与 [test_tools.py](test_tools.py)，运行方式：
+使用项目虚拟环境：
 
 ```bash
-python3 -m unittest discover -s tests -v
+.venv/bin/python -m unittest discover -s tests -v
 ```
 
-当前 15 项单元测试覆盖现有 JSON 资料兼容、JSON 输出、版本和内容变化后的旧检查拒绝、不可变数据、完成所需检查、时长上限与镜头覆盖、规则问题定位、未完成原因以及空检索与工具失败的区分。报告由测试人工构造，不是实际工具或模型输出。
+当前共 79 项，全部通过，无跳过项。实际环境为 Python 3.14.4、LangGraph 1.2.18 和 python-dotenv 1.2.4；[当前日志](../examples/agent-validation/unittest-001.txt) 包含被测文件指纹。
 
-另有 22 项工具测试，实际调用检索、估时和检查函数以及命令入口，覆盖空检索/工具失败、时长边界、P01 下新增功能与效果、跨镜头引用、缺失来源、标题与画面问题、品牌禁用、未知规则、版本和加载校验。完整 37 项均已通过。
+| 文件 | 数量 | 覆盖范围 |
+| --- | --- | --- |
+| test_schemas.py | 15 | 数据契约、版本/内容绑定、完成约束、时长和引用结构。 |
+| test_tools.py | 23 | 实际工具、估时边界、事实原文/受控表达、品牌禁用、加载及 CLI。 |
+| test_model.py | 13 | 六动作声明、原生消息解析、无效与批量响应、HTTP 错误、配置及专用代理。 |
+| test_agent.py | 24 | 节点边界、真实 LangGraph 路由、Mock+真实工具、修订重检、预算、失败及消息配对。 |
+| test_cli_trace.py | 4 | CLI 文件/终端输入、输出、目录保护及 Trace 脱敏。 |
 
-后续再补充 Agent 测试，验证模型根据工具结果修订、请求补充和执行上限等行为，不以工具测试替代模型决策验证。
+HTTP 单元测试使用假响应，Mock 模型按实际观察选择预设行为，二者均不证明真实模型效果。真实运行由用户在本机发起，代码与 Trace 已另行核对；见 [运行记录](../examples/agent-validation/README.md)。
 
-真实模型决策效果的验证应另有实际运行记录；离线 Mock 测试不能证明真实模型决策效果。
-
-v0.1.0 后续增加 Agent 文件/终端输入、配置优先级及输出文件验证。首版不包含会话恢复测试。DeepSeek 接入与框架均未完成，当前没有 Agent 运行结果。[当前套件日志](../examples/tool-validation/unittest-001.txt) 包含代码和资料指纹；[历史契约日志](../examples/schema-validation/unittest-001.txt) 保留早期版本结果。
+早期 15 项和 37 项日志保留在 schema-validation、tool-validation 下，属于历史代码版本，不作为当前源码指纹依据。前端、会话恢复和真实模型多次重复的稳定性评估未覆盖。

@@ -1,0 +1,21 @@
+{
+  "run_id": "621afe79c3b04d46a1daaabf30ec0e4e",
+  "mode": "real",
+  "status": "needs_input",
+  "task_input": null,
+  "script": null,
+  "duration_result": null,
+  "rule_check_result": null,
+  "risks": [
+    "时长是 timing-v1 假设下的估算，不是实际配音测量。",
+    "事实检查仅覆盖素材原文与受控表达，可能误拒有效改写。"
+  ],
+  "reason": "缺少必要任务信息",
+  "missing_fields": [
+    "topic"
+  ],
+  "errors": [],
+  "questions": [
+    "请补充 topic。"
+  ]
+}

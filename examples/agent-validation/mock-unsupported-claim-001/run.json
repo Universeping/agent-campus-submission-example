@@ -1,0 +1,37 @@
+{
+  "run_id": "5390034c1ee74d87a053c9b7213c0025",
+  "mode": "mock",
+  "command": [
+    "python",
+    "-m",
+    "src.main",
+    "--mode",
+    "mock",
+    "--input",
+    "examples/normal/input.json",
+    "--mock-scenario",
+    "unsupported-claim",
+    "--output-dir",
+    "examples/agent-validation/mock-unsupported-claim-001"
+  ],
+  "mock_scenario": "unsupported-claim",
+  "simulate_search_failure": false,
+  "sha256": {
+    "data/materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+    "data/brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91",
+    "src/tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+    "src/agent.py": "aaefcb8ec47d7dc1423ca39d449eb1645b0cc24216c5281ff5733c9dda7eefd9",
+    "src/main.py": "44d22212aa3b89106af2125a35207d682f97174ddf45dc952a6eb7e6bb98995c",
+    "src/schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+    "src/__init__.py": "86983bd57fbea9b1a408b85bf7ba28c44a76e7d991d9628b1cdc5aebb3188241",
+    "src/trace.py": "1caa9a5ae3c657ba3b4450261a7dd64c4cac4cece8f076ff38384c9def80fa9d",
+    "src/model.py": "233fe2b171f63cd2eac4d8bf28efcfbca2d7fcd006cc6076da3cdd601aac2fcc"
+  },
+  "model": "offline-mock",
+  "input_sha256": "812cb1c6a3ab8a44a498ac26a26827bee1f29dd6efca35f835c669311175faa8",
+  "limits": {
+    "max_steps": 12,
+    "max_tool_calls": 8,
+    "max_transport_retries": 1
+  }
+}

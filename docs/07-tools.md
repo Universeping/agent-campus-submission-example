@@ -1,8 +1,8 @@
 # 三个独立本地工具
 
-实现：[src/tools.py](../src/tools.py)。仅使用标准库，可直接调用函数或通过 `python3 -m src.tools` 执行，不读取 `.env`，不调用模型。先完成工具，再接 Agent 循环；后续离线 Mock 针对模型接口，不替代这三个工具的实际计算。
+实现：[src/tools.py](../src/tools.py)。仅使用标准库，可直接调用函数或通过 `python3 -m src.tools` 执行，不读取 `.env`，不调用模型。已接入 Agent 循环；离线 Mock 针对模型接口，不替代这三个工具的实际计算。
 
-当前工具函数、CLI 帮助和 Python 类型注解尚未转换为模型可见的 description/参数 JSON Schema。调用适配和模型选择能力仍待实现，见 [方案文档](02-solution.md#面向模型的工具适配待实现)。适配时从可信状态注入资料、品牌规则与时长限制，不将这些核验依据交由模型重写。
+`model.py` 已提供 description/参数 JSON Schema。模型选择检索参数或待检查的当前 script_version；执行器从可信状态注入脚本正文、资料、品牌规则与用户时长上限，不将核验依据交由模型重写。另有 save_script、request_input 和 finish 三个管理动作，合计六动作，见 [方案文档](02-solution.md#六个动作)。无须 MCP 服务即可完成原生函数调用。
 
 ## 素材检索
 
@@ -49,7 +49,8 @@ python3 -m src.tools estimate --script examples/tool-validation/input-script.jso
 1. 产品事实句需逐句匹配所引素材的完整原文，仅规范化 Unicode、空白、大小写和句末标点，不根据关键词相似推断支持。旁白按中文句末标点、问号、感叹号、分号和换行分句。
 2. 分镜事实必须由该镜头的引用支持，不能借用另一个分镜的引用；标题可使用脚本汇总引用。
 3. “支持字幕”不能自动推出识别、翻译或准确率；百分比也只有对应原文与正确引用同时存在才可通过，不采用“一律禁数字”的替代判断。
-4. 非事实的创意表达仅允许下表。超出范围返回 `unsupported_expression` 与“无法核验”，不把它断言为事实错误。模型后续需在提示中获得该列表，并据反馈修改。
+4. 非事实的创意表达仅允许下表。超出范围返回 `unsupported_expression` 与“无法核验”，不把它断言为事实错误。模型在动态上下文获得该列表，并据反馈修改。
+5. 引用了素材但整稿没有实际表达所引事实时，返回 `no_grounded_fact`，避免只附 P01 就让纯创意衔接文案通过。这仍是严格原文识别，不是语义证明。
 
 | 字段 | 项目自定的允许表达 |
 | --- | --- |
@@ -67,7 +68,7 @@ python3 -m src.tools estimate --script examples/tool-validation/input-script.jso
 python3 -m src.tools check --script examples/tool-validation/input-script.json
 ```
 
-限制：这是原文与封闭表达检查，不是开放域自然语言蕴含、素材真实性鉴定、完整平台审核或品牌政策理解器。可有明显误拒，不接受未覆盖表达并不代表它必然不实。规则、素材和估时配置变化后的历史结果失效仍需后续运行器处理；模型不能自己填写通过报告。
+限制：这是原文与封闭表达检查，不是开放域自然语言蕴含、素材真实性鉴定、完整平台审核或品牌政策理解器。真实运行将“它支持为视频添加字幕”误拒，见 [评估](03-evaluation.md)；不接受未覆盖表达并不代表它必然不实。一次运行固定资料、规则和估时配置，不跨运行复用报告；未来会话恢复必须增加配置失效机制。模型不能自己填写通过报告。
 
 ## 独立运行与错误
 
@@ -75,4 +76,4 @@ CLI 输出 JSON。退出码：0 为执行成功（检索可能为空），1 为�
 
 `load_materials` / `load_brand_rules` 加载现有数组格式；`load_script` 加载嵌套脚本，并核对可选的派生来源和指纹字段，不信任外部提供的旧指纹。函数接口使用 schemas 对象；CLI 负责文件转换。
 
-测试与实际输出见 [工具验证索引](../examples/tool-validation/README.md)。这些记录仅证明本地工具可运行，不证明模型能选工具、修订脚本或完成 Agent 任务。
+早期独立工具记录见 [工具验证索引](../examples/tool-validation/README.md)，它们是历史版本的人工输入。当前 23 项工具测试及 Agent/真实模型记录见 [评估](03-evaluation.md) 和 [运行索引](../examples/agent-validation/README.md)，各自区分验证范围。

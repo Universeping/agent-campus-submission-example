@@ -1,0 +1,126 @@
+{
+  "verified_at": "2026-10-30T13:32:11.948816+00:00",
+  "method": "Actual Python artifact audit: recompute all stored scripts and historical reports using current local tools; compare result/checks/history/trace; verify input/data hashes, call counters, budgets, save invalidation, and both passing reports before accepted finish. No model calls.",
+  "run_count": 13,
+  "runs": [
+    {
+      "directory": "mock-early-finish-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 1,
+      "historical_duration_reports_recomputed": 1,
+      "historical_rule_reports_recomputed": 1
+    },
+    {
+      "directory": "mock-execution-limit-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 1,
+      "historical_duration_reports_recomputed": 0,
+      "historical_rule_reports_recomputed": 0
+    },
+    {
+      "directory": "mock-missing-input-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 0,
+      "historical_duration_reports_recomputed": 0,
+      "historical_rule_reports_recomputed": 0
+    },
+    {
+      "directory": "mock-no-materials-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 0,
+      "historical_duration_reports_recomputed": 0,
+      "historical_rule_reports_recomputed": 0
+    },
+    {
+      "directory": "mock-normal-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 1,
+      "historical_duration_reports_recomputed": 1,
+      "historical_rule_reports_recomputed": 1
+    },
+    {
+      "directory": "mock-over-duration-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 2,
+      "historical_duration_reports_recomputed": 2,
+      "historical_rule_reports_recomputed": 1
+    },
+    {
+      "directory": "mock-tool-failure-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 1,
+      "historical_duration_reports_recomputed": 1,
+      "historical_rule_reports_recomputed": 1
+    },
+    {
+      "directory": "mock-unsupported-claim-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 2,
+      "historical_duration_reports_recomputed": 2,
+      "historical_rule_reports_recomputed": 2
+    },
+    {
+      "directory": "real-missing-input-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 0,
+      "historical_duration_reports_recomputed": 0,
+      "historical_rule_reports_recomputed": 0
+    },
+    {
+      "directory": "real-normal-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 0,
+      "historical_duration_reports_recomputed": 0,
+      "historical_rule_reports_recomputed": 0
+    },
+    {
+      "directory": "real-normal-002",
+      "checks": "passed",
+      "historical_scripts_recomputed": 2,
+      "historical_duration_reports_recomputed": 2,
+      "historical_rule_reports_recomputed": 2
+    },
+    {
+      "directory": "real-tool-failure-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 2,
+      "historical_duration_reports_recomputed": 2,
+      "historical_rule_reports_recomputed": 2
+    },
+    {
+      "directory": "real-tool-failure-local-001",
+      "checks": "passed",
+      "historical_scripts_recomputed": 0,
+      "historical_duration_reports_recomputed": 0,
+      "historical_rule_reports_recomputed": 0
+    }
+  ],
+  "current_test_log": {
+    "file": "unittest-001.txt",
+    "tests": 79,
+    "skipped": 0,
+    "source_hashes_matched": 14
+  },
+  "limitations": [
+    "Artifact consistency does not authenticate the model provider or independently prove how the trace was produced.",
+    "Historical source differences are preserved in run.json and listed in run-manifest.json; tool recomputation is not a model rerun.",
+    "Exact fact matching can falsely reject valid paraphrases; duration is an estimate."
+  ],
+  "repository_checks": {
+    "checked_at": "2026-10-30T13:32:52.341919+00:00",
+    "public_candidate_files_checked": 132,
+    "configured_local_key_leaks": 0,
+    "sensitive_artifact_fields": 0,
+    "json_artifacts_checked": 67,
+    "broken_local_links": [],
+    "locked_dependencies": 39,
+    "private_paths_ignored": [
+      ".env",
+      ".venv/",
+      "note/",
+      "outputs/"
+    ],
+    "private_paths_tracked": false,
+    "git_diff_check": "passed"
+  }
+}

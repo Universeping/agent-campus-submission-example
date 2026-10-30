@@ -1,0 +1,488 @@
+{
+  "generated_at": "2026-10-30T13:32:11.948816+00:00",
+  "scope": "Original stored run files, without rerunning the model or modifying traces",
+  "runs": [
+    {
+      "directory": "mock-early-finish-001",
+      "run_id": "0a40f64c26ec4eb78725860df5eaa146",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--mock-scenario",
+        "early-finish",
+        "--output-dir",
+        "examples/agent-validation/mock-early-finish-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 1,
+      "duration_seconds": 2.65,
+      "steps": 6,
+      "tool_calls": 3,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "f96031c1ebd6a21eabe552f040a8a25e0628f250cb002101d9a274bcc936b679",
+        "history.json": "2979ba5bb8296ae1a629f459ff498983a4eac6512ba945777afa77ded3d9ad3f",
+        "result.json": "c26d3dcec61c9988da7d33d60b1352fdceb65e6cc8e35c531d113c9b3cba473c",
+        "run.json": "c5d8d534ec91c3186447159e72b481eb6add2d5f3a30e6ae6c5cbe1098dd852b",
+        "script.md": "bd87351507995471e1625d66313f937b29143a794ec748ab8f623d840000fd8c",
+        "trace.jsonl": "2055b868bf927cb3c3bc3610d4695abfe9f7603befc5ac92b168022ccf71ae6b"
+      }
+    },
+    {
+      "directory": "mock-execution-limit-001",
+      "run_id": "a6af520bc69844bba3daf12cb5620bdb",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--max-steps",
+        "2",
+        "--output-dir",
+        "examples/agent-validation/mock-execution-limit-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "incomplete",
+      "script_version": 1,
+      "duration_seconds": null,
+      "steps": 2,
+      "tool_calls": 1,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "history.json": "fa9195e2d1388a6d8b11ac66120b5b4f336e500c124a3a6096db0d546f48592a",
+        "result.json": "28c5b3f8de6177a59f7aa62972eb9cd5c9980b42e3e4063678fef2e6b5fafc8c",
+        "run.json": "66e956f767a4b719e2d04b255467ea34079d98159ed7e71bf5e74cf092d61a78",
+        "script.md": "320e82f955e12ba7ff8766b6e90671c29a8f76a735abceaaaf8b60e11b6503e1",
+        "trace.jsonl": "f90103cb98e7045d13467b7267430f723b49f9be9bc9dcfa373359479e80825a"
+      }
+    },
+    {
+      "directory": "mock-missing-input-001",
+      "run_id": "f436519488914e609df663471f43ec5f",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/insufficient-information/input.json",
+        "--output-dir",
+        "examples/agent-validation/mock-missing-input-001"
+      ],
+      "input": "examples/insufficient-information/input.json",
+      "status": "needs_input",
+      "script_version": null,
+      "duration_seconds": null,
+      "steps": 0,
+      "tool_calls": 0,
+      "simulate_search_failure": false,
+      "model_actions_observed": false,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "history.json": "a4cefd87cce3ac339dea2f6e1d84e15a919faa434ffb5f588f7332f1d56b55f0",
+        "result.json": "6ef93d60a95d6a068efd68578f0fef77b7896dd9c88ad101677f7cf869da2e95",
+        "run.json": "45955058321cec774ffb9f2909822222c219c48f172d3b5d9796d44d958449a6",
+        "script.md": "67fb22cbf6530942bfdc998284b5b55e9737e87b2f92acd8afbb1574a79149d6",
+        "trace.jsonl": "75c970d6fc935b10fa0797b3b7c1463b75cf463f60f364909ea847a4d68f95f7"
+      }
+    },
+    {
+      "directory": "mock-no-materials-001",
+      "run_id": "557b75e6816f43319f52a93e2dda62b8",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--materials",
+        "examples/no-materials/materials.json",
+        "--output-dir",
+        "examples/agent-validation/mock-no-materials-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "needs_input",
+      "script_version": null,
+      "duration_seconds": null,
+      "steps": 2,
+      "tool_calls": 1,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "history.json": "1dfa6e6feb838de6a32cefae6ca3cb97b4dfe6d784eea0cb6cf97c234ca00bc4",
+        "result.json": "1597fab9287e0ff144bfe4b7fff9ed5a1da4de34e40611af7455a07b28c9dfbf",
+        "run.json": "1e52a831527a184033af8baa135c23dcaeced28140e9957a1ee0e3ca150a86e2",
+        "script.md": "ad99084b8cec9537a4548d643fce44401500ecd817ef1690502c03006535cce8",
+        "trace.jsonl": "3a09a2cca2521ab9df1d394a0178af437675f9256382ae87a6cac087fe8617fe"
+      }
+    },
+    {
+      "directory": "mock-normal-001",
+      "run_id": "7409396dcace4de4acc9b79a85db8c57",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--output-dir",
+        "examples/agent-validation/mock-normal-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 1,
+      "duration_seconds": 2.65,
+      "steps": 5,
+      "tool_calls": 3,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "f96031c1ebd6a21eabe552f040a8a25e0628f250cb002101d9a274bcc936b679",
+        "history.json": "0123c653859d90c0814a6090998d41acb558ccf56fabb4157d1d237eed6ac2a8",
+        "result.json": "147c23140ca2ddaca9563d61baffc4e4953023fe0888e23da9dad7a7b68e74f3",
+        "run.json": "693135c496ca476c7e16da6b56a5a068bee482933f9ff78621d6d96125fed8b1",
+        "script.md": "bd87351507995471e1625d66313f937b29143a794ec748ab8f623d840000fd8c",
+        "trace.jsonl": "09336b2b166d818e05d9f5d35bdea52f79113109598599bf633009a256d41ab0"
+      }
+    },
+    {
+      "directory": "mock-over-duration-001",
+      "run_id": "9900b3b2c7bc44bebbf19110358c78fb",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--mock-scenario",
+        "over-duration",
+        "--output-dir",
+        "examples/agent-validation/mock-over-duration-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 2,
+      "duration_seconds": 2.65,
+      "steps": 7,
+      "tool_calls": 4,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "1ea24b6225cd92e85c96af70ef0dad19acc8b4e1a2459b572fdb76695d41e847",
+        "history.json": "6de39d182fde1331ba10df4f633838df84aaa796e51f154eec444e484a94fc80",
+        "result.json": "9cafa716cd0f17c2f8bfc34ce6de072b5bd99e70fe4b6715657d99dedf921c75",
+        "run.json": "f48467c18a205b5991097da831c6b2aa2a85ee82565d7bf1266563e3b2c018b6",
+        "script.md": "a296218581489498c11d2fac6f9e2398dc8090eb6f69baf8b126e9875bf18cb1",
+        "trace.jsonl": "6f48e0c3666f3af6d654a23ca4c1b059f9c54f83fa8586d702465b04c3e5f879"
+      }
+    },
+    {
+      "directory": "mock-tool-failure-001",
+      "run_id": "269ea64fef5d4131bac1e986af30245e",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--simulate-search-failure",
+        "--output-dir",
+        "examples/agent-validation/mock-tool-failure-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 1,
+      "duration_seconds": 2.65,
+      "steps": 6,
+      "tool_calls": 4,
+      "simulate_search_failure": true,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "f96031c1ebd6a21eabe552f040a8a25e0628f250cb002101d9a274bcc936b679",
+        "history.json": "80529d6cfc7a8d9982ae84fbcac94362d048905f7557b341a9011a70858f67ee",
+        "result.json": "cfab3977e6ce89f8483945bec6835be66862c06fef330fee4b5085ab23ab400d",
+        "run.json": "8a79fe86d9f35b679519ac9a6864bb583da2098bbf0f1978f65fd6ab1b054e9d",
+        "script.md": "bd87351507995471e1625d66313f937b29143a794ec748ab8f623d840000fd8c",
+        "trace.jsonl": "e2f78a1d9d85057593eb973bc8013c9d3bfa0f96b3dd374a6541cfaa8ca05c46"
+      }
+    },
+    {
+      "directory": "mock-unsupported-claim-001",
+      "run_id": "5390034c1ee74d87a053c9b7213c0025",
+      "mode": "mock",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "mock",
+        "--input",
+        "examples/normal/input.json",
+        "--mock-scenario",
+        "unsupported-claim",
+        "--output-dir",
+        "examples/agent-validation/mock-unsupported-claim-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 2,
+      "duration_seconds": 2.65,
+      "steps": 8,
+      "tool_calls": 5,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "1ea24b6225cd92e85c96af70ef0dad19acc8b4e1a2459b572fdb76695d41e847",
+        "history.json": "e0f7a6306a37a17dc32d120e95ad4df3c2bdc6f435d784c6d607fbb2e99b52bd",
+        "result.json": "eab64b3a738e7d3837d1a654a5fdcb7423bab76419a6440a8b98510eca2db444",
+        "run.json": "dbcfb1b0c45853c28ad5452f22520d0473dcb198f89cfe02850ec0fe7b1b379f",
+        "script.md": "a296218581489498c11d2fac6f9e2398dc8090eb6f69baf8b126e9875bf18cb1",
+        "trace.jsonl": "6137cc2b96044bdfa043f2cec8c3bda7f7900afa2d2c3c0ea175a0b4fa4b478e"
+      }
+    },
+    {
+      "directory": "real-missing-input-001",
+      "run_id": "621afe79c3b04d46a1daaabf30ec0e4e",
+      "mode": "real",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "real",
+        "--input",
+        "examples/insufficient-information/input.json",
+        "--output-dir",
+        "examples/agent-validation/real-missing-input-001"
+      ],
+      "input": "examples/insufficient-information/input.json",
+      "status": "needs_input",
+      "script_version": null,
+      "duration_seconds": null,
+      "steps": 0,
+      "tool_calls": 0,
+      "simulate_search_failure": false,
+      "model_actions_observed": false,
+      "historical_files_differing_from_current": [],
+      "artifact_sha256": {
+        "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "history.json": "a4cefd87cce3ac339dea2f6e1d84e15a919faa434ffb5f588f7332f1d56b55f0",
+        "result.json": "54255af23e6211f2b588b19216130d25fb3b086f6b384051b3947eccb530f876",
+        "run.json": "f1a8497a2220ebf31696d2862a5567f20ddc51cb911344fca5b0e355e23d798e",
+        "script.md": "2b2cbc1101e393496b77fdde8d602f5d52024b66f519267745d5c3e44b16efef",
+        "trace.jsonl": "7ab09b1aae3e20d02342f3e38ec1fe3c28c7bee0d398f84f45aed4f78d5bb2a9"
+      }
+    },
+    {
+      "directory": "real-normal-001",
+      "run_id": "7ce7b4561bd2475792056df3f1adf3ad",
+      "mode": "real",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "real",
+        "--input",
+        "examples/normal/input.json",
+        "--output-dir",
+        "examples/agent-validation/real-normal-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "failed",
+      "script_version": null,
+      "duration_seconds": null,
+      "steps": 2,
+      "tool_calls": 0,
+      "simulate_search_failure": false,
+      "model_actions_observed": false,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "history.json": "ea397c6e55136009a700c07068434feb2a23bc377d508f54ea416e58a91a8fe4",
+        "result.json": "d4e7e1754bd1a1743b6080814644fd1feb41a7e0e3190d30685a13b44a22a6ba",
+        "run.json": "0de5df53f7a92c827e9d51ecdf81bf7bcb022abeb91c18094b60c9ea33b97c8e",
+        "script.md": "d11f3f5f9754ae36711ac7a17d0769abe65fbb8224422191d118b3e0f3f07234",
+        "trace.jsonl": "797bcd532385d749fac908667d0d58c73dfa367a479b45a408c3442199672513"
+      }
+    },
+    {
+      "directory": "real-normal-002",
+      "run_id": "711a95ea227a4028b08612299244543e",
+      "mode": "real",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "real",
+        "--input",
+        "examples/normal/input.json",
+        "--output-dir",
+        "examples/agent-validation/real-normal-002"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 2,
+      "duration_seconds": 7.1,
+      "steps": 10,
+      "tool_calls": 6,
+      "simulate_search_failure": false,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [
+        "src/main.py",
+        "src/__init__.py",
+        "src/model.py"
+      ],
+      "artifact_sha256": {
+        "checks.json": "d3c56a6327c73ad58b4f6f1bc9aa92c72148f08a16bfdc4893adf5a9c97d0600",
+        "history.json": "6bf7ce6341a3f175317726f35b36110ed2f98a355f6b23cb3e419a204f4c75b6",
+        "result.json": "e7d31a76efeb671cd220e9e4183c44e8e9cf3ab51d0d651e70c44c33c9614769",
+        "run.json": "f6e93de563c2245bfc48c4eac9f2a92231cd0507b00487cbcba69420677acfd0",
+        "script.md": "4ea4ac25cdb9c4cfc81e163818a7c8737c214131b18fb68a7aa3e1db8749fd06",
+        "trace.jsonl": "8c1cb6703d80d53f9d5c2dcae1a191f77b6ca5977136f220e07a5e8af43442e0"
+      }
+    },
+    {
+      "directory": "real-tool-failure-001",
+      "run_id": "276d968bbb91488480b825c52d174f85",
+      "mode": "real",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "real",
+        "--input",
+        "examples/normal/input.json",
+        "--simulate-search-failure",
+        "--output-dir",
+        "examples/agent-validation/real-tool-failure-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "completed",
+      "script_version": 2,
+      "duration_seconds": 9.399999999999999,
+      "steps": 10,
+      "tool_calls": 6,
+      "simulate_search_failure": true,
+      "model_actions_observed": true,
+      "historical_files_differing_from_current": [],
+      "artifact_sha256": {
+        "checks.json": "2cd5875707a73b7208cce18c5680391cfd484aa97a8da38ba4acba480f8a76c6",
+        "history.json": "666595c5c0b1a007548854f477b57e1e0c76082854117baa228320774f329c38",
+        "result.json": "dc688837de1cb15dd3fed268953d917c910797448404e4c079dbfbc1041e3fd3",
+        "run.json": "22d6196c65c0d5ace0a010ba10d760aff2599a62005f268137e9b54a80f562ca",
+        "script.md": "0906bed3edff53d772ddf57e6d9ebc7d7e972fc8cf08a6126c483ab7fa7c2825",
+        "trace.jsonl": "8d1cfba0a2bea3d0e00af95e9b2ac714f85b678ed4ba069395d29a209d7b5996"
+      }
+    },
+    {
+      "directory": "real-tool-failure-local-001",
+      "run_id": "7ac27ad6d601474fb97a64401058f2bd",
+      "mode": "real",
+      "command": [
+        "python",
+        "-m",
+        "src.main",
+        "--mode",
+        "real",
+        "--input",
+        "examples/normal/input.json",
+        "--simulate-search-failure",
+        "--output-dir",
+        "examples/agent-validation/real-tool-failure-local-001"
+      ],
+      "input": "examples/normal/input.json",
+      "status": "failed",
+      "script_version": null,
+      "duration_seconds": null,
+      "steps": 2,
+      "tool_calls": 0,
+      "simulate_search_failure": true,
+      "model_actions_observed": false,
+      "historical_files_differing_from_current": [],
+      "artifact_sha256": {
+        "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "history.json": "ea397c6e55136009a700c07068434feb2a23bc377d508f54ea416e58a91a8fe4",
+        "result.json": "d6f64aadf113ef3f992e78bd06b1e8a4842057f916fd6c7f96bac93d115719d8",
+        "run.json": "f79a12114b1fad4e359738934440e4ea296385896f9946607111060d5754eb22",
+        "script.md": "d11f3f5f9754ae36711ac7a17d0769abe65fbb8224422191d118b3e0f3f07234",
+        "trace.jsonl": "897a3a6d27eb3b68c6767d27037becb51e4933f2f09788c1212bc4a30977aceb"
+      }
+    }
+  ]
+}

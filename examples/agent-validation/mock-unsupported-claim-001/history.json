@@ -1,0 +1,110 @@
+{
+  "scripts": {
+    "1": {
+      "version": 1,
+      "title": "给视频加字幕",
+      "shots": [
+        {
+          "id": "S01",
+          "visual": "字幕示意画面",
+          "narration": "效率提升80%。",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "183b4d3a281f9e7cf3d1346a296b1c485a968631fd2f8319e6e82a13a22d0279"
+    },
+    "2": {
+      "version": 2,
+      "title": "给视频加字幕",
+      "shots": [
+        {
+          "id": "S01",
+          "visual": "字幕示意画面",
+          "narration": "支持为视频添加字幕。",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc"
+    }
+  },
+  "duration_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "183b4d3a281f9e7cf3d1346a296b1c485a968631fd2f8319e6e82a13a22d0279",
+      "shot_durations": [
+        {
+          "shot_id": "S01",
+          "duration_seconds": 2.0
+        }
+      ],
+      "target_duration_seconds": 30,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 2.0,
+      "passed": true
+    },
+    "2": {
+      "script_version": 2,
+      "script_fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc",
+      "shot_durations": [
+        {
+          "shot_id": "S01",
+          "duration_seconds": 2.65
+        }
+      ],
+      "target_duration_seconds": 30,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 2.65,
+      "passed": true
+    }
+  },
+  "rule_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "183b4d3a281f9e7cf3d1346a296b1c485a968631fd2f8319e6e82a13a22d0279",
+      "checked_rule_ids": [
+        "FACT-REF",
+        "FACT-SUPPORT",
+        "B01"
+      ],
+      "issues": [
+        {
+          "rule_id": "FACT-SUPPORT",
+          "code": "unsupported_expression",
+          "message": "旁白“效率提升80%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+          "shot_id": "S01"
+        },
+        {
+          "rule_id": "FACT-SUPPORT",
+          "code": "no_grounded_fact",
+          "message": "引用了素材但未实际表达任何有依据的事实，请使用所引素材原文。",
+          "shot_id": null
+        }
+      ],
+      "passed": false
+    },
+    "2": {
+      "script_version": 2,
+      "script_fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc",
+      "checked_rule_ids": [
+        "FACT-REF",
+        "FACT-SUPPORT",
+        "B01"
+      ],
+      "issues": [],
+      "passed": true
+    }
+  },
+  "error_history": [],
+  "step_count": 8,
+  "tool_call_count": 5
+}

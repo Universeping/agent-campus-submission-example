@@ -6,10 +6,10 @@
 
 | ID | 官方来源 | 本轮核对结果 |
 | --- | --- | --- |
-| DS-API-01 | [DeepSeek 首次调用](https://api-docs.deepseek.com/) | 已读取；提供模型 `deepseek-v4-pro` 及兼容 API 的调用地址。尚未实测账户可用性。 |
-| DS-TOOLS-01 | [DeepSeek Tool Calls](https://api-docs.deepseek.com/guides/tool_calls/) | 已读取；客户端执行工具，并将结果交回模型。thinking 及适配器兼容性仍需接入验证。 |
+| DS-API-01 | [DeepSeek 首次调用](https://api-docs.deepseek.com/) | 已读取；提供模型 `deepseek-v4-pro` 及兼容 API 的调用地址。用户已在本机完成两次真实任务，见评估文档。 |
+| DS-TOOLS-01 | [DeepSeek Tool Calls](https://api-docs.deepseek.com/guides/tool_calls/) | 已读取；客户端执行工具，并将结果交回模型。已验证非 thinking 模式的原生函数调用；thinking 模式未实现。 |
 | DS-CHAT-01 | [DeepSeek Chat Completions](https://api-docs.deepseek.com/api/create-chat-completion/) | 已读取；接口参数列出所选模型及工具消息格式。 |
-| LG-OVERVIEW-01 | [LangGraph 概览](https://docs.langchain.com/oss/python/langgraph/overview) | 已读取；支持状态与流程编排。LangGraph 为拟用方案，尚未安装、锁版本或验证。 |
+| LG-OVERVIEW-01 | [LangGraph 概览](https://docs.langchain.com/oss/python/langgraph/overview) | 已读取；已安装并固定 1.2.18，使用 StateGraph 节点和条件路由，集成验证见评估文档。 |
 
 ## 发布平台规范
 

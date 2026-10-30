@@ -1,0 +1,37 @@
+{
+  "run_id": "621afe79c3b04d46a1daaabf30ec0e4e",
+  "mode": "real",
+  "command": [
+    "python",
+    "-m",
+    "src.main",
+    "--mode",
+    "real",
+    "--input",
+    "examples/insufficient-information/input.json",
+    "--output-dir",
+    "examples/agent-validation/real-missing-input-001"
+  ],
+  "mock_scenario": null,
+  "simulate_search_failure": false,
+  "sha256": {
+    "data/materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+    "data/brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91",
+    "src/tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+    "src/agent.py": "aaefcb8ec47d7dc1423ca39d449eb1645b0cc24216c5281ff5733c9dda7eefd9",
+    "src/main.py": "89f89a22d384fa30a8344fc909ce793f5e99eb2782dbf5cf05d81287f4b668c2",
+    "src/schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+    "src/__init__.py": "7ae54096aa3796f8b993ae2664a4889270257431e274ed4b6fd20cfa08700af5",
+    "src/trace.py": "1caa9a5ae3c657ba3b4450261a7dd64c4cac4cece8f076ff38384c9def80fa9d",
+    "src/model.py": "916bbeda372e95705226ae1eb9d09649fda21b9cf3d2963ad536504980f5f215"
+  },
+  "model": "deepseek-v4-pro",
+  "timeout_seconds": 60.0,
+  "use_proxy": false,
+  "input_sha256": "4adf45a29b8a71860ef734cdf75dcfbaba43fe9dd2a8afb1c524816c16d57f70",
+  "limits": {
+    "max_steps": 12,
+    "max_tool_calls": 8,
+    "max_transport_retries": 1
+  }
+}
