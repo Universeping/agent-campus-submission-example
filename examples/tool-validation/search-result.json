@@ -1,0 +1,10 @@
+{
+  "query": "字幕",
+  "materials": [
+    {
+      "id": "P01",
+      "fact": "支持为视频添加字幕"
+    }
+  ],
+  "error": null
+}

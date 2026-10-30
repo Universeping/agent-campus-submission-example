@@ -1,0 +1,6 @@
+{
+  "tool": "search_materials",
+  "code": "data_unavailable",
+  "message": "输入文件不可读",
+  "retryable": false
+}

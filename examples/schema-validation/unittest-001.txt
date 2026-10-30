@@ -1,0 +1,33 @@
+Schema contract validation; constructed reports only, no Agent/tool/model execution.
+UTC: 2026-10-30T09:27:41.063885+00:00
+Python: 3.14.4
+Command: python3 -m unittest discover -s tests -p test_schemas.py -v
+Git base HEAD: a4d07ea49c0e86ba8cb0ec6ab234d2d0e689e3d5
+Schema changes are uncommitted; exact tested files are identified by SHA-256 below.
+SHA-256 src/schemas.py: 1d3652886079c6b08c6145e6c25d145a4f125ecb94660340e69f4427ea7bf4d8
+SHA-256 tests/test_schemas.py: ee11d9a84aa7e6f5d77b1dfb732a180bafd4c550961002b4a853ee72f4b99b5b
+SHA-256 data/materials.json: 880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186
+SHA-256 data/brand_rules.json: 223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91
+SHA-256 examples/normal/input.json: 812cb1c6a3ab8a44a498ac26a26827bee1f29dd6efca35f835c669311175faa8
+Exit code: 0
+
+test_both_checks_required_for_completion (test_schemas.SchemaTests.test_both_checks_required_for_completion) ... ok
+test_changed_content_cannot_reuse_checks_even_with_same_version (test_schemas.SchemaTests.test_changed_content_cannot_reuse_checks_even_with_same_version) ... ok
+test_check_cannot_relax_requested_duration_limit (test_schemas.SchemaTests.test_check_cannot_relax_requested_duration_limit) ... ok
+test_completed_result_rejects_missing_sources_errors_or_missing_fields (test_schemas.SchemaTests.test_completed_result_rejects_missing_sources_errors_or_missing_fields) ... ok
+test_completed_result_serializes_computed_checks_and_sources (test_schemas.SchemaTests.test_completed_result_serializes_computed_checks_and_sources) ... ok
+test_duration_must_cover_exact_script_shots (test_schemas.SchemaTests.test_duration_must_cover_exact_script_shots) ... ok
+test_duration_total_and_pass_are_derived (test_schemas.SchemaTests.test_duration_total_and_pass_are_derived) ... ok
+test_empty_search_is_distinct_from_tool_failure (test_schemas.SchemaTests.test_empty_search_is_distinct_from_tool_failure) ... ok
+test_existing_json_fixtures_fit_contracts (test_schemas.SchemaTests.test_existing_json_fixtures_fit_contracts) ... ok
+test_fingerprint_is_reproducible (test_schemas.SchemaTests.test_fingerprint_is_reproducible) ... ok
+test_invalid_numbers_versions_and_duplicate_ids_are_rejected (test_schemas.SchemaTests.test_invalid_numbers_versions_and_duplicate_ids_are_rejected) ... ok
+test_needs_input_and_failures_allow_absent_script_but_require_reason (test_schemas.SchemaTests.test_needs_input_and_failures_allow_absent_script_but_require_reason) ... ok
+test_revision_rejects_old_duration_and_old_rules_independently (test_schemas.SchemaTests.test_revision_rejects_old_duration_and_old_rules_independently) ... ok
+test_rule_issues_block_completion_and_locate_failures (test_schemas.SchemaTests.test_rule_issues_block_completion_and_locate_failures) ... ok
+test_script_and_nested_collections_cannot_change_after_check (test_schemas.SchemaTests.test_script_and_nested_collections_cannot_change_after_check) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.003s
+
+OK

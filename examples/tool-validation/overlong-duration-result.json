@@ -1,0 +1,18 @@
+{
+  "script_version": 1,
+  "script_fingerprint": "1252130889736292c60eb4c32de2f535543b837166a2ce55ba409d15b96587d4",
+  "shot_durations": [
+    {
+      "shot_id": "S01",
+      "duration_seconds": 2.4
+    },
+    {
+      "shot_id": "S02",
+      "duration_seconds": 32.1
+    }
+  ],
+  "target_duration_seconds": 30.0,
+  "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+  "total_duration_seconds": 34.5,
+  "passed": false
+}

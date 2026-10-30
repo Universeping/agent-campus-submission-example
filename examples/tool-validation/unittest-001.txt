@@ -1,0 +1,57 @@
+Schema and local tool tests. Scripts are authored test inputs; no model or Agent execution.
+UTC: 2026-10-30T09:41:20.880789+00:00
+Python: 3.14.4
+Command: python3 -m unittest discover -s tests -v
+Git base HEAD: a4d07ea49c0e86ba8cb0ec6ab234d2d0e689e3d5
+Uncommitted implementation identified by file SHA-256 below.
+SHA-256 src/schemas.py: 475e50d53a7fde7519d6ccf1d41d8c078e3696df1c3b37839553009c98b54cc1
+SHA-256 src/tools.py: 1c8f9b4aad03ec534cb3af4702dc4bdf997a8564e22278d2f64daf47108ebb4b
+SHA-256 tests/test_schemas.py: ee11d9a84aa7e6f5d77b1dfb732a180bafd4c550961002b4a853ee72f4b99b5b
+SHA-256 tests/test_tools.py: df5057dec1252c5a3958a955c892dfe67649c0235ae78586d19904d613e2b159
+SHA-256 data/materials.json: 880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186
+SHA-256 data/brand_rules.json: 223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91
+SHA-256 examples/tool-validation/input-script.json: 5d6a6b60262461878026824288972bbe33d18a04c25c2915bdf1e4070d14dad9
+Exit code: 0
+
+test_both_checks_required_for_completion (test_schemas.SchemaTests.test_both_checks_required_for_completion) ... ok
+test_changed_content_cannot_reuse_checks_even_with_same_version (test_schemas.SchemaTests.test_changed_content_cannot_reuse_checks_even_with_same_version) ... ok
+test_check_cannot_relax_requested_duration_limit (test_schemas.SchemaTests.test_check_cannot_relax_requested_duration_limit) ... ok
+test_completed_result_rejects_missing_sources_errors_or_missing_fields (test_schemas.SchemaTests.test_completed_result_rejects_missing_sources_errors_or_missing_fields) ... ok
+test_completed_result_serializes_computed_checks_and_sources (test_schemas.SchemaTests.test_completed_result_serializes_computed_checks_and_sources) ... ok
+test_duration_must_cover_exact_script_shots (test_schemas.SchemaTests.test_duration_must_cover_exact_script_shots) ... ok
+test_duration_total_and_pass_are_derived (test_schemas.SchemaTests.test_duration_total_and_pass_are_derived) ... ok
+test_empty_search_is_distinct_from_tool_failure (test_schemas.SchemaTests.test_empty_search_is_distinct_from_tool_failure) ... ok
+test_existing_json_fixtures_fit_contracts (test_schemas.SchemaTests.test_existing_json_fixtures_fit_contracts) ... ok
+test_fingerprint_is_reproducible (test_schemas.SchemaTests.test_fingerprint_is_reproducible) ... ok
+test_invalid_numbers_versions_and_duplicate_ids_are_rejected (test_schemas.SchemaTests.test_invalid_numbers_versions_and_duplicate_ids_are_rejected) ... ok
+test_needs_input_and_failures_allow_absent_script_but_require_reason (test_schemas.SchemaTests.test_needs_input_and_failures_allow_absent_script_but_require_reason) ... ok
+test_revision_rejects_old_duration_and_old_rules_independently (test_schemas.SchemaTests.test_revision_rejects_old_duration_and_old_rules_independently) ... ok
+test_rule_issues_block_completion_and_locate_failures (test_schemas.SchemaTests.test_rule_issues_block_completion_and_locate_failures) ... ok
+test_script_and_nested_collections_cannot_change_after_check (test_schemas.SchemaTests.test_script_and_nested_collections_cannot_change_after_check) ... ok
+test_citation_does_not_support_new_function_metrics_or_negation (test_tools.ToolTests.test_citation_does_not_support_new_function_metrics_or_negation) ... ok
+test_citation_in_another_shot_cannot_support_this_shot (test_tools.ToolTests.test_citation_in_another_shot_cannot_support_this_shot) ... ok
+test_cli_distinguishes_rejection_and_tool_error (test_tools.ToolTests.test_cli_distinguishes_rejection_and_tool_error) ... ok
+test_controlled_script_passes_real_rule_check (test_tools.ToolTests.test_controlled_script_passes_real_rule_check) ... ok
+test_empty_result_and_unreadable_corpus_are_distinct (test_tools.ToolTests.test_empty_result_and_unreadable_corpus_are_distinct) ... ok
+test_estimate_accounts_for_speech_pauses_and_transitions (test_tools.ToolTests.test_estimate_accounts_for_speech_pauses_and_transitions) ... ok
+test_estimate_has_minimum_shot_time_and_excludes_title_visual (test_tools.ToolTests.test_estimate_has_minimum_shot_time_and_excludes_title_visual) ... ok
+test_estimate_rejects_invalid_target (test_tools.ToolTests.test_estimate_rejects_invalid_target) ... ok
+test_exact_30_seconds_passes_and_overshoot_fails (test_tools.ToolTests.test_exact_30_seconds_passes_and_overshoot_fails) ... ok
+test_malformed_rule_context_is_tool_error (test_tools.ToolTests.test_malformed_rule_context_is_tool_error) ... ok
+test_new_tool_reports_allow_completion_and_old_reports_do_not (test_tools.ToolTests.test_new_tool_reports_allow_completion_and_old_reports_do_not) ... ok
+test_numeric_fact_requires_its_own_source_not_blanket_numeric_ban (test_tools.ToolTests.test_numeric_fact_requires_its_own_source_not_blanket_numeric_ban) ... ok
+test_script_loader_checks_read_only_fields (test_tools.ToolTests.test_script_loader_checks_read_only_fields) ... ok
+test_search_rejects_invalid_query_and_malformed_corpus (test_tools.ToolTests.test_search_rejects_invalid_query_and_malformed_corpus) ... ok
+test_search_returns_original_fact_and_honors_id_filter (test_tools.ToolTests.test_search_returns_original_fact_and_honors_id_filter) ... ok
+test_search_uses_case_insensitive_whitespace_separated_or_keywords (test_tools.ToolTests.test_search_uses_case_insensitive_whitespace_separated_or_keywords) ... ok
+test_structured_brand_ban_is_enforced_even_with_valid_source (test_tools.ToolTests.test_structured_brand_ban_is_enforced_even_with_valid_source) ... ok
+test_three_tools_run_as_cli_commands (test_tools.ToolTests.test_three_tools_run_as_cli_commands) ... ok
+test_title_and_visual_are_checked_too (test_tools.ToolTests.test_title_and_visual_are_checked_too) ... ok
+test_unknown_brand_rule_is_tool_error_not_a_passing_report (test_tools.ToolTests.test_unknown_brand_rule_is_tool_error_not_a_passing_report) ... ok
+test_unknown_citation_and_uncited_fact_are_reported (test_tools.ToolTests.test_unknown_citation_and_uncited_fact_are_reported) ... ok
+test_unknown_creative_expression_is_unverified_not_silently_accepted (test_tools.ToolTests.test_unknown_creative_expression_is_unverified_not_silently_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.191s
+
+OK

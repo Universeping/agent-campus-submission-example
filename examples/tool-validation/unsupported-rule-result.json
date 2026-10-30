@@ -1,0 +1,18 @@
+{
+  "script_version": 1,
+  "script_fingerprint": "cf850d58080d03001888b3bfe1d1883635d7c686e6c1c8dec450230e8435f3e7",
+  "checked_rule_ids": [
+    "FACT-REF",
+    "FACT-SUPPORT",
+    "B01"
+  ],
+  "issues": [
+    {
+      "rule_id": "FACT-SUPPORT",
+      "code": "unsupported_expression",
+      "message": "旁白“效率提升80%”无法核验；事实句需逐句使用所引素材原文，创意表达需使用首版允许列表。",
+      "shot_id": "S02"
+    }
+  ],
+  "passed": false
+}

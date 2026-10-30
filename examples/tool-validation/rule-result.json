@@ -1,0 +1,11 @@
+{
+  "script_version": 1,
+  "script_fingerprint": "598b7287a1132fb421e9383d793ce679ef2b1cf42efb90e530db76f7fad1e355",
+  "checked_rule_ids": [
+    "FACT-REF",
+    "FACT-SUPPORT",
+    "B01"
+  ],
+  "issues": [],
+  "passed": true
+}

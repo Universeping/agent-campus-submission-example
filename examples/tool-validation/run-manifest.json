@@ -1,0 +1,126 @@
+{
+  "scope": "Deterministic local tools only; no model or Agent run.",
+  "script_origin": "hand-authored test fixtures",
+  "utc": "2026-10-30T09:42:39.451072+00:00",
+  "implementation_sha256": {
+    "src/tools.py": "1c8f9b4aad03ec534cb3af4702dc4bdf997a8564e22278d2f64daf47108ebb4b",
+    "src/schemas.py": "475e50d53a7fde7519d6ccf1d41d8c078e3696df1c3b37839553009c98b54cc1",
+    "data/materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+    "data/brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91"
+  },
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "search",
+        "--query",
+        "字幕",
+        "--material-ids",
+        "P01"
+      ],
+      "output_file": "search-result.json",
+      "exit_code": 0,
+      "stderr": "",
+      "output_sha256": "5b01d86063c7222d1fd4b1ffb835512e36802bd97f8742622c7c50a89d508e02"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "search",
+        "--query",
+        "翻译",
+        "--material-ids",
+        "P01"
+      ],
+      "output_file": "empty-search-result.json",
+      "exit_code": 0,
+      "stderr": "",
+      "output_sha256": "d35d3fc173d983bbd4c13f4f09c7af023679aa32813b77db421d8ea53d4418a4"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "estimate",
+        "--script",
+        "examples/tool-validation/input-script.json",
+        "--target-seconds",
+        "30"
+      ],
+      "output_file": "duration-result.json",
+      "exit_code": 0,
+      "stderr": "",
+      "output_sha256": "67c6c89f8c5eb971386dbc8c1599e874181c40df51d927d376b2995a56e97a20"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "check",
+        "--script",
+        "examples/tool-validation/input-script.json"
+      ],
+      "output_file": "rule-result.json",
+      "exit_code": 0,
+      "stderr": "",
+      "output_sha256": "e81babce1da5ef716cfaa4bad95a6262133ff523a1b0e6b6a5fadd981b596a5c"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "check",
+        "--script",
+        "examples/tool-validation/unsupported-script.json"
+      ],
+      "output_file": "unsupported-rule-result.json",
+      "exit_code": 1,
+      "stderr": "",
+      "output_sha256": "69d106858c8b091f4c65064b06706faf4ac8642351902f88623a092eac900329"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "estimate",
+        "--script",
+        "examples/tool-validation/overlong-script.json",
+        "--target-seconds",
+        "30"
+      ],
+      "output_file": "overlong-duration-result.json",
+      "exit_code": 1,
+      "stderr": "",
+      "output_sha256": "daff8f5fc854f5c93095cd048b39ffe54361833c11a889ae50e4ed0d2e8eca1a"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "src.tools",
+        "search",
+        "--query",
+        "字幕",
+        "--materials",
+        "examples/tool-validation/missing-materials.json"
+      ],
+      "output_file": "missing-material-result.json",
+      "exit_code": 2,
+      "stderr": "",
+      "output_sha256": "cff2ae81ecbaa64e2c8f19917f9545f0719d14bc946d6801e7c2a7e15d7da0c3"
+    }
+  ],
+  "input_sha256": {
+    "examples/tool-validation/input-script.json": "5d6a6b60262461878026824288972bbe33d18a04c25c2915bdf1e4070d14dad9",
+    "examples/tool-validation/unsupported-script.json": "c64e143fc3a17aea4f1aefa4e4a38a072026fde01453e2c85215ebca0d24b30f",
+    "examples/tool-validation/overlong-script.json": "9d5f40c78a0d805e74949af5c2e53e40f99f27610bb1d55e3fdb497ce0da3ac2"
+  }
+}
