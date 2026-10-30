@@ -1,0 +1,68 @@
+{
+  "mode": "mock",
+  "created_at": "2026-10-30T16:53:32.979118+00:00",
+  "runner_sha256": "d91af3fcd797c6ef468124b106c26e30e51ff84e34725c7e308178c950b9a01a",
+  "scope": "Trace branch checks only; Mock never proves real model behavior. Human review of claims/reasons is required.",
+  "cases": [
+    {
+      "case": "normal",
+      "exit_code": 0,
+      "status": "completed",
+      "system_prompt_sha256": "593a81129d8ed2fb0f0173cea9ef33f5127155372a44de1f6bfe9259708c5500",
+      "steps": 5,
+      "verdict": "passed",
+      "reason": "核对最终完成条件与所需恢复分支。",
+      "empty_search": false,
+      "duration_failure": false,
+      "multiple_actions": 0
+    },
+    {
+      "case": "tool-failure",
+      "exit_code": 0,
+      "status": "completed",
+      "system_prompt_sha256": "593a81129d8ed2fb0f0173cea9ef33f5127155372a44de1f6bfe9259708c5500",
+      "steps": 6,
+      "verdict": "passed",
+      "reason": "核对最终完成条件与所需恢复分支。",
+      "empty_search": false,
+      "duration_failure": false,
+      "multiple_actions": 0
+    },
+    {
+      "case": "no-materials",
+      "exit_code": 1,
+      "status": "needs_input",
+      "system_prompt_sha256": "593a81129d8ed2fb0f0173cea9ef33f5127155372a44de1f6bfe9259708c5500",
+      "steps": 2,
+      "verdict": "passed",
+      "reason": "核对请求补资料；无关素材还须实际出现空检索结果。",
+      "empty_search": true,
+      "duration_failure": false,
+      "multiple_actions": 0
+    },
+    {
+      "case": "unrelated-materials",
+      "exit_code": 1,
+      "status": "needs_input",
+      "system_prompt_sha256": "593a81129d8ed2fb0f0173cea9ef33f5127155372a44de1f6bfe9259708c5500",
+      "steps": 2,
+      "verdict": "passed",
+      "reason": "核对请求补资料；无关素材还须实际出现空检索结果。",
+      "empty_search": true,
+      "duration_failure": false,
+      "multiple_actions": 0
+    },
+    {
+      "case": "over-duration",
+      "exit_code": 0,
+      "status": "completed",
+      "system_prompt_sha256": "593a81129d8ed2fb0f0173cea9ef33f5127155372a44de1f6bfe9259708c5500",
+      "steps": 7,
+      "verdict": "passed",
+      "reason": "实际超时→模型保存修订稿→两项重检→完成。",
+      "empty_search": false,
+      "duration_failure": true,
+      "multiple_actions": 0
+    }
+  ]
+}

@@ -9,7 +9,7 @@ from pathlib import Path
 import sys
 from uuid import uuid4
 
-from .agent import AgentLimits, AgentRunner
+from .agent import AgentLimits, AgentRunner, SYSTEM_PROMPT
 from .model import DeepSeekModel, MockModel, ModelConfig, ROOT, strict_json
 from .schemas import RunMode, TaskResult, ToolError
 from .tools import load_brand_rules, load_materials
@@ -89,6 +89,7 @@ def main(argv=None) -> int:
     trace = TraceRecorder(run_id, directory / "trace.jsonl")
     state = None
     metadata = {"run_id": run_id, "mode": args.mode, "command": ["python", "-m", "src.main", *(argv if argv is not None else sys.argv[1:])],
+                "system_prompt_sha256": hashlib.sha256(SYSTEM_PROMPT.encode("utf-8")).hexdigest(),
                 "mock_scenario": args.mock_scenario if args.mode == "mock" else None,
                 "simulate_search_failure": args.simulate_search_failure, "sha256": {}}
     try:

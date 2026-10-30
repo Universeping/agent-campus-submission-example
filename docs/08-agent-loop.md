@@ -16,6 +16,8 @@
 
 系统指导定义任务、六动作、事实边界、版本重检、结束条件和简短 reason。动态状态包含需求、规则、允许表达、已检索事实、当前稿、当前检查、剩余预算和最新观察。完整素材正文不在检索前泄露。
 
+新提示词明确 allowed_expressions 的 titles/visuals/narration 字段、同分镜引用、至少一条产品事实、主题相关性、工具失败与空结果的区别、request_input 与 incomplete 的选择和步骤预留。提示词不能代替执行器校验，也未扩大原文检查能力。新 run.json 记录 system_prompt_sha256；旧 Trace 不追写新摘要。
+
 函数声明使用 JSON Schema：对象禁止未声明字段，字符串非空，版本为正整数，脚本有完整分镜，request_input 有具体问题。六个动作的参数见 [方案](02-solution.md#六个动作)。原始素材、规则和时长上限由执行器注入，模型不能提供修改后的核验依据。
 
 模型只产生草稿和动作，不产生权威版本、指纹、估时和检查通过标志。普通文本、截断响应、非法 JSON、重复参数键或批量动作均作为无效响应处理。批量调用不执行，逐个返回相应错误，维持消息协议一致。
@@ -38,6 +40,6 @@ Trace 记录 run_id、顺序、时间、步骤、动作、参数、调用 ID、�
 
 ## 独立验证
 
-79 项测试覆盖真实 LangGraph 条件路由、Mock+真实工具、版本失效、受控事实、预算、消息配对、协议错误、传输错误、配置、代理范围、CLI 和 Trace。HTTP 单测为模拟传输，真实效果另看 [实际运行索引](../examples/agent-validation/README.md)。
+87 项测试覆盖真实 LangGraph 条件路由、Mock+真实工具、版本失效、受控事实、预算、消息配对、协议错误、传输错误、配置、代理范围、CLI、Trace 及分支分类。HTTP 单测为模拟传输，分类器使用人工事件。新提示词真实连接受阻，结果见 [当前验证](../examples/prompt-validation/README.md)；旧真实效果见 [历史运行索引](../examples/agent-validation/README.md)。
 
 LangGraph 1.2.18 负责状态图及执行，python-dotenv 1.2.4 负责 .env 读取；DeepSeek HTTP、动作验证、业务状态和检查逻辑由项目实现。未使用框架预制 Agent、持久化 checkpointer 或多 Agent。

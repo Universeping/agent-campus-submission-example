@@ -1,6 +1,6 @@
 # Agent 执行与验证记录
 
-环境 Python 3.14.4、LangGraph 1.2.18、python-dotenv 1.2.4。当前 [79 项测试日志](unittest-001.txt) 全部通过，无跳过。每个运行目录包含 result.json、checks.json、script.md、history.json、trace.jsonl、run.json，后者保存实际命令、配置边界和源码/资料摘要。
+本目录为旧提示词阶段的历史证据。环境 Python 3.14.4、LangGraph 1.2.18、python-dotenv 1.2.4；当时 [79 项测试日志](unittest-001.txt) 全部通过，无跳过。每个运行目录包含 result.json、checks.json、script.md、history.json、trace.jsonl、run.json，后者保存实际命令、配置边界和源码/资料摘要。当前提示词、87 项测试和真实验证状态见 [新索引](../prompt-validation/README.md)。
 
 ## 真实模型与入口校验
 
@@ -43,6 +43,6 @@
 
 ## 版本与复核
 
-原始记录保持不改。早期 Mock、real-normal-002 的 model/main 摘要与当前版本有代理配置等差异，不能写成全部来自当前源码；各自 run.json 保存实际摘要。最新单测、real-tool-failure-001 对应当前源码。
+原始记录保持不改。早期 Mock、real-normal-002 的 model/main 摘要存在代理配置等差异，各自 run.json 保存实际摘要。本轮另更新 agent 提示词与 main 元数据，因此本目录所有记录均为历史，不写成当前提示词已通过的证据。
 
 [verification.json](verification.json) 由读取实际文件、重算指纹、重新执行本地工具和核对 Trace 生成；[run-manifest.json](run-manifest.json) 汇总全部运行、命令和证据文件摘要。复核不会调用模型，也不把历史 Trace 改写为当前版本。更多失败分析见 [评估](../../docs/03-evaluation.md)。

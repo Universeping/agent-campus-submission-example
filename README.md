@@ -1,8 +1,8 @@
 # 短视频脚本 Agent
 
-基于 Python、LangGraph 1.2.18 和 DeepSeek V4 Pro 的单 Agent。已实现六动作循环、三个本地工具、文件/终端输入、离线 Mock、版本检查和输出记录。真实正常任务与一次检索故障注入任务均已完成，最终分别为 v2 / 7.1 秒与 v2 / 9.4 秒。
+基于 Python、LangGraph 1.2.18 和 DeepSeek V4 Pro 的单 Agent。已实现六动作循环、三个本地工具、文件/终端输入、离线 Mock、版本检查和输出记录。旧提示词的真实正常任务与检索故障注入任务均已完成，最终分别为 v2 / 7.1 秒与 v2 / 9.4 秒；新提示词的真实验证受连接错误阻断，不能沿用旧结果证明效果。
 
-当前验证了 79 项测试和最小产品事实场景；事实检查采用素材原文与封闭表达，存在明显误拒，不能代表通用事实判断或平台实际审核。
+当前 87 项测试全部通过，新提示词五个 Mock 案例通过。事实检查采用素材原文与封闭表达，存在明显误拒，不能代表通用事实判断或平台实际审核。
 
 ## 安装
 
@@ -55,7 +55,15 @@ DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-79 项测试全部通过，无跳过项。HTTP 单元测试使用模拟响应，Mock 集成使用真实 LangGraph 和本地工具；真实模型效果另以实际 Trace 验证。
+87 项测试全部通过，无跳过项。HTTP 单元测试使用模拟响应，Mock 集成使用真实 LangGraph 和本地工具；真实模型效果另以实际 Trace 验证。
+
+新提示词的正常、故障、空资料、无关资料、超时长批量验证：
+
+```bash
+.venv/bin/python examples/prompt-validation/run_cases.py --mode real
+```
+
+自动新建 outputs/ 目录；首稿直接满足短时长时记为未覆盖修订，连接失败时记录受阻。输入、验收和本轮实际结果见 [新提示词验证](examples/prompt-validation/README.md)。
 
 - [需求和验收映射](docs/01-requirements.md)
 - [实现方案](docs/02-solution.md)

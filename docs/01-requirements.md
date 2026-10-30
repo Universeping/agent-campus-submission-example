@@ -1,6 +1,6 @@
 # 需求与成功标准
 
-业务理解基线 v0.1.0；当前已实现 CLI 单 Agent 最小闭环。79 项测试通过，保存了两条真实模型成功路径。完整效果范围及不足见 [评估](03-evaluation.md)。
+业务理解基线 v0.1.0；当前已实现 CLI 单 Agent 最小闭环。87 项测试通过；旧提示词保存两条真实模型成功路径，新提示词真实验证连接受阻。完整效果范围及不足见 [评估](03-evaluation.md)。
 
 ## 用户、目标与范围
 
@@ -38,9 +38,11 @@
 | 稿次、时长、报告对应 | schemas 完成约束；agent 可信执行 | test_schemas、test_agent；两条真实路径均保存 v1/v2，最终只用 v2 两项报告。 |
 | 两条真实动态决策路径 | model 原生函数调用、LangGraph 条件循环 | 正常路径空检索后改查询；故障路径收到工具错误后重新检索，两者均有检查反馈后修订。 |
 | 执行预算与明确未完成 | 主动计数及图后备上限 | [上限结果](../examples/agent-validation/mock-execution-limit-001/result.json)，incomplete；test_agent 覆盖工具上限。 |
-| 可复现、离线入口、可执行测试 | README、锁定依赖、CLI | [运行索引](../examples/agent-validation/README.md)、[79 项测试](../examples/agent-validation/unittest-001.txt)。 |
+| 可复现、离线入口、可执行测试 | README、锁定依赖、CLI | [当前运行索引](../examples/prompt-validation/README.md)、[87 项测试](../examples/prompt-validation/unittest-v2-001.txt)。 |
 
-以上覆盖本轮最小业务范围；不将 Mock 分支视为真实模型效果，也不宣称已证明重复运行稳定性或自由创作质量。
+上述真实证据为旧提示词结果；当前提示词与 main 元数据已变化。当前测试日志与批量验收见 [新提示词验证](../examples/prompt-validation/README.md)，新增空资料、无关资料、5 秒上限输入，真实执行受连接错误阻断。首稿直接短于上限不能覆盖超时修订；无关资料直接请求补充不能覆盖实际空检索反馈。业务成功标准未放宽。
+
+不将 Mock 分支视为真实模型效果，也不宣称已证明重复运行稳定性或自由创作质量。
 
 ## 后续资料准备
 

@@ -1,0 +1,64 @@
+{
+  "run_id": "c9ba9f37bd4346bebf7316f425864069",
+  "mode": "mock",
+  "status": "completed",
+  "task_input": {
+    "topic": "介绍为视频添加字幕的功能",
+    "audience": "新手",
+    "platform": "通用短视频",
+    "target_duration_seconds": 5,
+    "style": "轻松"
+  },
+  "script": {
+    "version": 2,
+    "title": "给视频加字幕",
+    "shots": [
+      {
+        "id": "S01",
+        "visual": "字幕示意画面",
+        "narration": "支持为视频添加字幕。",
+        "source_ids": [
+          "P01"
+        ]
+      }
+    ],
+    "source_ids": [
+      "P01"
+    ],
+    "fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc"
+  },
+  "duration_result": {
+    "script_version": 2,
+    "script_fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc",
+    "shot_durations": [
+      {
+        "shot_id": "S01",
+        "duration_seconds": 2.65
+      }
+    ],
+    "target_duration_seconds": 5,
+    "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+    "total_duration_seconds": 2.65,
+    "passed": true
+  },
+  "rule_check_result": {
+    "script_version": 2,
+    "script_fingerprint": "e6901315f2c2255d4b7f4e0c3245c244fa1c067c21cdcd7b54c242ca7b2e93dc",
+    "checked_rule_ids": [
+      "FACT-REF",
+      "FACT-SUPPORT",
+      "B01"
+    ],
+    "issues": [],
+    "passed": true
+  },
+  "risks": [
+    "时长是 timing-v1 假设下的估算，不是实际配音测量。",
+    "事实检查仅覆盖素材原文与受控表达，可能误拒有效改写。",
+    "离线 Mock 仅验证流程，不证明真实模型决策效果。"
+  ],
+  "reason": "当前稿已通过估时和规则检查",
+  "missing_fields": [],
+  "errors": [],
+  "questions": []
+}

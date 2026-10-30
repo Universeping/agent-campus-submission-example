@@ -4,7 +4,7 @@
 
 | 模块 | 职责 |
 | --- | --- |
-| main.py | 文件/终端输入，启动任务，保存六类输出文件及退出码。 |
+| main.py | 文件/终端输入，启动任务，保存六类输出文件、提示词 SHA-256 及退出码。 |
 | schemas.py | 不可变领域数据、版本/指纹绑定和完成约束。 |
 | model.py | 配置、六动作 description/JSON Schema、标准 HTTP 客户端及离线 Mock。 |
 | agent.py | prepare/call_model/dispatch/finalize 图节点、可信状态、历史版本和预算。 |

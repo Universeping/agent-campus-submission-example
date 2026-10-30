@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -7,6 +8,7 @@ import tempfile
 import unittest
 
 from src.trace import TraceRecorder
+from src.agent import SYSTEM_PROMPT
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,6 +41,8 @@ class CliTests(unittest.TestCase):
                                      "--output-dir", str(output)], cwd=ROOT, capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
             self.assertEqual(json.loads((output / "result.json").read_text())["mode"], "mock")
+            metadata = json.loads((output / "run.json").read_text())
+            self.assertEqual(metadata["system_prompt_sha256"], hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest())
             for name in ["checks.json", "script.md", "history.json", "run.json", "trace.jsonl"]:
                 self.assertTrue((output / name).is_file(), name)
             again = subprocess.run([sys.executable, "-m", "src.main", "--input", "examples/normal/input.json", "--output-dir", str(output)],
