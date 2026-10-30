@@ -5,6 +5,9 @@
 *.pem
 *.key
 
+# Local discussion notes and personal reference files
+/note/
+
 # Python
 __pycache__/
 *.py[cod]
