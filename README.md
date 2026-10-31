@@ -110,6 +110,6 @@ P01 基线的正常、故障、空资料、无关资料、超时长批量验证�
 
 `.env`、`.venv/`、`note/`、`outputs/` 不纳入 Git，运行与评审不依赖本地笔记。产品资料已按 profile 接入；官方发布平台审核规则仍未实现，未实现前端、HTTP API、会话恢复或视频生成。
 
-题目：短视频脚本 Agent，题号待用户补充。仓库为 [Universeping/agent-campus-submission-example](https://github.com/Universeping/agent-campus-submission-example)。实际用时待候选人填写；最终提交 SHA 用 `git rev-parse HEAD` 获取，不追写自身所在提交的 SHA。
+题目：第 4 题，短视频脚本 Agent。仓库为 [Universeping/agent-campus-submission-example](https://github.com/Universeping/agent-campus-submission-example)。候选人自报实际投入约 3.5 小时，中途因吃饭、睡觉暂停，为估算而非计时日志。个人贡献见 [AI 使用记录](docs/04-ai-usage.md)，复盘与后续设想见 [复盘](docs/05-retrospective.md)，其中最难问题和学习收获由 AI 根据实际过程协助归纳，按候选人提交指示定稿。最终提交 SHA 用 `git rev-parse HEAD` 获取，不追写自身所在提交的 SHA。
 
 可选连接诊断支持 `--chat` 和 `--timeout`，详见 [网络验证](examples/network-validation/README.md)。宿主已有列表成功和聊天超时记录，具体网络原因未确定；无需把继续诊断作为材料收尾的前置条件。
