@@ -1,0 +1,17 @@
+{
+  "scripts": {},
+  "duration_results": {},
+  "rule_results": {},
+  "error_history": [
+    {
+      "error": {
+        "tool": "model",
+        "code": "connection_error",
+        "message": "无法连接模型服务",
+        "retryable": true
+      }
+    }
+  ],
+  "step_count": 2,
+  "tool_call_count": 0
+}

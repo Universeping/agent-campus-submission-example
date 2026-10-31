@@ -1,0 +1,109 @@
+{
+  "scripts": {
+    "1": {
+      "version": 1,
+      "title": "字幕功能介绍",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "标题卡片",
+          "narration": "今天聊聊视频字幕。",
+          "source_ids": []
+        },
+        {
+          "id": "S2",
+          "visual": "展示字幕示意画面",
+          "narration": "必剪 iOS 版支持语音转字幕。",
+          "source_ids": [
+            "P_BCT_001"
+          ]
+        },
+        {
+          "id": "S3",
+          "visual": "字幕示意画面",
+          "narration": "必剪 iOS 版支持文本朗读。",
+          "source_ids": [
+            "P_BCT_002"
+          ]
+        },
+        {
+          "id": "S4",
+          "visual": "片尾提示画面",
+          "narration": "你会给视频加字幕吗？",
+          "source_ids": []
+        }
+      ],
+      "source_ids": [
+        "P_BCT_001",
+        "P_BCT_002"
+      ],
+      "fingerprint": "21f97c381b3cfd33a519650b8c83cb25d0f8cc577d4cdbd65d123c98fc6e57d8"
+    }
+  },
+  "duration_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "21f97c381b3cfd33a519650b8c83cb25d0f8cc577d4cdbd65d123c98fc6e57d8",
+      "shot_durations": [
+        {
+          "shot_id": "S1",
+          "duration_seconds": 2.4
+        },
+        {
+          "shot_id": "S2",
+          "duration_seconds": 3.95
+        },
+        {
+          "shot_id": "S3",
+          "duration_seconds": 3.7
+        },
+        {
+          "shot_id": "S4",
+          "duration_seconds": 2.95
+        }
+      ],
+      "target_duration_seconds": 30,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 13.0,
+      "passed": true
+    }
+  },
+  "rule_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "21f97c381b3cfd33a519650b8c83cb25d0f8cc577d4cdbd65d123c98fc6e57d8",
+      "checked_rule_ids": [
+        "FACT-REF",
+        "FACT-SUPPORT",
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "B_SCOPE_BCUT",
+        "B_SURFACE_IOS"
+      ],
+      "issues": [],
+      "passed": true
+    }
+  },
+  "error_history": [
+    {
+      "error": {
+        "tool": "model",
+        "code": "multiple_actions",
+        "message": "每轮只允许一个动作，本轮未执行任何动作",
+        "retryable": false
+      }
+    }
+  ],
+  "step_count": 6,
+  "tool_call_count": 3
+}

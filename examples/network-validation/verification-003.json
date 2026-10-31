@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-31T03:25:48.113593+00:00",
+  "tests": 119,
+  "test_file_hashes_matched": 20,
+  "business_stage_hashes_unchanged": 18,
+  "host_post_report_and_script_snapshot_exact": true,
+  "current_local_result": "connect/dns_error in Codex environment; host precise stage pending",
+  "configured_key_leaks": 0,
+  "local_links_valid": true,
+  "production_client_agent_and_evaluator_unchanged": true
+}

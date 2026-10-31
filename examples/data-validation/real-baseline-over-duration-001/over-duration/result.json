@@ -1,0 +1,40 @@
+{
+  "run_id": "967a40a29a094c07bb104e11346df021",
+  "mode": "real",
+  "status": "incomplete",
+  "task_input": {
+    "topic": "介绍为视频添加字幕的功能",
+    "audience": "新手",
+    "platform": "通用短视频",
+    "target_duration_seconds": 5,
+    "style": "轻松"
+  },
+  "script": {
+    "version": 4,
+    "title": "字幕功能介绍",
+    "shots": [
+      {
+        "id": "S1",
+        "visual": "展示字幕示意画面",
+        "narration": "支持为视频添加字幕",
+        "source_ids": [
+          "P01"
+        ]
+      }
+    ],
+    "source_ids": [
+      "P01"
+    ],
+    "fingerprint": "e14d619ba35e6bb6371b23203960f176c16ab20c0257229e99828030a00a3ada"
+  },
+  "duration_result": null,
+  "rule_check_result": null,
+  "risks": [
+    "时长是 timing-v1 假设下的估算，不是实际配音测量。",
+    "事实检查仅覆盖素材原文与受控表达，可能误拒有效改写。"
+  ],
+  "reason": "达到模型步骤或工具调用上限",
+  "missing_fields": [],
+  "errors": [],
+  "questions": []
+}

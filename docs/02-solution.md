@@ -2,7 +2,7 @@
 
 当前已实现六动作单 Agent、LangGraph 状态图、DeepSeek 适配、Mock、CLI、Trace 和输出文件。业务理解基线仍为 v0.1.0；早期五动作建议已被用户确认的六动作协议替代。
 
-本轮更新 SYSTEM_PROMPT，明确授权与主题相关事实、按字段的 allowed_expressions、同镜引用、至少一条事实、工具错误区别、补充与未完成的选择、当前稿重检及预算。不改变工具或执行器的完成条件。main 为每次运行保存 system_prompt_sha256；批量验证仅观察真实 Trace，不控制模型下一步或替换工具结果，见 [新提示词验证](../examples/prompt-validation/README.md)。
+当前 SYSTEM_PROMPT 约束授权与主题相关事实、按字段的 allowed_expressions、同镜引用、至少一条事实、工具错误区别、补充与未完成的选择、当前稿重检及预算。完成条件由工具和执行器校验，不依赖提示词自报。main 为每次运行保存 system_prompt_sha256；批量验证仅观察真实 Trace，不控制模型下一步或替换工具结果，见 [批量验证说明](../examples/prompt-validation/README.md)。
 
 ## 分层职责
 
@@ -69,10 +69,16 @@ flowchart TD
 
 保存 result、script、checks、history、trace 和 run 元数据；后者包含模型、运行模式、故障注入、预算、资料和代码指纹。目录默认按 run_id 新建，不覆盖既有结果。
 
-旧提示词的真实正常任务与故障注入任务已出现改写检索、修订稿件和重新检查。新提示词的五条 Mock 路径通过，真实尝试连接失败；详见 [评估](03-evaluation.md)。Mock 调用同一执行器和真实工具，只证明流程，不能证明真实模型效果。
+当前产品配置的 CapCut 与必剪正常真实路径通过；P01 工具失败后由模型改查并完成，空资料与无关资料在实际空检索后请求补充。5 秒例有修订、重检及上限未完成退出，原自定义评估 failed 保留，不等于最终修订成功。旧提示词的 v2 成功结果另作历史解释；完整结论见 [评估](03-evaluation.md)。Mock 调用同一执行器和真实工具，只证明流程，不能证明真实模型效果。
 
 后续前端经 HTTP API 复用同一业务核心；会话恢复、自由表达事实判断和真实时长测量尚未实现。
 
 ## 产品配置接入
 
 从本地 profile 注入 data_scope 和 retrieved_material_metadata，事实和来源仅在实际检索后交给模型。每次选择单产品/客户端范围，全部适用规则完整加载；拒绝手动素材/规则覆盖。使用独立配置避免直接混合 40 条总表，P_CAN_010 暂缓，原包保持不改。来源导出 sources.json 并展示于 Markdown，配置、来源和审阅文件摘要写入 run.json，详见 [资料接入](09-data-pack.md)。事实检查工具没有放宽，Mock 仅按当前配置选择事实，不证明真实模型的相关性判断。
+
+## 可选连接诊断
+
+独立 scripts/check_deepseek_connection.py 复用模型配置和传输，默认 GET /models，--chat 请求一次原生工具响应；不执行 Agent 业务工具。安全分类 DNS/TLS/超时和 HTTP 状态，可记录连接、代理隧道、TLS、发送及等待阶段的耗时，不返回凭据、原始响应或异常正文。GET 默认诊断超时 15 秒，聊天默认使用模型配置；不修改 Agent 的 60 秒及预算，保留 TLS 校验。
+
+宿主 GET 已成功，POST 为 60 秒超时，具体网络子阶段未确定；生产 JSON 请求头原本正确。诊断阶段未修改业务客户端或循环，不把结果归因于规则、提示词或模型推理耗时，也不将继续诊断作为交付前置条件。记录与边界见 [网络验证](../examples/network-validation/README.md)。

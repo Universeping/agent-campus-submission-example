@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-31T03:13:53.708861+00:00",
+  "tests": 115,
+  "test_log_file_hashes_matched": 20,
+  "business_stage_hashes_unchanged": 18,
+  "host_get_report_and_script_snapshot_exact": true,
+  "current_local_post": "dns_error; not host POST result",
+  "configured_key_leaks": 0,
+  "local_links_valid": true,
+  "runtime_client_and_agent_code_unchanged": true
+}

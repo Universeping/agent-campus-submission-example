@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-10-31T03:09:20.474490+00:00",
+  "executed_by": "user on host terminal",
+  "original_directory": "outputs/connection-check-a8eff1d2e2284a7090086075b106162c",
+  "archived_directory": "examples/network-validation/host-models-001",
+  "report_sha256": "dbf5a3bc11a9562e3c705d29b821e3aa79c86e75a1a6d6c5525ad2fcf3b7af41",
+  "script_snapshot": "examples/network-validation/diagnostic-models-only.py.txt",
+  "script_sha256": "baf65322834522f7939452e694af6b91af554a903fb7db3c3bbd90dcdc75a9b8",
+  "scope": "This GET /models succeeded in 0.169 seconds; does not establish POST /chat/completions availability or explain earlier transient failures."
+}

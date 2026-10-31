@@ -1,6 +1,6 @@
 # 需求与成功标准
 
-业务理解基线 v0.1.0；当前已实现 CLI 单 Agent 最小闭环。105 项测试通过；8 个产品/客户端配置已接入，39 条事实启用、1 条暂缓，规则为项目自定演示政策。旧提示词保存两条真实路径，当前 profile 真实验证连接受阻。完整效果范围及不足见 [评估](03-evaluation.md)。
+业务理解基线 v0.1.0；当前已实现 CLI 单 Agent 最小闭环。119 项测试通过（105 项业务测试、14 项独立连接诊断测试）；8 个产品/客户端配置已接入，39 条事实启用、1 条暂缓，规则为项目自定演示政策。真实正常生成、缺关键信息、空资料、无关资料和工具失败处理均有记录。超时长案例已展示反馈后的修订、重检与明确未完成退出，尚未证明最终修订成功。当前结论及证据边界以 [评估](03-evaluation.md) 为准。
 
 ## 用户、目标与范围
 
@@ -29,18 +29,20 @@
 
 | 验收点 | 实现和测试 | 实际证据与边界 |
 | --- | --- | --- |
-| 完整脚本与正常闭环 | agent/main；test_agent、test_cli_trace | [真实正常结果](../examples/agent-validation/real-normal-002/result.json)，v2、7.1 秒。 |
-| 缺关键信息 | prepare 校验与 questions | [缺输入结果](../examples/agent-validation/real-missing-input-001/result.json)，needs_input；0 次模型调用。 |
-| 资料不足 | search、request_input | [空资料 Trace](../examples/agent-validation/mock-no-materials-001/trace.jsonl)，Mock 决策，请求补资料。 |
-| 工具失败后调整 | 结构化错误反馈、模型重新决策 | [真实故障 Trace](../examples/agent-validation/real-tool-failure-001/trace.jsonl)，显式注入一次检索失败，模型重新检索。 |
-| 超时长修订与重检 | estimate_duration、版本循环 | [超时长历史](../examples/agent-validation/mock-over-duration-001/history.json)，31.8→2.65 秒；仅 Mock，真实模型尚未验证此分支。 |
-| 产品依据与引用 | 原文/受控表达、同镜引用、no_grounded_fact | test_tools；[真实修订 Trace](../examples/agent-validation/real-tool-failure-001/trace.jsonl)。不是通用事实判断。 |
-| 稿次、时长、报告对应 | schemas 完成约束；agent 可信执行 | test_schemas、test_agent；两条真实路径均保存 v1/v2，最终只用 v2 两项报告。 |
-| 两条真实动态决策路径 | model 原生函数调用、LangGraph 条件循环 | 正常路径空检索后改查询；故障路径收到工具错误后重新检索，两者均有检查反馈后修订。 |
-| 执行预算与明确未完成 | 主动计数及图后备上限 | [上限结果](../examples/agent-validation/mock-execution-limit-001/result.json)，incomplete；test_agent 覆盖工具上限。 |
-| 可复现、离线入口、可执行测试 | README、锁定依赖、CLI | [当前运行索引](../examples/data-validation/README.md)、[105 项测试](../examples/data-validation/unittest-001.txt)。 |
+| 完整脚本与正常闭环 | agent/main；test_agent、test_cli_trace | [当前 CapCut 结果](../examples/data-validation/real-capcut-web-002/result.json)，v1、21.4 秒；[必剪结果](../examples/data-validation/real-bcut-ios-001/result.json)，v1、13 秒。 |
+| 缺关键信息 | prepare 校验与 questions | [缺输入结果](../examples/data-validation/real-baseline-missing-input-001/result.json)，needs_input；0 次模型调用。 |
+| 资料不足 | search、request_input | [真实空资料 Trace](../examples/data-validation/real-baseline-no-materials-001/no-materials/trace.jsonl)，实际检索后请求补充。 |
+| 工具失败后调整 | 结构化错误反馈、模型重新决策 | [当前真实故障 Trace](../examples/data-validation/real-baseline-tool-failure-001/tool-failure/trace.jsonl)，注入错误后模型重新选择查询，成功恢复。 |
+| 超时长后的修订或明确失败 | estimate_duration、版本循环、未完成退出 | [真实超时历史](../examples/data-validation/real-baseline-over-duration-001/over-duration/history.json)，7.6→5.3→2.25 秒，v3 无事实被拒，v4 保存后预算耗尽未检；任务 incomplete，自定义评估 failed。有修订和失败退出证据，无最终修订成功证据。 |
+| 产品依据与引用 | 原文/受控表达、同镜引用、no_grounded_fact | test_tools；[当前真实规则反馈](../examples/data-validation/real-baseline-over-duration-001/over-duration/trace.jsonl) 拒绝只引用 P01 却不表达事实的 v3。不是通用事实判断。 |
+| 稿次、时长、报告对应 | schemas 完成约束；agent 可信执行 | test_schemas、test_agent；当前两条产品成功结果仅使用各自 v1 报告；超时长 v4 不沿用 v3 通过报告。[历史 v2 重检](../examples/agent-validation/real-normal-002/history.json) 单独保留。 |
+| 两条真实动态决策路径 | model 原生函数调用、LangGraph 条件循环 | [故障后改查并完成](../examples/data-validation/real-baseline-tool-failure-001/tool-failure/trace.jsonl)；[多次空检索后请求补充](../examples/data-validation/real-baseline-no-materials-001/no-materials/trace.jsonl)。均为当前业务源码的真实模型记录。 |
+| 执行预算与明确未完成 | 主动计数及图后备上限 | [真实上限结果](../examples/data-validation/real-baseline-over-duration-001/over-duration/result.json)，incomplete；test_agent 另覆盖工具上限。 |
+| 可复现、离线入口、可执行测试 | README、锁定依赖、CLI | [当前运行索引](../examples/data-validation/README.md)、[119 项测试](../examples/network-validation/unittest-003.txt)。 |
 
-上述真实证据为旧提示词结果；当前提示词与 main 元数据已变化。当前测试日志与批量验收见 [新提示词验证](../examples/prompt-validation/README.md)，新增空资料、无关资料、5 秒上限输入，真实执行受连接错误阻断。首稿直接短于上限不能覆盖超时修订；无关资料直接请求补充不能覆盖实际空检索反馈。业务成功标准未放宽。
+当前正常与异常路径记录见 [资料与真实运行索引](../examples/data-validation/README.md)。[提示词阶段索引](../examples/prompt-validation/README.md) 保留历史报告及仍可使用的批量入口说明，不再代表当前效果缺失。首稿直接短于上限不证明超时修订；没有实际空检索的直接补充也不证明观察空结果后的决策。
+
+原题允许超时后修订或明确失败。当前案例可作为修订尝试及达到上限后明确未完成的记录；它没有证明模型主动判断业务约束无法满足，也没有证明最终稿成功。自定义评估器要求重检完成或模型主动 finish(incomplete)，因此原报告 failed 保留；该分类不直接等同于考核整项不达标。completed 的检查标准保持不变。
 
 不将 Mock 分支视为真实模型效果，也不宣称已证明重复运行稳定性或自由创作质量。
 
@@ -49,3 +51,7 @@
 官方发布规范、产品事实、自定品牌/创作配置、合成案例须分开记录。抖音/快手规范可作为规则参考，剪映/必剪说明可作为产品事实候选。来源登记在 [sources.md](../data/sources.md)，登记不等于已经转成可执行检查。扩展范围时再补充有来源的数据与相应用例，不将经验性数值写成平台强制要求。
 
 资料扩充已通过用户包接入 CapCut、Canva、Adobe Express、必剪 iOS，详见 [资料评估](09-data-pack.md)。产品客户端不等同于发布 platform；P01 保留作合成基线。8 条 Mock CLI 验证资料、范围、规则与来源可运行，但不证明真实模型选择最相关功能。业务成功标准未放宽，官方发布平台规则仍未实现。
+
+当前宿主两条正常运行及 P01 批量连接失败见 [归档索引](../examples/data-validation/README.md)。产品稿件均 v1 一次检查通过，不能作为超时修订证明。缺资料与工具失败当前真实结果已独立补齐；超时长虽有数值反馈和修订，仍未完成最终重检及结束申请。
+
+20/10 预算复跑超时长任务在最初两次请求连接失败，0 次工具，不能判断较大预算的修订效果。独立诊断已记录宿主 GET 列表成功和 POST 超时，详见 [记录](../examples/network-validation/README.md)。诊断不替代业务验证，也不是当前材料收尾的前置条件。

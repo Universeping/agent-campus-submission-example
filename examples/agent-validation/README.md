@@ -1,6 +1,6 @@
 # Agent 执行与验证记录
 
-本目录为旧提示词阶段的历史证据。环境 Python 3.14.4、LangGraph 1.2.18、python-dotenv 1.2.4；当时 [79 项测试日志](unittest-001.txt) 全部通过，无跳过。每个运行目录包含 result.json、checks.json、script.md、history.json、trace.jsonl、run.json，后者保存实际命令、配置边界和源码/资料摘要。当前提示词、87 项测试和真实验证状态见 [新索引](../prompt-validation/README.md)。
+本目录为旧提示词阶段的历史证据。环境 Python 3.14.4、LangGraph 1.2.18、python-dotenv 1.2.4；当时 [79 项测试日志](unittest-001.txt) 全部通过，无跳过。每个运行目录包含 result.json、checks.json、script.md、history.json、trace.jsonl、run.json，后者保存实际命令、配置边界和源码/资料摘要。当前真实状态见 [资料与运行索引](../data-validation/README.md)，最新为 [119 项测试日志](../network-validation/unittest-003.txt)，其中业务 105 项、独立诊断 14 项；[提示词阶段](../prompt-validation/README.md) 的 87 项也是历史结果。
 
 ## 真实模型与入口校验
 
@@ -35,7 +35,7 @@
 | mock-execution-limit-001 | 两轮预算耗尽，incomplete | [结果](mock-execution-limit-001/result.json)、[Trace](mock-execution-limit-001/trace.jsonl) |
 | mock-early-finish-001 | 过早 finish 被拒，补检查后完成 | [结果](mock-early-finish-001/result.json)、[Trace](mock-early-finish-001/trace.jsonl) |
 
-实际参数见各目录 run.json：将 command 的 python 换成 .venv/bin/python，output-dir 换成新路径即可重跑。缺输入、缺资料和预算结束的退出码为 1，属于预期。Mock 不证明真实模型决策或改稿能力；真实超时长修订尚待验证。
+实际参数见各目录 run.json：将 command 的 python 换成 .venv/bin/python，output-dir 换成新路径即可重跑。缺输入、缺资料和预算结束的退出码为 1，属于预期。Mock 不证明真实模型决策或改稿能力；该阶段没有真实超时修订记录。当前已有反馈修订及明确未完成记录，最终修订成功仍未证明，见 [效果验证](../../docs/03-evaluation.md)。
 
 ## 保留的连接失败
 

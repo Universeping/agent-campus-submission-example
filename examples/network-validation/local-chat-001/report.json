@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-31T03:11:33.233295+00:00",
+  "operation": "POST /chat/completions",
+  "target_host": "api.deepseek.com",
+  "model": "deepseek-v4-pro",
+  "use_proxy": false,
+  "timeout_seconds": 5.0,
+  "scope": "Single diagnostic tool-call response; no tool execution, Agent task, or duration-repair evidence.",
+  "status": "dns_error",
+  "message": "域名解析失败",
+  "phase": "https_request",
+  "wrapped_by_urlerror": true,
+  "elapsed_seconds": 0.001,
+  "diagnostic_script_sha256": "b528177108f941fe346d18ef06f26d0f82b7150a0c7e027b911aa5029c0305d5"
+}

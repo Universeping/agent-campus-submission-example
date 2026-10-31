@@ -1,0 +1,172 @@
+{
+  "scripts": {
+    "1": {
+      "version": 1,
+      "title": "视频字幕小课堂",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "展示字幕示意画面",
+          "narration": "你会给视频加字幕吗？支持为视频添加字幕。",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "id": "S2",
+          "visual": "片尾提示画面",
+          "narration": "我们开始吧。",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "e98ba2ca2cb6ed051c9d486a1c563812805a305d12d42f8131ca85ca41e72019"
+    },
+    "2": {
+      "version": 2,
+      "title": "视频字幕小课堂",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "展示字幕示意画面",
+          "narration": "你会给视频加字幕吗？支持为视频添加字幕。",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "624cf75ad593a68166c0789e565f5f346bc0cd198493084d4dd51c580d040ca7"
+    },
+    "3": {
+      "version": 3,
+      "title": "视频字幕小课堂",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "展示字幕示意画面",
+          "narration": "你会给视频加字幕吗",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "56c69b2a69af7be1f5f001cac0e68c102057d9bf2805211b94e640de5a41ddac"
+    },
+    "4": {
+      "version": 4,
+      "title": "字幕功能介绍",
+      "shots": [
+        {
+          "id": "S1",
+          "visual": "展示字幕示意画面",
+          "narration": "支持为视频添加字幕",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "fingerprint": "e14d619ba35e6bb6371b23203960f176c16ab20c0257229e99828030a00a3ada"
+    }
+  },
+  "duration_results": {
+    "1": {
+      "script_version": 1,
+      "script_fingerprint": "e98ba2ca2cb6ed051c9d486a1c563812805a305d12d42f8131ca85ca41e72019",
+      "shot_durations": [
+        {
+          "shot_id": "S1",
+          "duration_seconds": 5.3
+        },
+        {
+          "shot_id": "S2",
+          "duration_seconds": 2.3
+        }
+      ],
+      "target_duration_seconds": 5,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 7.6,
+      "passed": false
+    },
+    "2": {
+      "script_version": 2,
+      "script_fingerprint": "624cf75ad593a68166c0789e565f5f346bc0cd198493084d4dd51c580d040ca7",
+      "shot_durations": [
+        {
+          "shot_id": "S1",
+          "duration_seconds": 5.3
+        }
+      ],
+      "target_duration_seconds": 5,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 5.3,
+      "passed": false
+    },
+    "3": {
+      "script_version": 3,
+      "script_fingerprint": "56c69b2a69af7be1f5f001cac0e68c102057d9bf2805211b94e640de5a41ddac",
+      "shot_durations": [
+        {
+          "shot_id": "S1",
+          "duration_seconds": 2.25
+        }
+      ],
+      "target_duration_seconds": 5,
+      "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+      "total_duration_seconds": 2.25,
+      "passed": true
+    }
+  },
+  "rule_results": {
+    "3": {
+      "script_version": 3,
+      "script_fingerprint": "56c69b2a69af7be1f5f001cac0e68c102057d9bf2805211b94e640de5a41ddac",
+      "checked_rule_ids": [
+        "FACT-REF",
+        "FACT-SUPPORT",
+        "B01"
+      ],
+      "issues": [
+        {
+          "rule_id": "FACT-SUPPORT",
+          "code": "no_grounded_fact",
+          "message": "引用了素材但未实际表达任何有依据的事实，请使用所引素材原文。",
+          "shot_id": null
+        }
+      ],
+      "passed": false
+    }
+  },
+  "error_history": [
+    {
+      "error": {
+        "tool": "model",
+        "code": "multiple_actions",
+        "message": "每轮只允许一个动作，本轮未执行任何动作",
+        "retryable": false
+      }
+    },
+    {
+      "error": {
+        "tool": "model",
+        "code": "connection_error",
+        "message": "无法连接模型服务",
+        "retryable": true
+      }
+    }
+  ],
+  "step_count": 12,
+  "tool_call_count": 6
+}

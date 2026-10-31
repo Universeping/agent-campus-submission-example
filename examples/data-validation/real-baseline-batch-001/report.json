@@ -1,0 +1,40 @@
+{
+  "mode": "real",
+  "created_at": "2026-10-30T17:31:46.267002+00:00",
+  "runner_sha256": "d91af3fcd797c6ef468124b106c26e30e51ff84e34725c7e308178c950b9a01a",
+  "scope": "Trace branch checks only; Mock never proves real model behavior. Human review of claims/reasons is required.",
+  "cases": [
+    {
+      "case": "normal",
+      "exit_code": 2,
+      "status": "failed",
+      "system_prompt_sha256": "c1e4d7261450968139165cbef94a4e99a2f89b9d62e3feea0ded5c900777bb3c",
+      "steps": 2,
+      "verdict": "blocked",
+      "reason": "无法连接模型服务",
+      "empty_search": false,
+      "duration_failure": false,
+      "multiple_actions": 0
+    },
+    {
+      "case": "tool-failure",
+      "verdict": "not_run",
+      "reason": "前一案例模型服务不可用，停止相同连接尝试。"
+    },
+    {
+      "case": "no-materials",
+      "verdict": "not_run",
+      "reason": "前一案例模型服务不可用，停止相同连接尝试。"
+    },
+    {
+      "case": "unrelated-materials",
+      "verdict": "not_run",
+      "reason": "前一案例模型服务不可用，停止相同连接尝试。"
+    },
+    {
+      "case": "over-duration",
+      "verdict": "not_run",
+      "reason": "前一案例模型服务不可用，停止相同连接尝试。"
+    }
+  ]
+}

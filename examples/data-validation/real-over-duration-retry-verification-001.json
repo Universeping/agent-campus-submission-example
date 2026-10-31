@@ -1,0 +1,28 @@
+{
+  "verified_at": "2026-10-31T02:54:43.443875+00:00",
+  "original_directory": "outputs/d841c0cdf9c94e6d843d45d0de0b0937",
+  "archived_directory": "examples/data-validation/real-baseline-over-duration-002",
+  "executed_by": "user on host terminal",
+  "limits": {
+    "max_steps": 20,
+    "max_tool_calls": 10,
+    "max_transport_retries": 1
+  },
+  "status": "failed",
+  "model_requests": 2,
+  "tool_calls": 0,
+  "scripts_saved": 0,
+  "observed_errors": [
+    "connection_error",
+    "connection_error"
+  ],
+  "assessment": "Blocked before any model decision; no evidence for or against duration-repair effectiveness under the larger budget.",
+  "artifact_sha256": {
+    "history.json": "ea397c6e55136009a700c07068434feb2a23bc377d508f54ea416e58a91a8fe4",
+    "result.json": "b98069ccf4b7c045e37feb138e638adc9f2671c60852f35eeac79fcccfa88ee0",
+    "trace.jsonl": "039bbd3f4022487d5b16fa3c83750fc5fa7fe0beda25f696923a71e6d64cc634",
+    "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+    "run.json": "4fc3d377c835ea1dd689bd0730e610fdbf45064737b7af6a860c2ca260868104",
+    "script.md": "d11f3f5f9754ae36711ac7a17d0769abe65fbb8224422191d118b3e0f3f07234"
+  }
+}

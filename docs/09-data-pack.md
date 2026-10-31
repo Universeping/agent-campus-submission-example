@@ -8,7 +8,7 @@
 
 原包自带的验证脚本已在本仓库复跑：[140 项检查通过](../examples/data-validation/raw-pack-report.json)。这些检查包括人工脚本、逐条原文和禁用词，以及“混合总表缺少产品隔离”这个已知限制；不等于已经证明业务或模型效果。原包 62 个文件与其 file_hashes.json 全部匹配。
 
-本轮另完成 [105 项测试](../examples/data-validation/unittest-001.txt) 和 [8 次 Mock CLI 运行](../examples/data-validation/mock-runs.json)。实际使用 LangGraph 和本地工具，模型决策为 Mock，不能证明真实模型会正确选择事实。真实 CapCut 配置尝试 connection_error，见 [结果](../examples/data-validation/real-capcut-web-001/result.json)，未取得模型动作。
+资料接入阶段完成 [105 项业务测试](../examples/data-validation/unittest-001.txt) 和 [8 次 Mock CLI 运行](../examples/data-validation/mock-runs.json)；后续另增 14 项独立诊断测试，最新 [119 项日志](../examples/network-validation/unittest-003.txt) 全部通过。Mock 实际使用 LangGraph 和本地工具，但不证明真实模型会正确选择事实。较早执行环境的真实尝试 connection_error，见 [失败结果](../examples/data-validation/real-capcut-web-001/result.json)。随后宿主完成 [CapCut 网页端](../examples/data-validation/real-capcut-web-002/result.json) v1 / 21.4 秒和 [必剪 iOS](../examples/data-validation/real-bcut-ios-001/result.json) v1 / 13 秒；[P01 批量](../examples/data-validation/real-baseline-batch-001/report.json) 首例连接失败后，工具失败、空资料和无关资料已通过独立复跑补齐，见 [当前索引](../examples/data-validation/README.md)。
 
 ## 来源与含义
 
@@ -52,6 +52,8 @@ profile 模式新增 sources.json，仅列实际稿件引用的素材及来源�
 
 一次运行中的资料和规则固定。模型仍需保存稿件、执行两项检查，再申请完成；报告继续绑定版本和指纹。当前不跨配置恢复会话或复用旧报告。
 
-## 保留的后续工作
+## 当前能力边界
 
-检索仍为关键词子串匹配，metadata.tags 尚未参与召回。事实检查仍只接受原文与原有封闭表达，没有因扩充事实而宣称支持任意改写。非字幕任务目前可用完整事实句作标题、使用既有通用画面，创作空间和受众/风格适配仍有限。下一阶段用真实模型测试各配置，再基于误拒与漏召回案例改进检查和检索；数据库、向量召回尚未引入。
+检索仍为关键词子串匹配，metadata.tags 尚未参与召回。事实检查仍只接受原文与原有封闭表达，没有因扩充事实而宣称支持任意改写。非字幕任务可用完整事实句作标题、使用既有通用画面，创作空间和受众/风格适配仍有限。2 个 profile 有真实正常成功，其他 6 个仅有 Mock CLI，不能宣称全部配置真实验证通过。数据库、向量召回未引入，也不是原题必需。
+
+P01 工具失败、空资料、无关资料三例均通过；5 秒例有修订、重检及上限未完成退出，无最终修订成功证据，任务 incomplete、自定义评估 failed 保留。它们仍是合成基线，不外推到全部 profile。详情见 [真实分支复核](../examples/data-validation/real-branches-verification-001.json)，考核要求与自定义分类的区别见 [效果验证](03-evaluation.md)。

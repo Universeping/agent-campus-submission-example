@@ -1,13 +1,13 @@
-# 本地工具验证
+# 本地工具阶段历史验证
 
-这里的脚本都是人工编写的合成测试输入，不是模型输出，也不是 `normal` 场景的 Agent 执行结果。
+这里的脚本都是人工编写的合成测试输入，不是模型输出，也不是 `normal` 场景的 Agent 执行结果。本目录记录工具阶段的历史状态，当前项目结论见 [效果验证](../../docs/03-evaluation.md)。
 
 | 输入或记录 | 用途 |
 | --- | --- |
 | [input-script.json](input-script.json) | 单事实和允许表达组成的手工脚本。 |
 | [unsupported-script.json](unsupported-script.json) | 引用 P01 但声称效率提升 80%，验证引用存在不代表事实有依据。 |
 | [overlong-script.json](overlong-script.json) | 重复事实句构造超时长输入，不代表推荐的实际脚本。 |
-| [unittest-001.txt](unittest-001.txt) | 当前 37 项契约与工具测试的实际输出，含文件指纹。 |
+| [unittest-001.txt](unittest-001.txt) | 工具阶段当时 37 项契约与工具测试的实际输出，含文件指纹；不是当前全量测试数量。 |
 | [run-manifest.json](run-manifest.json) | 七次实际命令、退出码、输出文件及指纹，明确没有模型或 Agent 运行。 |
 
 ## 实际工具结果

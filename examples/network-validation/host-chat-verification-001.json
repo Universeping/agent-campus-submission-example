@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-10-31T03:21:49.872774+00:00",
+  "executed_by": "user on host terminal",
+  "original_directory": "outputs/connection-check-f44a3dbf36ef4b0d986532e7b0443ba8",
+  "archived_directory": "examples/network-validation/host-chat-001",
+  "report_sha256": "b66cda1c7a43e73787a7df3f7d0740255c829f41d1b90632b2e88f575373b77c",
+  "script_snapshot": "examples/network-validation/diagnostic-before-stages.py.txt",
+  "script_sha256": "b528177108f941fe346d18ef06f26d0f82b7150a0c7e027b911aa5029c0305d5",
+  "assessment": "One POST probe timed out in 60.065 seconds before obtaining a response. Python urllib wrapping narrows failure to connection/request-send path; current report cannot isolate DNS/TCP/TLS/send. Not a duration-repair result."
+}

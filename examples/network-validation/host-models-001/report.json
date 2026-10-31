@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-31T03:06:26.807252+00:00",
+  "operation": "GET /models",
+  "target_host": "api.deepseek.com",
+  "model": "deepseek-v4-pro",
+  "use_proxy": false,
+  "timeout_seconds": 15,
+  "scope": "Connectivity and model-list endpoint only; not Chat Completions or Agent behavior.",
+  "http_status": 200,
+  "status": "passed",
+  "model_list_contains_configured_model": true,
+  "message": "接口可达且列表包含配置模型",
+  "elapsed_seconds": 0.169,
+  "diagnostic_script_sha256": "baf65322834522f7939452e694af6b91af554a903fb7db3c3bbd90dcdc75a9b8"
+}

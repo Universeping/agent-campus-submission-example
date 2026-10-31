@@ -1,0 +1,20 @@
+{
+  "mode": "real",
+  "created_at": "2026-10-31T02:33:59.748555+00:00",
+  "runner_sha256": "d91af3fcd797c6ef468124b106c26e30e51ff84e34725c7e308178c950b9a01a",
+  "scope": "Trace branch checks only; Mock never proves real model behavior. Human review of claims/reasons is required.",
+  "cases": [
+    {
+      "case": "tool-failure",
+      "exit_code": 0,
+      "status": "completed",
+      "system_prompt_sha256": "c1e4d7261450968139165cbef94a4e99a2f89b9d62e3feea0ded5c900777bb3c",
+      "steps": 8,
+      "verdict": "passed",
+      "reason": "核对最终完成条件与所需恢复分支。",
+      "empty_search": true,
+      "duration_failure": false,
+      "multiple_actions": 1
+    }
+  ]
+}

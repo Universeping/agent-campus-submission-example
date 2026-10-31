@@ -1,0 +1,181 @@
+{
+  "verified_at": "2026-10-31T02:38:49.501073+00:00",
+  "git_head_at_audit": "6037a11e60ee519174d1b49d9522af8692776d61",
+  "scope": "Exact copy of user-produced artifacts, current source/data hashes and assessment checked; recomputed stored historical tool results. No model calls.",
+  "records": [
+    {
+      "original_directory": "outputs/prompt-validation-764d107ab5084a579f9131f33b30dc0b",
+      "archived_directory": "examples/data-validation/real-baseline-tool-failure-001",
+      "executed_by": "user on host terminal",
+      "summary": {
+        "case": "tool-failure",
+        "verdict": "passed",
+        "status": "completed",
+        "run_id": "3ad3b434592347f7b9610ecfc2153fd8",
+        "steps": 8,
+        "tool_calls": 5,
+        "source_data_hashes_matched": 10,
+        "duration_history": {
+          "1": 9.399999999999999
+        },
+        "rule_history": {
+          "1": {
+            "passed": true,
+            "issue_codes": []
+          }
+        },
+        "multiple_actions": 1,
+        "connection_errors": 0
+      },
+      "artifact_sha256": {
+        "report.json": "c525b22258967ab2fc657eed70f2cb30be0a2d9ca3de086b8f02a2863bcd2423",
+        "tool-failure/history.json": "4ba324f9210405ff2cfa199127088c4f145358745f259924bd380d3943bbea70",
+        "tool-failure/result.json": "418c10e615b06ab69614737f661a06a8431524646ee90d8d832a0eb6c374ee70",
+        "tool-failure/trace.jsonl": "035d6e5bc8e540197ffc883822168f435217ae32a124b971a0b8cf92724f00d8",
+        "tool-failure/checks.json": "d49d31f3b26b65a9eaff90e4e109f04392d8202f5456f97546e6fc046d1a6d8a",
+        "tool-failure/run.json": "bcd1cf9a4a97c2cb26e251275803ba0d7a208a71fa83f85ded748924e553605b",
+        "tool-failure/script.md": "4d5b7d66b0714232c1cfc60959d52e644ef26de7076bcb49d88153c2590c05be"
+      }
+    },
+    {
+      "original_directory": "outputs/prompt-validation-edf3975d53c6430588b66202c6b7d416",
+      "archived_directory": "examples/data-validation/real-baseline-no-materials-001",
+      "executed_by": "user on host terminal",
+      "summary": {
+        "case": "no-materials",
+        "verdict": "passed",
+        "status": "needs_input",
+        "run_id": "04c55cd5ca4249c2847d0ade84c1de91",
+        "steps": 5,
+        "tool_calls": 4,
+        "source_data_hashes_matched": 10,
+        "duration_history": {},
+        "rule_history": {},
+        "multiple_actions": 0,
+        "connection_errors": 0
+      },
+      "artifact_sha256": {
+        "report.json": "ad05241a502742cb3b1f1dc4a270bd5a3f905705e16a5975fc32f1d33d77ea29",
+        "no-materials/history.json": "d4ad5f8974ffdfcddbf0f7a590b92ed004ee17d5e475647d929a4d7efafba7c4",
+        "no-materials/result.json": "85bad8cd33243b0bc1a567731ddaa7a87a1dd3ad2580d99b20f16f1806261d94",
+        "no-materials/trace.jsonl": "e6c768237127d3d5690c5b2e4b1915ade7fdbcd188cc39890c3330f3908a85fa",
+        "no-materials/checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "no-materials/run.json": "c9b768f6c538b1056d5bd3c398f580a3151554d062a0e938b7f48fd16663cc48",
+        "no-materials/script.md": "715f2ee2a8048f8cf2790ca0970cbfecdba96a0336c08dc11e92255329a3bb61"
+      }
+    },
+    {
+      "original_directory": "outputs/prompt-validation-0d361f7a646d43788a8bbfcb50d2d83b",
+      "archived_directory": "examples/data-validation/real-baseline-unrelated-materials-001",
+      "executed_by": "user on host terminal",
+      "summary": {
+        "case": "unrelated-materials",
+        "verdict": "passed",
+        "status": "needs_input",
+        "run_id": "e19bfecfad8a4781ad57d3eae1c1e026",
+        "steps": 4,
+        "tool_calls": 3,
+        "source_data_hashes_matched": 10,
+        "duration_history": {},
+        "rule_history": {},
+        "multiple_actions": 0,
+        "connection_errors": 0
+      },
+      "artifact_sha256": {
+        "report.json": "e1c11281a52965a0a877d2e47f1fceb646874259f78a71cc5719f7e889b59256",
+        "unrelated-materials/history.json": "c91da78ec4e787b6e481b333e70d542de8104b348d81f9c6edb3ad19a70ee1b2",
+        "unrelated-materials/result.json": "3df52f5aa7246fde6a46ce029d1152625e4f46c723a2c90782c95ecdc1c7324c",
+        "unrelated-materials/trace.jsonl": "5ac3a0c181ace02ccbcceb691af8f9b1163c8a74d94cf0351fe6b4d0304d33ac",
+        "unrelated-materials/checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "unrelated-materials/run.json": "e5c54480bf0d305a1ab9f4394af3422a685ce1aad186f214d9235c5c98e32674",
+        "unrelated-materials/script.md": "782b6cad05888147b571559de0efb76ce17cbe66ade559dcf1f737d7dc549013"
+      }
+    },
+    {
+      "original_directory": "outputs/prompt-validation-ad0ff98dfdbd43d59e6339e3a2bdf261",
+      "archived_directory": "examples/data-validation/real-baseline-over-duration-001",
+      "executed_by": "user on host terminal",
+      "summary": {
+        "case": "over-duration",
+        "verdict": "failed",
+        "status": "incomplete",
+        "run_id": "967a40a29a094c07bb104e11346df021",
+        "steps": 12,
+        "tool_calls": 6,
+        "source_data_hashes_matched": 10,
+        "duration_history": {
+          "1": 7.6,
+          "2": 5.3,
+          "3": 2.25
+        },
+        "rule_history": {
+          "3": {
+            "passed": false,
+            "issue_codes": [
+              "no_grounded_fact"
+            ]
+          }
+        },
+        "multiple_actions": 1,
+        "connection_errors": 1,
+        "post_run_diagnostics": {
+          "scope": "Audit-only tool execution AFTER the original run; not Agent observations or completion evidence. Original task stays incomplete and verdict stays failed.",
+          "version": 4,
+          "fingerprint": "e14d619ba35e6bb6371b23203960f176c16ab20c0257229e99828030a00a3ada",
+          "duration": {
+            "script_version": 4,
+            "script_fingerprint": "e14d619ba35e6bb6371b23203960f176c16ab20c0257229e99828030a00a3ada",
+            "shot_durations": [
+              {
+                "shot_id": "S1",
+                "duration_seconds": 2.25
+              }
+            ],
+            "target_duration_seconds": 5,
+            "method": "timing-v1：旁白中每个字母或数字（含汉字）按 4 字符/秒计；逗号/顿号/分号/冒号每个停顿 0.2 秒，句号/问号/感叹号每个 0.4 秒；每镜至少 2 秒，第二镜起每镜另加转场 0.3 秒；每镜向上取整至 0.01 秒。标题和画面描述不朗读，数字和外语逐字符估算；不是实际配音时长。",
+            "total_duration_seconds": 2.25,
+            "passed": true
+          },
+          "rules": {
+            "script_version": 4,
+            "script_fingerprint": "e14d619ba35e6bb6371b23203960f176c16ab20c0257229e99828030a00a3ada",
+            "checked_rule_ids": [
+              "FACT-REF",
+              "FACT-SUPPORT",
+              "B01"
+            ],
+            "issues": [],
+            "passed": true
+          }
+        }
+      },
+      "artifact_sha256": {
+        "report.json": "0e0d5decf540e15d0d1dc9e941edd1a3af55c7b8074525765d89007eaa28346d",
+        "over-duration/history.json": "44e95b097bc8246cc89e1e0e120ec0e7a6d54b2c7184eb6c4956a058f71a2dff",
+        "over-duration/result.json": "0c464329f5b3ba3a74a03a3874e4978bcd070117c1116c68c8a370184e2a58fe",
+        "over-duration/trace.jsonl": "2020cee1cc8688cc294993aa81c647db9dc417cb8cb43bb13e9481e4518be1b3",
+        "over-duration/checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "over-duration/run.json": "971e4396280921f8a50096a289fe60e227086979e2a3b162d6977522c9c3184a",
+        "over-duration/script.md": "a7bbc92d96040fab2e00c9aa51727bd211c159c7ac45b08045fb079a1a5a3b97"
+      }
+    }
+  ],
+  "follow_up": "Preserve the default-12-step failure. Optionally rerun with explicitly recorded 20-step/10-tool budget; do not relabel the old run or use audit-only v4 checks as Agent evidence.",
+  "preflight_validation": {
+    "directory": "examples/data-validation/real-baseline-missing-input-001",
+    "executed_by": "Codex local real-mode CLI, no model calls",
+    "status": "needs_input",
+    "missing_fields": [
+      "topic"
+    ],
+    "model_calls": 0,
+    "artifact_sha256": {
+      "history.json": "a4cefd87cce3ac339dea2f6e1d84e15a919faa434ffb5f588f7332f1d56b55f0",
+      "result.json": "f2ad18cc1af3eec640e3731d8da59569cbfaa45ad80b6f8f54b765c5c0176cbb",
+      "trace.jsonl": "250b550ddde5b147bd7ec60815a535bab15542b94ecf6d039880ff51ba63ec00",
+      "checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+      "run.json": "0f163bb4dc23024ba3c8a7fc3bc90280a8a2edf18a636348d52e58abd8361301",
+      "script.md": "2b2cbc1101e393496b77fdde8d602f5d52024b66f519267745d5c3e44b16efef"
+    }
+  }
+}

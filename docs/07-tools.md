@@ -76,10 +76,10 @@ CLI 输出 JSON。退出码：0 为执行成功（检索可能为空），1 为�
 
 `load_materials` / `load_brand_rules` 加载现有数组格式；`load_script` 加载嵌套脚本，并核对可选的派生来源和指纹字段，不信任外部提供的旧指纹。函数接口使用 schemas 对象；CLI 负责文件转换。
 
-早期独立工具记录见 [工具验证索引](../examples/tool-validation/README.md)，它们是历史版本的人工输入。当前 23 项工具测试及 Agent/真实模型记录见 [评估](03-evaluation.md) 和 [运行索引](../examples/agent-validation/README.md)，各自区分验证范围。
+早期独立工具记录见 [工具验证索引](../examples/tool-validation/README.md)，它们是历史版本的人工输入。当前 23 项工具测试及 Agent/真实模型记录见 [评估](03-evaluation.md) 和 [当前运行索引](../examples/data-validation/README.md)，各自区分验证范围。
 
 ## 产品资料配置
 
 原工具接口继续使用 Material/BrandRule，profiles.py 在 CLI 运行前校验独立产品/客户端素材、来源和必需规则。全部适用规则由程序注入，不经过检索筛选。Agent 的 search 观察可附可信来源元数据；SearchResult 自身的字段不变。
 
-8 个配置当前启用 39 条事实，20 条 distinct 规则按适用范围加载；它们为项目自定演示政策。保留原文与字面词表的能力边界，不宣称通用语义检查、完整平台审核或标签向量检索。原始人工样例和 140 项兼容检查不代表真实模型效果，详见 [资料评估](09-data-pack.md) 与 [105 项测试及执行证据](../examples/data-validation/README.md)。
+8 个配置当前启用 39 条事实，20 条 distinct 规则按适用范围加载；它们为项目自定演示政策。保留原文与字面词表的能力边界，不宣称通用语义检查、完整平台审核或标签向量检索。原始人工样例和 140 项兼容检查不代表真实模型效果，详见 [资料评估](09-data-pack.md) 与 [业务测试及执行证据](../examples/data-validation/README.md)；最新全量日志为 119 项，其中业务测试 105 项。

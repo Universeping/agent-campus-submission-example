@@ -1,0 +1,244 @@
+"""模型连接诊断：默认查询列表，--chat 执行一轮原生工具响应探测；不执行业务工具。"""
+
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+from dataclasses import replace
+import hashlib
+import http.client
+import json
+import math
+from pathlib import Path
+import socket
+import ssl
+import sys
+from time import perf_counter
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlsplit
+from urllib.request import HTTPSHandler, ProxyHandler, Request, build_opener
+from uuid import uuid4
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from src.model import DeepSeekModel, ModelConfig, _NoRedirect, strict_json, tool_specs
+from src.trace import TraceRecorder
+
+
+def classify_connection_error(error):
+    """只输出受控类别，不把异常原文、代理地址或凭据写入报告。"""
+    reason = error.reason if isinstance(error, URLError) else error
+    if isinstance(reason, socket.gaierror):
+        return "dns_error", "域名解析失败"
+    if isinstance(reason, ssl.SSLCertVerificationError):
+        return "tls_certificate_error", "TLS 证书校验失败"
+    if isinstance(reason, ssl.SSLError):
+        return "tls_error", "TLS 连接失败"
+    if isinstance(reason, TimeoutError):
+        return "timeout", "请求或读取响应超时"
+    if isinstance(reason, ConnectionRefusedError):
+        return "connection_refused", "连接被拒绝"
+    if isinstance(reason, ConnectionResetError):
+        return "connection_reset", "连接被重置"
+    return "connection_error", "连接失败，现有异常类型无法进一步分类"
+
+
+class NetworkStages:
+    """只保存固定阶段名、耗时和结果，不接收请求数据或异常正文。"""
+
+    def __init__(self):
+        self.phase = "https_request"
+        self.events = []
+
+    def run(self, phase, operation):
+        self.phase = phase
+        started = perf_counter()
+        try:
+            result = operation()
+        except Exception:
+            self.events.append({"stage": phase, "status": "failed", "elapsed_seconds": round(perf_counter() - started, 3)})
+            raise
+        self.events.append({"stage": phase, "status": "passed", "elapsed_seconds": round(perf_counter() - started, 3)})
+        return result
+
+
+class ObservedHTTPSConnection(http.client.HTTPSConnection):
+    """保留标准库连接和 TLS 校验，仅为独立诊断标注阶段。"""
+
+    def __init__(self, *args, stages, **kwargs):
+        self.stages = stages
+        self.in_proxy_tunnel = False
+        super().__init__(*args, **kwargs)
+
+    def connect(self):
+        # 标准库处理 DNS、地址尝试、TCP_NODELAY 以及可选代理 CONNECT。
+        self.stages.run("connect", lambda: http.client.HTTPConnection.connect(self))
+        hostname = self._tunnel_host or self.host
+        self.sock = self.stages.run("tls_handshake", lambda: self._context.wrap_socket(self.sock, server_hostname=hostname))
+
+    def send(self, data):
+        if self.sock is None:
+            if self.auto_open:
+                self.connect()
+            else:
+                raise http.client.NotConnected()
+        phase = "proxy_connect" if self.in_proxy_tunnel else "send_request"
+        return self.stages.run(phase, lambda: super(ObservedHTTPSConnection, self).send(data))
+
+    def _tunnel(self):
+        self.in_proxy_tunnel = True
+        try:
+            return self.stages.run("proxy_connect", lambda: super(ObservedHTTPSConnection, self)._tunnel())
+        finally:
+            self.in_proxy_tunnel = False
+
+    def getresponse(self):
+        return self.stages.run("wait_http_response", lambda: super(ObservedHTTPSConnection, self).getresponse())
+
+
+class ObservedHTTPSHandler(HTTPSHandler):
+    def __init__(self, stages):
+        super().__init__()
+        self.stages = stages
+
+    def https_open(self, request):
+        def connection(*args, **kwargs):
+            return ObservedHTTPSConnection(*args, stages=self.stages, **kwargs)
+        return self.do_open(connection, request, context=self._context)
+
+
+def observed_opener(config, stages):
+    handlers = [ObservedHTTPSHandler(stages), _NoRedirect()]
+    if not config.use_proxy:
+        handlers.insert(0, ProxyHandler({}))
+    return build_opener(*handlers).open
+
+
+def check_connection(config, *, timeout=15, transport=None):
+    if not math.isfinite(timeout) or timeout <= 0:
+        raise ValueError("timeout must be finite and positive")
+    opener = transport or DeepSeekModel(config).transport
+    report = {"checked_at": datetime.now(timezone.utc).isoformat(),
+              "operation": "GET /models", "target_host": urlsplit(config.base_url).hostname,
+              "model": config.model, "use_proxy": config.use_proxy, "timeout_seconds": timeout,
+              "scope": "Connectivity and model-list endpoint only; not Chat Completions or Agent behavior."}
+    request = Request(config.base_url.rstrip("/") + "/models", method="GET",
+                      headers={"Authorization": "Bearer " + config.api_key, "Accept": "application/json"})
+    phase = "https_request"
+    started = perf_counter()
+    try:
+        with opener(request, timeout=timeout) as response:
+            report["http_status"] = response.status
+            phase = "response_body"
+            payload = response.read(1024 * 1024 + 1)
+            if len(payload) > 1024 * 1024:
+                raise ValueError("response exceeds diagnostic size limit")
+            data = strict_json(payload.decode("utf-8"))
+        if not isinstance(data, dict) or not isinstance(data.get("data"), list) or any(
+            not isinstance(item, dict) or not isinstance(item.get("id"), str) for item in data["data"]
+        ):
+            raise ValueError("invalid model-list response")
+        available = any(item["id"] == config.model for item in data["data"])
+        report.update(status="passed" if available else "model_not_listed", model_list_contains_configured_model=available,
+                      message="接口可达且列表包含配置模型" if available else "接口可达，但列表未包含配置模型；需要核对模型标识或别名")
+    except HTTPError as error:
+        status = error.code
+        error.close()
+        report.update(status="http_error", http_status=status,
+                      message={401: "模型列表请求未获授权", 403: "模型列表访问被拒绝", 429: "模型列表请求被限流"}.get(status, "模型列表接口返回 HTTP 错误"))
+    except (URLError, OSError) as error:
+        code, message = classify_connection_error(error)
+        report.update(status=code, message=message, phase=phase, wrapped_by_urlerror=isinstance(error, URLError))
+    except (ValueError, UnicodeError, TypeError):
+        report.update(status="invalid_response", message="模型列表响应格式无效，未记录原始正文")
+    report["elapsed_seconds"] = round(perf_counter() - started, 3)
+    return TraceRecorder("connection-diagnostic", secrets=(config.api_key,)).sanitize(report)
+
+
+def check_chat(config, *, timeout=60, transport=None):
+    """以生产 JSON 客户端发起一次最小工具响应请求；不运行 Agent。"""
+    if not math.isfinite(timeout) or timeout <= 0:
+        raise ValueError("timeout must be finite and positive")
+    captured = {}
+    stages = NetworkStages()
+    opener = transport or observed_opener(config, stages)
+
+    def observed_transport(request, timeout):
+        try:
+            response = opener(request, timeout=timeout)
+            status = getattr(response, "status", None)
+            if isinstance(status, int):
+                captured["http_status"] = status
+            return response
+        except HTTPError as error:
+            captured["http_status"] = error.code
+            raise
+        except (URLError, OSError) as error:
+            code, message = classify_connection_error(error)
+            captured.update(status=code, message=message, phase=stages.phase, wrapped_by_urlerror=isinstance(error, URLError))
+            raise
+
+    report = {"checked_at": datetime.now(timezone.utc).isoformat(), "operation": "POST /chat/completions",
+              "target_host": urlsplit(config.base_url).hostname, "model": config.model,
+              "use_proxy": config.use_proxy, "timeout_seconds": timeout,
+              "scope": "Single diagnostic tool-call response; no tool execution, Agent task, or duration-repair evidence."}
+    messages = [{"role": "system", "content": "这是接口连通性诊断。只调用 finish，status 设为 incomplete，reason 为连接诊断，不生成脚本。"},
+                {"role": "user", "content": "请返回这一条工具调用。"}]
+    declared_tools = [item for item in tool_specs() if item["function"]["name"] == "finish"]
+    started = perf_counter()
+    reply = DeepSeekModel(replace(config, timeout_seconds=timeout), observed_transport).next_turn(messages, declared_tools)
+    report.update(captured)
+    if reply.error:
+        if "status" not in captured:
+            code = reply.error.code
+            status = "http_error" if code.startswith("http_") else code if code in {"timeout", "connection_error"} else "protocol_error"
+            report.update(status=status, error_code=code, message=reply.error.message,
+                          phase="http_response" if code.startswith("http_") else "response_body" if captured.get("http_status") else "https_request")
+    else:
+        try:
+            reply.action.validate()
+            valid = reply.action.name == "finish" and reply.action.arguments.get("status") == "incomplete"
+        except (ValueError, TypeError, AttributeError):
+            valid = False
+        report.update(status="passed" if valid else "protocol_error",
+                      message="聊天接口返回预期的单条原生工具调用" if valid else "聊天接口返回，但未得到预期诊断动作")
+        if valid:
+            report["tool_action"] = "finish"
+    report["elapsed_seconds"] = round(perf_counter() - started, 3)
+    report["network_stages"] = stages.events
+    return TraceRecorder("chat-diagnostic", secrets=(config.api_key,)).sanitize(report)
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--env-file", type=Path, default=ROOT / ".env")
+    parser.add_argument("--timeout", type=float, help="仅本次诊断；GET 默认 15 秒，--chat 默认使用模型超时配置")
+    parser.add_argument("--chat", action="store_true", help="执行一轮聊天工具响应诊断，会调用模型，不执行业务工具")
+    parser.add_argument("--output-dir", type=Path)
+    args = parser.parse_args(argv)
+    if args.timeout is not None and (not math.isfinite(args.timeout) or args.timeout <= 0):
+        parser.error("--timeout 必须为有限正数")
+    output = args.output_dir or ROOT / "outputs" / ("connection-check-" + uuid4().hex)
+    try:
+        output.mkdir(parents=True, exist_ok=False)
+    except OSError:
+        print("无法创建诊断目录；请使用新的输出目录。", file=sys.stderr)
+        return 2
+    try:
+        config = ModelConfig.from_env(args.env_file)
+        if args.chat:
+            report = check_chat(config, timeout=args.timeout if args.timeout is not None else config.timeout_seconds)
+        else:
+            report = check_connection(config, timeout=args.timeout if args.timeout is not None else 15)
+    except (OSError, ValueError, ImportError):
+        report = {"status": "configuration_error", "message": "模型配置或依赖无效；未输出配置值或异常原文"}
+    report["diagnostic_script_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    (output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+    print(f"报告目录：{output}")
+    return 0 if report["status"] == "passed" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

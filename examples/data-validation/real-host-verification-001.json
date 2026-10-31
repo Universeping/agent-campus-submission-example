@@ -1,0 +1,112 @@
+{
+  "verified_at": "2026-10-30T17:36:53.404645+00:00",
+  "git_head_at_audit": "6037a11e60ee519174d1b49d9522af8692776d61",
+  "scope": "Copied exact user-produced files; verified source/data hashes, source metadata, trace ordering and recomputed final local checks. No model calls in this audit.",
+  "records": [
+    {
+      "original_directory": "outputs/e0bd72a7fa764da9b3e32a6d78b5fe58",
+      "archived_directory": "examples/data-validation/real-capcut-web-002",
+      "executed_by": "user on host terminal",
+      "runs": [
+        {
+          "run_id": "e0bd72a7fa764da9b3e32a6d78b5fe58",
+          "status": "completed",
+          "mode": "real",
+          "steps": 8,
+          "tool_calls": 3,
+          "multiple_actions": 1,
+          "connection_errors": 2,
+          "current_source_data_hashes_matched": 21,
+          "profile": "capcut_web_captions",
+          "script_version": 1,
+          "script_fingerprint": "4b1ea9a3f741aebafc4262027b3d872935a03c2c0d5af150aacc31e4586b8bae",
+          "duration_seconds": 21.4,
+          "source_ids": [
+            "P_CAP_001",
+            "P_CAP_002",
+            "P_CAP_003"
+          ],
+          "checks_recomputed": true
+        }
+      ],
+      "artifact_sha256": {
+        "history.json": "891aa77d05acdc89e17e3ca5bef5ce781d63b37dfc41bae24f2551cd039b67dd",
+        "result.json": "b80db239c52572e17742492e92c156c4f51ea2ffd048bc05fc119e9357527dba",
+        "trace.jsonl": "c107df370e7afaeaf62ae6777b068cf3f274b654a03cf3ff4ab978599368bbef",
+        "sources.json": "b453029dff3e39e4cd32b733ea3068e7f78d714db0b4ddfc6242a73e463abaa4",
+        "checks.json": "3616ca5e80902e49a909fe86e679239a78e0624a10b831bafbc2b312af03ce55",
+        "run.json": "7b74f1ea0e1f9b07efa444ab145a30c65000cd931474936462d2486e2daa2f9c",
+        "script.md": "0f1a647961ce44d985c445a4eabc1956fe357a0d526f2467a56aa14944f8aa9f"
+      }
+    },
+    {
+      "original_directory": "outputs/cc4e2b31c1a745138d61f3b3c76891ec",
+      "archived_directory": "examples/data-validation/real-bcut-ios-001",
+      "executed_by": "user on host terminal",
+      "runs": [
+        {
+          "run_id": "cc4e2b31c1a745138d61f3b3c76891ec",
+          "status": "completed",
+          "mode": "real",
+          "steps": 6,
+          "tool_calls": 3,
+          "multiple_actions": 1,
+          "connection_errors": 0,
+          "current_source_data_hashes_matched": 21,
+          "profile": "bcut_ios",
+          "script_version": 1,
+          "script_fingerprint": "21f97c381b3cfd33a519650b8c83cb25d0f8cc577d4cdbd65d123c98fc6e57d8",
+          "duration_seconds": 13.0,
+          "source_ids": [
+            "P_BCT_001",
+            "P_BCT_002"
+          ],
+          "checks_recomputed": true
+        }
+      ],
+      "artifact_sha256": {
+        "history.json": "311466dea330ef7a5463268b30334a5fd6cf05111863cb10b63bdc734021a370",
+        "result.json": "560f5b9c5136e161ff8bfd141210fd04fbbdcf34496a99fa503d14f340037e72",
+        "trace.jsonl": "4864ac229aa45a72971ab37a882cab1112e67e11fe15245a609448c55a824728",
+        "sources.json": "6adc4f4930bb114a544486ee4d4ff09aaeba4046dd7fe301adb3ff5e06ebecf9",
+        "checks.json": "57b6c35ff83599711605e82b3e2f3ac6c445ae92cff452761a980c177c99613a",
+        "run.json": "571ff39b757f4ec8d3f35730548fc0026a494a2c855c610df83da5158151591c",
+        "script.md": "75a97c3a159991365c41992583b97fc4462f98579a622d2fb34d650c908abacb"
+      }
+    },
+    {
+      "original_directory": "outputs/prompt-validation-756a2b1c436047328684acbce7cd567e",
+      "archived_directory": "examples/data-validation/real-baseline-batch-001",
+      "executed_by": "user on host terminal",
+      "runs": [
+        {
+          "run_id": "37fb24c2715f4efe8cf028a1e76fff80",
+          "status": "failed",
+          "mode": "real",
+          "steps": 2,
+          "tool_calls": 0,
+          "multiple_actions": 0,
+          "connection_errors": 2,
+          "current_source_data_hashes_matched": 10,
+          "error_codes": [
+            "connection_error"
+          ]
+        }
+      ],
+      "artifact_sha256": {
+        "report.json": "aab42513b4f9b177260fed682e9d4915d9f57d41ecd50807a9ae6d7b15af20d2",
+        "normal/history.json": "ea397c6e55136009a700c07068434feb2a23bc377d508f54ea416e58a91a8fe4",
+        "normal/result.json": "f3af66423f022d78e3cd9dab12e8c58672ff91b3ec94a0cbabcbe971268123c3",
+        "normal/trace.jsonl": "e81c5756d894f5306c846f9213b059ad48492189657051203eb42807aed9b96d",
+        "normal/checks.json": "0790e6ec8a2ad0d2a91b12b591618dde3cd97a35c4271e6aaca3f12c5febdc58",
+        "normal/run.json": "07c238cefe39cdd8fc7c4b15f9404b9f0d6e9838852688310aff1689d4631b05",
+        "normal/script.md": "d11f3f5f9754ae36711ac7a17d0769abe65fbb8224422191d118b3e0f3f07234"
+      }
+    }
+  ],
+  "limitations": [
+    "Two product runs are normal first-draft successes, not evidence of post-duration-failure repair.",
+    "Transient connection errors have no safe underlying DNS/TLS diagnostics in current logs; cause is unresolved.",
+    "Both successful runs contain a rejected multiple_actions response."
+  ]
+}

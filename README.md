@@ -1,8 +1,8 @@
 # 短视频脚本 Agent
 
-基于 Python、LangGraph 1.2.18 和 DeepSeek V4 Pro 的单 Agent。已实现六动作循环、三个本地工具、文件/终端输入、离线 Mock、版本检查和输出记录。旧提示词的真实正常任务与检索故障注入任务均已完成，最终分别为 v2 / 7.1 秒与 v2 / 9.4 秒；新提示词的真实验证受连接错误阻断，不能沿用旧结果证明效果。
+基于 Python、LangGraph 1.2.18 和 DeepSeek V4 Pro 的单 Agent。已实现六动作循环、三个本地工具、文件/终端输入、离线 Mock、版本检查和输出记录。当前真实正常路径为 CapCut 网页端 v1 / 21.4 秒、必剪 iOS v1 / 13 秒；缺关键信息、工具失败、空资料、无关资料均有实际记录。5 秒超时长案例展示了修订与重检，最终达到上限返回 incomplete，尚无最终修订成功证据。
 
-当前 105 项测试全部通过。已接入用户资料包的 8 个产品/客户端配置，40 条原始事实中启用 39 条、暂缓 1 条；规则为 12 条通用与 8 条范围规则，均为项目自定演示政策。8 条 profile Mock CLI 路径通过，真实连接受阻。事实检查仍采用素材原文与封闭表达，不能代表通用事实判断或平台审核。
+当前结论、历史记录及证据边界见 [效果验证](docs/03-evaluation.md)。
 
 ## 安装
 
@@ -26,6 +26,14 @@ cp -n .env.example .env
 仅在本地填写 `DEEPSEEK_API_KEY`。默认模型 `deepseek-v4-pro`，API 地址 `https://api.deepseek.com`，单次超时 60 秒。进程环境优先于本地文件。Mock 模式不读取密钥，也不调用模型。
 
 DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时设为 `true`。该选项仅影响此客户端，不修改 pip 或全局代理。用户在本机直连后完成真实验证；本执行环境曾因 DNS 失败无法连接，相关失败记录保留。
+
+需要单独排查连接时，可在运行 Agent 的同一终端执行：
+
+```bash
+.venv/bin/python scripts/check_deepseek_connection.py
+```
+
+诊断复用模型配置和代理设置，仅查询模型列表，自动保存脱敏报告；可区分 DNS、TLS、超时和 HTTP 状态。它不请求聊天生成，也不证明后续生成连接稳定，详见 [说明](examples/network-validation/README.md)。
 
 ## 运行 CLI
 
@@ -55,15 +63,15 @@ DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-105 项测试全部通过，无跳过项。HTTP 单元测试使用模拟响应，Mock 集成使用真实 LangGraph 和本地工具；真实模型效果另以实际 Trace 验证。当前日志与配置运行见 [资料验证](examples/data-validation/README.md)。
+119 项测试全部通过，无跳过项。HTTP 单元测试使用模拟响应，Mock 集成使用真实 LangGraph 和本地工具；真实模型效果另以实际 Trace 验证。最新全量日志见 [连接诊断验证](examples/network-validation/README.md)，业务配置运行见 [资料验证](examples/data-validation/README.md)。
 
-新提示词的正常、故障、空资料、无关资料、超时长批量验证：
+P01 基线的正常、故障、空资料、无关资料、超时长批量验证：
 
 ```bash
 .venv/bin/python examples/prompt-validation/run_cases.py --mode real
 ```
 
-自动新建 outputs/ 目录；首稿直接满足短时长时记为未覆盖修订，连接失败时记录受阻。输入、验收和本轮实际结果见 [新提示词验证](examples/prompt-validation/README.md)。
+自动新建 outputs/ 目录；首稿直接满足短时长时记为未覆盖修订，连接失败时记录受阻。入口及自定义判定见 [批量验证说明](examples/prompt-validation/README.md)，当前真实结果见 [运行索引](examples/data-validation/README.md)。超时长原报告 failed 保留：任务实际为 incomplete，有反馈修订及上限退出记录，不能称为最终修订成功，也不直接等同于考核不达标。
 
 - [需求和验收映射](docs/01-requirements.md)
 - [实现方案](docs/02-solution.md)
@@ -103,3 +111,5 @@ DeepSeek 默认直连，`DEEPSEEK_USE_PROXY=false`；需要继承系统代理时
 `.env`、`.venv/`、`note/`、`outputs/` 不纳入 Git，运行与评审不依赖本地笔记。产品资料已按 profile 接入；官方发布平台审核规则仍未实现，未实现前端、HTTP API、会话恢复或视频生成。
 
 题目：短视频脚本 Agent，题号待用户补充。仓库为 [Universeping/agent-campus-submission-example](https://github.com/Universeping/agent-campus-submission-example)。实际用时待候选人填写；最终提交 SHA 用 `git rev-parse HEAD` 获取，不追写自身所在提交的 SHA。
+
+可选连接诊断支持 `--chat` 和 `--timeout`，详见 [网络验证](examples/network-validation/README.md)。宿主已有列表成功和聊天超时记录，具体网络原因未确定；无需把继续诊断作为材料收尾的前置条件。

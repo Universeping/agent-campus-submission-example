@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-31T02:55:31.144991+00:00",
+  "operation": "GET /models",
+  "target_host": "api.deepseek.com",
+  "model": "deepseek-v4-pro",
+  "use_proxy": false,
+  "timeout_seconds": 5.0,
+  "scope": "Connectivity and model-list endpoint only; not Chat Completions or Agent behavior.",
+  "status": "dns_error",
+  "message": "域名解析失败",
+  "phase": "https_request",
+  "wrapped_by_urlerror": true,
+  "elapsed_seconds": 0.001,
+  "diagnostic_script_sha256": "baf65322834522f7939452e694af6b91af554a903fb7db3c3bbd90dcdc75a9b8"
+}

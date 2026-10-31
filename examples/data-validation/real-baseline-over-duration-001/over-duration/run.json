@@ -1,0 +1,39 @@
+{
+  "run_id": "967a40a29a094c07bb104e11346df021",
+  "mode": "real",
+  "command": [
+    "python",
+    "-m",
+    "src.main",
+    "--mode",
+    "real",
+    "--input",
+    "examples/over-duration/input.json",
+    "--output-dir",
+    "/home/yuchi/workspace/codex-notes/xiaoying/agent-campus-submission-example/outputs/prompt-validation-ad0ff98dfdbd43d59e6339e3a2bdf261/over-duration"
+  ],
+  "system_prompt_sha256": "c1e4d7261450968139165cbef94a4e99a2f89b9d62e3feea0ded5c900777bb3c",
+  "mock_scenario": null,
+  "simulate_search_failure": false,
+  "sha256": {
+    "data/materials.json": "880e5a12420bf10bbe69b188addfcafc6dd8a98c95e39d9d4bb4475aeca17186",
+    "data/brand_rules.json": "223f4dcee224ea9db1a189afc4a2005d6e6a590a72bf1969eb0edc5d3e09ac91",
+    "src/tools.py": "b410797dd70f64f73c7139e6a17f08b4763dfb5ad0f66d8d871f0fb55b7027bc",
+    "src/agent.py": "6f02d246cb6f20358dccf744d7ed72c161e99a5c58cf1a236c62eef7a5d5098b",
+    "src/main.py": "9838cecb6221f4ccc1160f5901a3639ef93eec4e43f241eefe98fa6a91b3e46c",
+    "src/schemas.py": "65b918166538fd2ddd189a9c576cf19ccffd9be6b5e4797c1e832e5e43dd1bd5",
+    "src/__init__.py": "7ae54096aa3796f8b993ae2664a4889270257431e274ed4b6fd20cfa08700af5",
+    "src/trace.py": "1caa9a5ae3c657ba3b4450261a7dd64c4cac4cece8f076ff38384c9def80fa9d",
+    "src/model.py": "ba1475a86c26e56ab0b040384c8ec000e710336b73e7c2a34cce41d052cbb409",
+    "src/profiles.py": "96e255c10c76d4005d67304ad94fc2489e2c76ddf4c7fd127a2ce6c3760f6115"
+  },
+  "model": "deepseek-v4-pro",
+  "timeout_seconds": 60.0,
+  "use_proxy": false,
+  "input_sha256": "51a9cea7a9411cf166d9283f89c313b65c06bffad6c54756b2356d927cdeb584",
+  "limits": {
+    "max_steps": 12,
+    "max_tool_calls": 8,
+    "max_transport_retries": 1
+  }
+}
